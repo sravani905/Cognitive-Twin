@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { 
   RefreshCw, Book, Share2, Check, Clock, User, LogOut, MessageSquare, Globe, LogIn,
-  Compass, Award, BrainCircuit, Sparkles, Heart, Bell, AlertTriangle, ShieldCheck, Play, Pause, Trophy, FileText, ArrowLeft, Mail
+  Compass, Award, BrainCircuit, Sparkles, Heart, Bell, AlertTriangle, ShieldCheck, Play, Pause, Trophy, FileText, ArrowLeft, Mail, Key
 } from 'lucide-react';
 import { cn } from './lib/utils';
 import { getApiKeyInfo, getMarketInsights } from './services/geminiService';
@@ -24,6 +24,7 @@ import { AestheticDashboard } from './components/AestheticDashboard';
 import { AboutView } from './components/AboutView';
 import { PrivacyView } from './components/PrivacyView';
 import { ContactView } from './components/ContactView';
+import { ApiConfigView } from './components/ApiConfigView';
 import { PassiveTrackingHub } from './components/PassiveTrackingHub';
 
 // Pixel faithful Recreated Cognitive twin views
@@ -56,6 +57,7 @@ export default function App() {
   const [showAbout, setShowAbout] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [showContact, setShowContact] = useState(false);
+  const [showApiConfig, setShowApiConfig] = useState(false);
   const [isOnline, setIsOnline] = useState(navigator.onLine);
   const [authEmail, setAuthEmail] = useState('');
   const [authPass, setAuthPass] = useState('');
@@ -321,6 +323,7 @@ export default function App() {
             onShowAbout={() => setShowAbout(true)}
             onShowPrivacy={() => setShowPrivacy(true)}
             onShowContact={() => setShowContact(true)}
+            onShowApiConfig={() => setShowApiConfig(true)}
             onExploreDemo={handleExploreDemo}
           />
         )}
@@ -360,8 +363,9 @@ export default function App() {
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 border-l border-purple-100/30 pl-4">
+              <div className="flex items-center gap-4 border-l border-purple-100/30 pl-4 flex-wrap">
                 <button onClick={() => { setIsDemoMode(false); setStep('welcome'); }} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#5c4ce1] hover:brightness-110 border border-[#5c4ce1]/25 px-4 py-1.5 rounded-full bg-[#5c4ce1]/5 shrink-0"><ArrowLeft className="w-3.5 h-3.5" /> Landing Page</button>
+                <button onClick={() => setShowApiConfig(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-accent-blue hover:brightness-110 border border-accent-blue/20 px-4 py-1.5 rounded-full bg-blue-50/10 shrink-0"><Key className="w-3.5 h-3.5" /> API Settings</button>
                 <button onClick={() => setShowAbout(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#8161e1] hover:brightness-110 border border-[#8161e1]/20 px-4 py-1.5 rounded-full bg-[#8161e1]/8 shrink-0"><Sparkles className="w-3.5 h-3.5" /> About Platform</button>
                 <button onClick={() => setShowResetConfirm(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-accent-purple hover:brightness-110 border border-accent-purple/20 px-4 py-1.5 rounded-full bg-white/40 shrink-0"><RefreshCw className="w-3.5 h-3.5" /> Start Fresh</button>
                 <button onClick={handleShare} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-muted hover:text-primary shrink-0">{copied ? <Check className="w-3 h-3 text-accent-emerald" /> : <Share2 className="w-3.5 h-3.5" />}{copied ? "Copied" : "Share URL"}</button>
@@ -744,10 +748,14 @@ export default function App() {
         {showAbout && <AboutView onClose={() => setShowAbout(false)} />}
         {showPrivacy && <PrivacyView onClose={() => setShowPrivacy(false)} />}
         {showContact && <ContactView onClose={() => setShowContact(false)} />}
+        {showApiConfig && <ApiConfigView onClose={() => setShowApiConfig(false)} />}
       </AnimatePresence>
 
       <footer className="relative z-10 mt-12 p-8 border-t border-black/5 text-center flex flex-col items-center gap-4">
-        <button id="btn-footer-contact" onClick={() => setShowContact(true)} className="px-6 py-2 rounded-full border border-black/5 text-[10px] font-bold text-muted uppercase tracking-widest hover:bg-white/40 transition-all"><Mail className="w-3 h-3 inline mr-2" /> Contact</button>
+        <div className="flex gap-4 flex-wrap justify-center">
+          <button id="btn-footer-contact" onClick={() => setShowContact(true)} className="px-6 py-2 rounded-full border border-black/5 text-[10px] font-bold text-muted uppercase tracking-widest hover:bg-white/40 transition-all"><Mail className="w-3 h-3 inline mr-2" /> Contact</button>
+          <button id="btn-footer-api-config" onClick={() => setShowApiConfig(true)} className="px-6 py-2 rounded-full border border-black/5 text-[10px] font-bold text-[#8161e1] uppercase tracking-widest hover:bg-white/40 transition-all"><Key className="w-3 h-3 inline mr-2" /> API Settings</button>
+        </div>
         <p className="text-[9px] font-semibold text-muted uppercase tracking-[0.4em]">Cognitive Twin • Your Mind, Reflected</p>
       </footer>
     </div>

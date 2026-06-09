@@ -18,6 +18,7 @@ interface AuthModuleProps {
   onExploreDemo?: () => void;
   onShowPrivacy?: () => void;
   onShowContact?: () => void;
+  onShowApiConfig?: () => void;
 }
 
 export const AuthModule: React.FC<AuthModuleProps> = ({
@@ -34,6 +35,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
   onExploreDemo,
   onShowPrivacy,
   onShowContact,
+  onShowApiConfig,
 }) => {
   // Local state to toggle between the landing page (Image 7) and login screen (Image 8)
   const [view, setView] = useState<'landing' | 'auth'>('landing');
@@ -806,17 +808,19 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
       </AnimatePresence>
 
       {/* FOOTER SECTION: SHARED BY BOTH INTERFACES PIXEL MATCHED */}
-      <footer className="w-full relative z-10 bottom-0 select-none px-6">
+      <footer className="w-full relative z-10 bottom-0 select-none px-6 text-[#7c779e]">
         {/* Simple elegant thin line above footer matching Image 7 and 8 */}
         <div className="max-w-6xl mx-auto h-[1px] bg-gradient-to-r from-transparent via-[#bfaad4]/40 to-transparent" />
         
-        <div className="max-w-6xl mx-auto py-8 flex items-center justify-center text-xs text-[#7c779e] font-sans">
-          <ul className="flex items-center gap-4 uppercase font-medium tracking-widest text-[10px]">
+        <div className="max-w-6xl mx-auto py-8 flex items-center justify-center text-xs font-sans">
+          <ul className="flex items-center gap-4 uppercase font-medium tracking-widest text-[10px] flex-wrap justify-center text-center">
             <li className="cursor-pointer hover:text-[#1e1a42] transition-colors" onClick={() => onShowAbout ? onShowAbout() : alert("Cognitive Twin is a state-of-the-art mental mapping tool designed to reflect your cognitive parameters securely.")}>About</li>
             <li className="text-purple-300">|</li>
             <li className="cursor-pointer hover:text-[#1e1a42] transition-colors" onClick={() => onShowPrivacy ? onShowPrivacy() : alert("Your privacy is absolute. All brain profiles and interaction telemetry are stored client-side securely.")}>Privacy</li>
             <li className="text-purple-300">|</li>
             <li className="cursor-pointer hover:text-[#1e1a42] transition-colors" onClick={() => onShowContact ? onShowContact() : alert("Contact support at researcher@cognitivetwin.ai for lab verification.")}>Contact</li>
+            <li className="text-purple-300">|</li>
+            <li className="cursor-pointer hover:text-[#1e1a42] transition-colors" onClick={() => onShowApiConfig ? onShowApiConfig() : alert("API configuration interface and telemetry triggers.")}>API Settings</li>
           </ul>
         </div>
       </footer>
