@@ -1,0 +1,161 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "Stores user cognitive profile and insights.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "metrics": {
+          "type": "object",
+          "properties": {
+            "age": { "type": "number" },
+            "ageRange": { "type": "string" },
+            "role": { "type": "string" },
+            "field": { "type": "string" },
+            "learningTime": { "type": "string" },
+            "learningStyle": { "type": "string" },
+            "focusScore": { "type": "number" },
+            "memoryScore": { "type": "number" },
+            "logicScore": { "type": "number" },
+            "riskScore": { "type": "number" },
+            "speedScore": { "type": "number" },
+            "creativityScore": { "type": "number" },
+            "spatialScore": { "type": "number" },
+            "verbalScore": { "type": "number" },
+            "learningStyleScore": { "type": "number" },
+            "eqScore": { "type": "number" },
+            "numericalScore": { "type": "number" },
+            "abstractScore": { "type": "number" },
+            "executiveScore": { "type": "number" },
+            "timestamp": { "type": "number" }
+          }
+        },
+        "insights": {
+          "type": "object",
+          "properties": {
+            "summary": { "type": "string" },
+            "studyMethod": { "type": "string" },
+            "careerGuide": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "why": { "type": "string" },
+                  "detailedRoadmap": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "stage": { "type": "string" },
+                        "tasks": { "type": "array", "items": { "type": "string" } }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "productivityStyle": { "type": "string" },
+            "workEnvironment": { "type": "string" }
+          }
+        },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Chat": {
+      "title": "Chat Message",
+      "description": "Messages between user and AI twin.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "role": { "type": "string", "enum": ["user", "model"] },
+        "content": { "type": "string" },
+        "timestamp": { "type": "number" }
+      },
+      "required": ["uid", "role", "content", "timestamp"]
+    },
+    "Feedback": {
+      "title": "User Feedback",
+      "description": "User ratings and suggestions.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "rating": { "type": "number" },
+        "suggestion": { "type": "string" },
+        "timestamp": { "type": "number" }
+      },
+      "required": ["uid", "rating", "timestamp"]
+    },
+    "Result": {
+      "title": "Cognitive Result",
+      "description": "Historical cognitive test results.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "metrics": { "type": "object" },
+        "insights": { "type": "object" },
+        "timestamp": { "type": "number" }
+      },
+      "required": ["uid", "metrics", "insights", "timestamp"]
+    },
+    "Roadmap": {
+      "title": "Career Roadmap",
+      "description": "Personalized career journey roadmap.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "careerTitle": { "type": "string" },
+        "phases": { "type": "array" },
+        "timestamp": { "type": "number" },
+        "completedTasks": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["uid", "careerTitle", "phases", "timestamp"]
+    },
+    "SharedReport": {
+      "title": "Shared Cognitive Report",
+      "description": "Anonymized cognitive insights for sharing.",
+      "type": "object",
+      "properties": {
+        "summary": { "type": "string" },
+        "archetype": { "type": "object" },
+        "growthAreas": { "type": "array" },
+        "careerGuide": { "type": "array" },
+        "studyMethod": { "type": "string" },
+        "metrics": { "type": "object" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["summary", "archetype", "metrics", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile document"
+    },
+    "/users/{userId}/chats/{chatId}": {
+      "schema": "Chat",
+      "description": "User chat history"
+    },
+    "/users/{userId}/results/{resultId}": {
+      "schema": "Result",
+      "description": "User historical results"
+    },
+    "/users/{userId}/roadmaps/{roadmapId}": {
+      "schema": "Roadmap",
+      "description": "User career roadmaps"
+    },
+    "/sharedReports/{reportId}": {
+      "schema": "SharedReport",
+      "description": "Publicly accessible anonymized reports"
+    },
+    "/feedback/{feedbackId}": {
+      "schema": "Feedback",
+      "description": "Global user feedback"
+    }
+  }
+}
