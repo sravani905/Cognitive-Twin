@@ -133,7 +133,7 @@ export const ComprehensiveLocalTest = withStability(({ onComplete }: any) => {
       const set = [...(LOCAL_QUESTION_SETS as any)[setName]].sort(() => Math.random() - 0.5);
       all.push(...set);
     });
-    return all;
+    return all.slice(0, 5); // Delightfully brief 5 questions instead of 29
   });
   
   const currentQuestion = sessionQuestions[currentIndex];
@@ -204,7 +204,7 @@ export const ComprehensiveLocalTest = withStability(({ onComplete }: any) => {
 const useDynamicQuestions = (testType: string, difficulty: string, staticPool: any[], userProfile?: any, sessionKey?: number) => {
   const [questions, setQuestions] = useState<any[]>(() => {
     // Instantly return pre-shuffled static pool to avoid any render-blocking delays
-    return [...staticPool].sort(() => Math.random() - 0.5).slice(0, Math.min(6, staticPool.length));
+    return [...staticPool].sort(() => Math.random() - 0.5).slice(0, Math.min(3, staticPool.length));
   });
   
   const [isLoading, setIsLoading] = useState(() => {
@@ -292,7 +292,7 @@ const LoadingOverlay = ({ message }: { message: string }) => (
 
 export const AttentionTest = withStability(({ onComplete, difficulty = 'moderate' }: any) => {
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(difficulty === 'challenging' ? 15 : difficulty === 'gentle' ? 25 : 20);
+  const [timeLeft, setTimeLeft] = useState(difficulty === 'challenging' ? 10 : difficulty === 'gentle' ? 15 : 12);
   const [target, setTarget] = useState({ x: 50, y: 50 });
   const [isActive, setIsActive] = useState(false);
   const [showPulse, setShowPulse] = useState(false);
@@ -485,7 +485,7 @@ export const MemoryTest = withStability(({ onComplete, difficulty = 'moderate' }
   const [showPulse, setShowPulse] = useState(false);
   const [startTime, setStartTime] = useState(0);
 
-  const maxLevel = difficultyLevel === 3 ? 12 : difficultyLevel === 1 ? 6 : 9;
+  const maxLevel = difficultyLevel === 3 ? 5 : difficultyLevel === 1 ? 3 : 4;
 
   const startLevel = useCallback((l: number) => {
     // Adaptive: Sequence length could grow faster at higher difficulty levels
@@ -849,7 +849,7 @@ export const DecisionTest = withStability(({ onComplete, difficulty = 'moderate'
   ];
 
   useEffect(() => {
-    const count = difficultyLevel === 3 ? 8 : difficultyLevel === 1 ? 4 : 6;
+    const count = difficultyLevel === 3 ? 4 : difficultyLevel === 1 ? 2 : 3;
     setShuffledScenarios([...scenarioPool].sort(() => Math.random() - 0.5).slice(0, count));
   }, [difficultyLevel, sessionKey]);
 
@@ -946,12 +946,6 @@ export const SpatialTest = withStability(({ onComplete, difficulty = 'moderate' 
       isInteractive: true
     },
     { 
-      type: 'rotation',
-      q: "Turn the shape halfway around (180°).", 
-      targetRotation: 180,
-      isInteractive: true
-    },
-    { 
       type: 'folding',
       q: "If you fold this into a box, which side is opposite the middle?", 
       isFolding: true,
@@ -959,23 +953,10 @@ export const SpatialTest = withStability(({ onComplete, difficulty = 'moderate' 
       correct: 1 
     },
     { 
-      type: 'folding',
-      q: "Which shape can you make by folding this pattern?", 
-      isFolding: true,
-      options: ["Cube", "Pyramid", "Prism", "Cylinder"],
-      correct: 0
-    },
-    { 
       type: 'perspective',
       q: "What does this look like from above?", 
       options: ["Square", "Triangle", "Circle", "Hexagon"], 
       correct: 0 
-    },
-    { 
-      type: 'perspective',
-      q: "What does this look like from the side?", 
-      options: ["L-shape", "T-shape", "I-shape", "O-shape"],
-      correct: 0
     },
   ];
 
@@ -1174,34 +1155,9 @@ export const LearningStyleTest = withStability(({ onComplete }: any) => {
       icons: [Sparkles, Clock, Zap]
     },
     { 
-      q: "How do you best recall a complex memory sequence?", 
-      a: ["By visualizing the spatial layout of the events", "By repeating the sequence of sounds and voices", "By re-enacting the physical movements involved"], 
-      icons: [Puzzle, Target, Heart]
-    },
-    { 
-      q: "In a collaborative neural synthesis, you contribute best by:", 
-      a: ["Designing the visual interface and data maps", "Articulating the core logic and strategy verbally", "Building the functional prototype and testing limits"], 
-      icons: [Box, Smile, Shield]
-    },
-    { 
       q: "When you are stuck on a difficult problem, you usually:", 
       a: ["Draw a diagram to see the connections", "Talk it through with someone else", "Try different physical approaches until one works"], 
       icons: [Shapes, MessageSquare, Activity]
-    },
-    { 
-      q: "Your favorite way to relax and learn something new is:", 
-      a: ["Watching a documentary", "Listening to an audiobook", "Building a small project or crafting"], 
-      icons: [Sparkles, Clock, Zap]
-    },
-    { 
-      q: "When you meet someone new, you are most likely to remember:", 
-      a: ["Their face and what they were wearing", "Their name and the sound of their voice", "The way they shook your hand or their gestures"], 
-      icons: [Smile, MessageSquare, Activity]
-    },
-    { 
-      q: "In a classroom or lecture, you find it easiest to stay focused when:", 
-      a: ["There are lots of slides and visual aids", "The speaker is engaging and tells stories", "There are interactive exercises or labs"], 
-      icons: [Sparkles, Clock, Zap]
     },
   ];
 
@@ -1518,11 +1474,11 @@ export const ExecutiveTest = withStability(({ onComplete, difficulty = 'moderate
       setShowPulse(true);
       setTimeout(() => setShowPulse(false), 500);
       const speedBonus = Math.max(0, (maxTime - timeTaken) / maxTime) * 10;
-      roundPoints = 10 + speedBonus;
+      roundPoints = 15 + speedBonus; // Scaled to reach 100 max over 4 rounds
       setScore(s => s + roundPoints);
     }
 
-    if (current + 1 < 10) {
+    if (current + 1 < 4) {
       setCurrent(c => c + 1);
       nextRound();
     } else {
@@ -1545,7 +1501,7 @@ export const ExecutiveTest = withStability(({ onComplete, difficulty = 'moderate
         description="Pick the COLOR of the word, not what the word says."
         icon={Activity}
       />
-      <ProgressBar current={current + 1} total={10} />
+      <ProgressBar current={current + 1} total={4} />
       <div className="w-full bg-white/95 border border-purple-100 rounded-3xl p-6 sm:p-10 space-y-12 flex flex-col items-center shadow-xl shadow-purple-600/5">
         <motion.div 
           key={current}
@@ -1617,18 +1573,20 @@ export const ResilienceTest = withStability(({ onComplete, difficulty = 'moderat
     const timeTaken = Date.now() - startTime;
     const maxTime = difficulty === 'challenging' ? 1500 : difficulty === 'gentle' ? 4000 : 2500;
     
+    const speedBonus = isCorrect ? Math.max(0, (maxTime - timeTaken) / maxTime) * 10 : 0;
+    const gainedPoints = isCorrect ? 15 + speedBonus : 0; // Scaled to reach 100 max over 4 rounds
+
     if (isCorrect) {
       setShowPulse(true);
       setTimeout(() => setShowPulse(false), 500);
-      const speedBonus = Math.max(0, (maxTime - timeTaken) / maxTime) * 20;
-      setScore(s => s + 20 + speedBonus);
+      setScore(s => s + gainedPoints);
     }
 
-    if (current + 1 < 10) {
+    if (current + 1 < 4) {
       setCurrent(c => c + 1);
       generateProblem();
     } else {
-      onComplete(Math.min(100, score));
+      onComplete(Math.min(100, Math.floor(score + gainedPoints)));
     }
   };
 
@@ -1643,7 +1601,7 @@ export const ResilienceTest = withStability(({ onComplete, difficulty = 'moderat
         description="Solve problems under increasing cognitive load and visual pressure."
         icon={Shield}
       />
-      <ProgressBar current={current + 1} total={10} />
+      <ProgressBar current={current + 1} total={4} />
       <div className={cn(
         "w-full bg-white/95 border border-purple-100 rounded-3xl p-6 sm:p-10 space-y-12 flex flex-col items-center relative overflow-hidden shadow-xl shadow-purple-600/5 transition-all duration-300",
         isDistracted && "bg-red-50/95 border-red-200"
@@ -1688,8 +1646,6 @@ export const AestheticTest = withStability(({ onComplete }: any) => {
     { main: '#1a1a1a', options: [['#333333', '#4d4d4d'], ['#ff0000', '#00ff00'], ['#121212', '#242424']], correct: 2 },
     { main: '#ff5733', options: [['#c70039', '#900c3f'], ['#33ff57', '#3357ff'], ['#ff8d1a', '#ffc300']], correct: 0 },
     { main: '#3357ff', options: [['#ff3357', '#57ff33'], ['#1a3399', '#0d1a4d'], ['#33ffff', '#33ffaa']], correct: 1 },
-    { main: '#8e44ad', options: [['#2ecc71', '#f1c40f'], ['#9b59b6', '#7d3c98'], ['#e74c3c', '#d35400']], correct: 1 },
-    { main: '#27ae60', options: [['#2ecc71', '#1e8449'], ['#c0392b', '#8e44ad'], ['#f39c12', '#d35400']], correct: 0 },
   ];
 
   const handleChoice = (idx: number) => {

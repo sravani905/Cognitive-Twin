@@ -701,7 +701,7 @@ export async function generateDynamicTestQuestions(testType: string, difficulty:
   const model = "gemini-3.5-flash";
   const randomSeed = Math.random().toString(36).substring(7);
   const prompt = `
-    Generate 8 unique, diverse, and advanced "${testType}" cognitive test questions. 
+    Generate 3 unique, diverse, and advanced "${testType}" cognitive test questions. 
     Difficulty Level: ${difficulty}.
     
     CRITICAL: 
