@@ -104,6 +104,12 @@ const BENCHMARKS: CareerBenchmark[] = [
     vector: [85, 80, 95, 40, 60, 80, 40, 85, 30, 60, 98, 98, 85, 85, 60, 30, 40, 85]
   },
   {
+    title: "Data Analyst",
+    category: "Business Intelligence",
+    description: "Extracting insights from structured and unstructured datasets to guide modern operations.",
+    vector: [90, 85, 92, 30, 65, 50, 40, 75, 50, 70, 92, 85, 80, 80, 50, 10, 30, 40]
+  },
+  {
     title: "Aeronautical Systems Architect",
     category: "Engineering",
     description: "Balancing complex spatial systems with rigorous executive planning.",

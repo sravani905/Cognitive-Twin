@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { 
   RefreshCw, Book, Share2, Check, Clock, User, LogOut, MessageSquare, Globe, LogIn,
-  Compass, Award, BrainCircuit, Sparkles, Heart, Bell, AlertTriangle, ShieldCheck, Play, Pause, Trophy, FileText, ArrowLeft, Mail, Key
+  Compass, Award, BrainCircuit, Sparkles, Heart, Bell, AlertTriangle, ShieldCheck, Play, Pause, Trophy, FileText, ArrowLeft, Mail, Key, HelpCircle
 } from 'lucide-react';
 import { cn } from './lib/utils';
 import { getApiKeyInfo, getMarketInsights } from './services/geminiService';
@@ -37,6 +37,8 @@ import { GrowthMapView } from './components/GrowthMapView';
 import { ReportView } from './components/ReportView';
 import { SuccessParticleCanvas } from './components/SuccessParticleCanvas';
 import { QuickActionsFloatingMenu } from './components/QuickActionsFloatingMenu';
+import { DashboardOnboardingWalkthrough } from './components/DashboardOnboardingWalkthrough';
+import { NotificationScheduler } from './components/NotificationScheduler';
 
 export default function App() {
   const state = useAppState();
@@ -52,6 +54,9 @@ export default function App() {
 
   // Local Navigation State matching the side navigation in the image
   const [activeTab, setActiveTab] = useState<'home' | 'profile' | 'careers' | 'archetype' | 'growth' | 'progress' | 'sessions' | 'recommendations' | 'hub'>('home');
+
+  // Interactive Onboarding Walkthrough State
+  const [showOnboarding, setShowOnboarding] = useState(false);
 
   // Local UI State
   const [showAbout, setShowAbout] = useState(false);
@@ -244,6 +249,19 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    if (['dashboard', 'report', 'library', 'roadmap'].includes(step)) {
+      const isCompleted = localStorage.getItem('onboarding_completed');
+      if (!isCompleted) {
+        // Trigger welcome onboarding walkthrough automatically
+        const timer = setTimeout(() => {
+          setShowOnboarding(true);
+        }, 1200);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [step]);
+
   const handleAuthenticate = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsAuthenticating(true);
@@ -354,7 +372,7 @@ export default function App() {
           <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-8 space-y-6">
             
             {/* Top Info Ribbon */}
-            <div className="flex flex-col sm:flex-row justify-between items-center bg-white/30 border border-white/60 p-4 rounded-3xl gap-4">
+            <div id="ob-top-ribbon" className="flex flex-col sm:flex-row justify-between items-center bg-white/30 border border-white/60 p-4 rounded-3xl gap-4">
               <div className="flex items-center gap-3">
                 <MeshBrain className="w-8 h-8 text-accent-purple" />
                 <div>
@@ -366,6 +384,7 @@ export default function App() {
               <div className="flex items-center gap-4 border-l border-purple-100/30 pl-4 flex-wrap">
                 <button onClick={() => { setIsDemoMode(false); setStep('welcome'); }} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#5c4ce1] hover:brightness-110 border border-[#5c4ce1]/25 px-4 py-1.5 rounded-full bg-[#5c4ce1]/5 shrink-0"><ArrowLeft className="w-3.5 h-3.5" /> Landing Page</button>
                 <button onClick={() => setShowApiConfig(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-accent-blue hover:brightness-110 border border-accent-blue/20 px-4 py-1.5 rounded-full bg-blue-50/10 shrink-0"><Key className="w-3.5 h-3.5" /> API Settings</button>
+                <button onClick={() => setShowOnboarding(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-accent-emerald hover:brightness-110 border border-accent-emerald/20 px-4 py-1.5 rounded-full bg-emerald-50/15 shrink-0 animate-pulse"><HelpCircle className="w-3.5 h-3.5" /> Interactive Tour</button>
                 <button onClick={() => setShowAbout(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#8161e1] hover:brightness-110 border border-[#8161e1]/20 px-4 py-1.5 rounded-full bg-[#8161e1]/8 shrink-0"><Sparkles className="w-3.5 h-3.5" /> About Platform</button>
                 <button onClick={() => setShowResetConfirm(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-accent-purple hover:brightness-110 border border-accent-purple/20 px-4 py-1.5 rounded-full bg-white/40 shrink-0"><RefreshCw className="w-3.5 h-3.5" /> Start Fresh</button>
                 <button onClick={handleShare} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-muted hover:text-primary shrink-0">{copied ? <Check className="w-3 h-3 text-accent-emerald" /> : <Share2 className="w-3.5 h-3.5" />}{copied ? "Copied" : "Share URL"}</button>
@@ -457,7 +476,7 @@ export default function App() {
               <div className="lg:col-span-3 space-y-6">
                 
                 {/* Active Navigation Capsule List */}
-                <div className="glow-card p-6 rounded-3xl space-y-2">
+                <div id="ob-nav-console" className="glow-card p-6 rounded-3xl space-y-2">
                   <div className="pb-4 border-b border-black/5">
                     <p className="micro-label">Laboratory Console</p>
                     <p className="text-xs font-serif text-primary font-bold">Workspace Navigation</p>
@@ -514,7 +533,7 @@ export default function App() {
                 </div>
 
                 {/* FOCUS MODE OSCILLATOR PLAYER */}
-                <div className="glow-card p-6 rounded-3xl space-y-4 bg-gradient-to-br from-white/60 to-white/20">
+                <div id="ob-focus-mode" className="glow-card p-6 rounded-3xl space-y-4 bg-gradient-to-br from-white/60 to-white/20">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-xs font-bold text-primary">Focus mode</p>
@@ -569,7 +588,7 @@ export default function App() {
               {activeTab === 'home' ? (
                 <>
                   {/* CENTER COLUMN: ACTIVE CONTENT VIEWS (6 COLS) */}
-                  <div className="lg:col-span-6 space-y-6">
+                  <div id="ob-main-workspace" className="lg:col-span-6 space-y-6">
                     <AnimatePresence mode="wait">
                       {step === 'dashboard' && (
                         <motion.div key="home-tab" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -613,7 +632,7 @@ export default function App() {
                     </div>
 
                     {/* FRMYTHING SAVE PROGRESS PANEL */}
-                    <div className="glow-card p-6 rounded-3xl space-y-4">
+                    <div id="ob-save-state" className="glow-card p-6 rounded-3xl space-y-4">
                       <p className="micro-label">Temporal Save State</p>
                       <p className="text-xs font-bold text-primary">Frmything Save</p>
 
@@ -670,6 +689,9 @@ export default function App() {
                         <span>13 Sessions tracked</span>
                       </div>
                     </div>
+
+                    {/* INTERACTIVE BROWSER INACTIVITY PORT PORTAL */}
+                    <NotificationScheduler />
 
                   </div>
                 </>
@@ -745,6 +767,16 @@ export default function App() {
       <FeedbackModal isOpen={showFeedback} onClose={() => setShowFeedback(false)} rating={feedbackRating} setRating={setFeedbackRating} text={feedbackText} setText={setFeedbackText} onSubmit={() => setShowFeedback(false)} isSubmitting={false} />
 
       <AnimatePresence>
+        {showOnboarding && (
+          <DashboardOnboardingWalkthrough 
+            onClose={() => setShowOnboarding(false)} 
+            onNavigateTab={(tab) => {
+              setActiveTab(tab);
+              setStep('dashboard');
+            }}
+            activeTab={activeTab}
+          />
+        )}
         {showAbout && <AboutView onClose={() => setShowAbout(false)} />}
         {showPrivacy && <PrivacyView onClose={() => setShowPrivacy(false)} />}
         {showContact && <ContactView onClose={() => setShowContact(false)} />}

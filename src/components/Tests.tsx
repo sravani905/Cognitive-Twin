@@ -203,8 +203,8 @@ export const ComprehensiveLocalTest = withStability(({ onComplete }: any) => {
 // --- Custom Hook for Dynamic Questions ---
 const useDynamicQuestions = (testType: string, difficulty: string, staticPool: any[], userProfile?: any, sessionKey?: number) => {
   const [questions, setQuestions] = useState<any[]>(() => {
-    // Instantly return pre-shuffled static pool to avoid any render-blocking delays
-    return [...staticPool].sort(() => Math.random() - 0.5).slice(0, Math.min(3, staticPool.length));
+    // Instantly return pre-shuffled static pool of 5 questions to mimic personalization when offline
+    return [...staticPool].sort(() => Math.random() - 0.5).slice(0, Math.min(5, staticPool.length));
   });
   
   const [isLoading, setIsLoading] = useState(() => {
@@ -849,7 +849,7 @@ export const DecisionTest = withStability(({ onComplete, difficulty = 'moderate'
   ];
 
   useEffect(() => {
-    const count = difficultyLevel === 3 ? 4 : difficultyLevel === 1 ? 2 : 3;
+    const count = 5;
     setShuffledScenarios([...scenarioPool].sort(() => Math.random() - 0.5).slice(0, count));
   }, [difficultyLevel, sessionKey]);
 
@@ -1478,7 +1478,7 @@ export const ExecutiveTest = withStability(({ onComplete, difficulty = 'moderate
       setScore(s => s + roundPoints);
     }
 
-    if (current + 1 < 4) {
+    if (current + 1 < 5) {
       setCurrent(c => c + 1);
       nextRound();
     } else {
@@ -1501,7 +1501,7 @@ export const ExecutiveTest = withStability(({ onComplete, difficulty = 'moderate
         description="Pick the COLOR of the word, not what the word says."
         icon={Activity}
       />
-      <ProgressBar current={current + 1} total={4} />
+      <ProgressBar current={current + 1} total={5} />
       <div className="w-full bg-white/95 border border-purple-100 rounded-3xl p-6 sm:p-10 space-y-12 flex flex-col items-center shadow-xl shadow-purple-600/5">
         <motion.div 
           key={current}
@@ -1582,7 +1582,7 @@ export const ResilienceTest = withStability(({ onComplete, difficulty = 'moderat
       setScore(s => s + gainedPoints);
     }
 
-    if (current + 1 < 4) {
+    if (current + 1 < 5) {
       setCurrent(c => c + 1);
       generateProblem();
     } else {
@@ -1601,7 +1601,7 @@ export const ResilienceTest = withStability(({ onComplete, difficulty = 'moderat
         description="Solve problems under increasing cognitive load and visual pressure."
         icon={Shield}
       />
-      <ProgressBar current={current + 1} total={4} />
+      <ProgressBar current={current + 1} total={5} />
       <div className={cn(
         "w-full bg-white/95 border border-purple-100 rounded-3xl p-6 sm:p-10 space-y-12 flex flex-col items-center relative overflow-hidden shadow-xl shadow-purple-600/5 transition-all duration-300",
         isDistracted && "bg-red-50/95 border-red-200"

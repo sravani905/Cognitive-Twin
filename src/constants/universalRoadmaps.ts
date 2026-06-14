@@ -94,6 +94,87 @@ export const UNIVERSAL_ROADMAPS: Record<string, any> = {
       }
     ]
   },
+  "Data Analyst": {
+    careerTitle: "Data Analyst",
+    overview: "Extracting insights from complex datasets to drive business decisions.",
+    phases: [
+      {
+        title: "Foundations of Quantitative Analysis",
+        description: "Establish solid ground of querying structures and statistical concepts necessary to organize unstructured datasets cleanly.",
+        milestones: [
+          "Master SQL queries (SELECT, JOIN, GROUP BY, CTEs, Window Functions)",
+          "Foundations of Descriptive Statistics (Mean, Median, Mode, Variance, Standard Deviation)",
+          "Excellence in Spreadsheet Modeling & Pivot Tables (Excel/Google Sheets)",
+          "Understanding Relational Database Management Systems (RDBMS)"
+        ],
+        resources: [
+          "SQL for Data Analysis Guide",
+          "Khan Academy Descriptive Statistics Course",
+          "Advanced Excel for Analytics Bootcamp"
+        ]
+      },
+      {
+        title: "Scientific Scripting & EDA (Python/R)",
+        description: "Transition from GUI-based analysis to programmatic scripting to unlock complex filtering pipelines and custom calculations.",
+        milestones: [
+          "Learn Python syntax and data structures (Lists, Dicts, Tuples)",
+          "Master Pandas & NumPy libraries for data manipulation and alignment",
+          "Perform Exploratory Data Analysis (EDA) to find correlations and outliers",
+          "Implement visual plots using Seaborn and Matplotlib"
+        ],
+        resources: [
+          "Kaggle Pandas Tutorials",
+          "Exploratory Data Analysis Cookbook",
+          "Python for Data Analysis by Wes McKinney"
+        ]
+      },
+      {
+        title: "Business Intelligence & Interactive Dashboards",
+        description: "Translate complex numeric indexes into intuitive, business-aligned visual representations that drive strategic decisions.",
+        milestones: [
+          "Design executive-ready interactive dashboards in Tableau or Power BI",
+          "Learn dimensional modeling (Stars, Snowflakes schemas)",
+          "Define key product KPIs (Retention Rate, CLV, Funnel Conversions)",
+          "Implement storytelling with data (Context, Clutter reduction, Visual hierarchy)"
+        ],
+        resources: [
+          "Storytelling with Data by Cole Nussbaumer Knaflic",
+          "Tableau Public Dashboard Gallery and Challenges",
+          "Microsoft Power BI Data Analyst Certification Path"
+        ]
+      },
+      {
+        title: "Statistical Testing & Predictive Modeling",
+        description: "Move from historical description to proactive hypothesis validation and trend projection using scientific statistical bounds.",
+        milestones: [
+          "Formulate Null and Alternative Hypotheses for Business Trials",
+          "Run A/B Testing, T-Tests, Chi-Square Tests with statistical safety confidence",
+          "Build simple Supervised Regression models (Linear, Logistic)",
+          "Identify Multicollinearity, Overfitting, and Bias in predictions"
+        ],
+        resources: [
+          "Hypothesis Testing in Python Practical Walkthrough",
+          "Introduction to Statistical Learning (ISLR)",
+          "StatQuest with Josh Starmer Regression YouTube Hub"
+        ]
+      },
+      {
+        title: "Data Storytelling & Strategic Synthesis",
+        description: "Elevate your technical proficiency to high-impact strategic influence, bridging cold numbers with critical human operations.",
+        milestones: [
+          "Synthesize structured analyst reports into concise executive decks",
+          "Present data insights live to cross-functional stakeholders",
+          "Engage in data governance, security, and ethical considerations",
+          "Establish continuous modern-stack automation using SQL agents or Airflow"
+        ],
+        resources: [
+          "Strategic Communication for Technologists Manual",
+          "Data Governance for Modern Lakehouses Guideline",
+          "Automating Analytics Workflows with Python Cron and Airflow"
+        ]
+      }
+    ]
+  },
   "Surgical Neuro-Specialist": {
     careerTitle: "Surgical Neuro-Specialist",
     overview: "Mastery of high-precision biological systems and cognitive hardware.",

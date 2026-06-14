@@ -474,12 +474,41 @@ export async function generateCognitiveInsights(profile: any) {
 }
 
 export async function generateDetailedRoadmap(careerTitle: string, profile: any) {
-  // Check for Universal Preloaded Roadmaps first - high fidelity, quota-proof
-  if (UNIVERSAL_ROADMAPS[careerTitle]) {
-    console.log(`Using universal preloaded roadmap for: ${careerTitle}`);
-    // Deep clone it to avoid accidental mutation
-    const roadmap = JSON.parse(JSON.stringify(UNIVERSAL_ROADMAPS[careerTitle]));
-    return { ...roadmap, id: `universal_${Date.now()}` };
+  // Check for Universal Preloaded Roadmaps first - case-insensitive and flexible key matching
+  const normalizedTitle = (careerTitle || "").toLowerCase().trim();
+  const matchedKey = Object.keys(UNIVERSAL_ROADMAPS).find(k => {
+    const kNorm = k.toLowerCase().trim();
+    return kNorm === normalizedTitle || kNorm.includes(normalizedTitle) || normalizedTitle.includes(kNorm);
+  });
+
+  if (matchedKey) {
+    console.log(`Using universal preloaded roadmap for: ${matchedKey}`);
+    const roadmap = JSON.parse(JSON.stringify(UNIVERSAL_ROADMAPS[matchedKey]));
+    
+    // Auto-enrich phases with descriptions and resources to prevent any layout deficiencies
+    roadmap.phases = (roadmap.phases || []).map((phase: any, idx: number) => {
+      const milestones = phase.milestones && phase.milestones.length > 0 
+        ? phase.milestones 
+        : (phase.tasks || [`Mastery phase completion of ${phase.title || "Foundations"}`]);
+      return {
+        phase: phase.phase || `Phase ${idx + 1}`,
+        title: phase.title || "Strategic Execution",
+        description: phase.description || `Build high-quality mastery of essential skills, tools, and practices required to excel in ${matchedKey} targets during this stage.`,
+        skills: phase.skills || [],
+        tools: phase.tools || [],
+        milestones: milestones,
+        resources: phase.resources || phase.freeResources || [
+          `${matchedKey} ${phase.title || "Domain"} Mastery Guide`,
+          `Interactive ${matchedKey} Practice Sandbox`,
+          "Open Learning Core Collaborative Syllabus"
+        ],
+        freeResources: phase.freeResources || phase.resources || [
+          `${matchedKey} ${phase.title || "Domain"} Mastery Guide`
+        ]
+      };
+    });
+
+    return { ...roadmap, careerTitle: matchedKey, id: `universal_${Date.now()}` };
   }
 
   if (!hasValidKey()) {
@@ -495,7 +524,8 @@ export async function generateDetailedRoadmap(careerTitle: string, profile: any)
           description: `Custom roadmap designed for the "${bestSet.archetype.title}" archetype using client-side decision-tree classification.`,
           skills: p.tasks.slice(0, 2),
           tools: p.tasks.slice(1, 4),
-          milestones: [`Mastery of ${p.stage}`],
+          milestones: p.tasks || [`Mastery of ${p.stage}`],
+          resources: ["K-NN Interactive Reference Study Guide", "Cogme Twin Open Learning Repository"],
           freeResources: ["K-NN Interactive Reference Study Guide", "Cogme Twin Open Learning Repository"]
         }))
       };
@@ -512,7 +542,8 @@ export async function generateDetailedRoadmap(careerTitle: string, profile: any)
             description: `Custom roadmap designed for the "${set.archetype.title}" archetype using client-side decision-tree classification.`,
             skills: p.tasks.slice(0, 2),
             tools: p.tasks.slice(1, 4),
-            milestones: [`Mastery of ${p.stage}`],
+            milestones: p.tasks || [`Mastery of ${p.stage}`],
+            resources: ["K-NN Interactive Reference Study Guide", "Cogme Twin Open Learning Repository"],
             freeResources: ["K-NN Interactive Reference Study Guide", "Cogme Twin Open Learning Repository"]
           }))
         };
@@ -700,15 +731,18 @@ export async function generateDynamicTestQuestions(testType: string, difficulty:
 
   const model = "gemini-3.5-flash";
   const randomSeed = Math.random().toString(36).substring(7);
+  const userProfileInfo = profile ? `User Profile Info - Field: ${profile.field || 'General'}, Focus Area: ${profile.interests || 'Cognitive Exploration'}` : '';
   const prompt = `
-    Generate 3 unique, diverse, and advanced "${testType}" cognitive test questions. 
+    Generate 5 unique, diverse, and highly personalized "${testType}" cognitive test questions tailored to learn and understand the user better.
     Difficulty Level: ${difficulty}.
+    ${userProfileInfo}
     
     CRITICAL: 
     - Do NOT repeat common or cliché questions. 
     - Ensure a mix of abstract, concrete, and scenario-based problems.
     - Each question should have 3-4 distinct options and one clear correct answer index.
     - Randomization Seed: ${randomSeed} (Use this to ensure high entropy in your choices).
+    - Leverage the user's field and focus level to seamlessly personalize these questions to challenge their domain of expertise and explore adjacent cognitive areas.
     
     Format the output as a JSON array of objects with the structure: { q: string, a: string[], correct: number, scores: number[] }.
     If the question is subjective (like Risk or Creativity), use 'scores' array to assign value to each option (0-100).

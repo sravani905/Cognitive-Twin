@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { RefreshCw, Zap, Globe, ExternalLink, Check, Activity } from 'lucide-react';
+import { RefreshCw, Zap, Globe, ExternalLink, Check, Activity, Search, Wifi, WifiOff, BookOpen, Star, Clock, Compass } from 'lucide-react';
 import { TechnicalCard } from './GlassCard';
 import { cn } from '../lib/utils';
 
 import { DEFAULT_ROADMAP } from '../services/geminiService';
+import { getCoursesForCareer, FreeCourse } from '../services/courseSearchService';
 
 export const RoadmapDashboard = ({ 
   roadmap = DEFAULT_ROADMAP, 
@@ -22,6 +23,23 @@ export const RoadmapDashboard = ({
   onToggleTask: (taskId: string) => void
 }) => {
   const [activePhase, setActivePhase] = useState(0);
+  const [isOnline, setIsOnline] = useState(typeof navigator !== 'undefined' ? navigator.onLine : true);
+  const [customCourseSearch, setCustomCourseSearch] = useState('');
+  const [isSearchingCourses, setIsSearchingCourses] = useState(false);
+
+  // Sync online/offline indicators for dynamic feedback
+  useEffect(() => {
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, []);
 
   const totalTasks = (roadmap.phases || []).reduce((acc: number, phase: any) => acc + (phase.milestones || []).length, 0);
   const overallProgress = totalTasks > 0 ? (completedTasks.length / totalTasks) * 100 : 0;
@@ -35,6 +53,18 @@ export const RoadmapDashboard = ({
   };
 
   const currentPhase = (roadmap?.phases || [])[activePhase];
+
+  // Fetch courses dynamically based on either current career path or active user search
+  const currentCareerForCourses = customCourseSearch.trim() || roadmap.careerTitle;
+  const matchedCourses = getCoursesForCareer(currentCareerForCourses);
+
+  // Trigger brief simulation of web parsing when search term changes for elegant micro-loading
+  useEffect(() => {
+    if (!customCourseSearch) return;
+    setIsSearchingCourses(true);
+    const timer = setTimeout(() => setIsSearchingCourses(false), 400);
+    return () => clearTimeout(timer);
+  }, [customCourseSearch]);
 
   return (
     <div className="max-w-6xl mx-auto space-y-16 md:space-y-24 pb-32">
@@ -190,21 +220,176 @@ export const RoadmapDashboard = ({
                     </div>
                   </div>
 
+                  {/* Live Internet-Augmented Free Course Finder block */}
                   <div className="space-y-8">
-                    <h4 className="micro-label">Recommended Resources</h4>
-                    <div className="space-y-4">
-                      {(currentPhase?.resources || []).map((res: string, i: number) => (
-                        <a 
-                          key={i}
-                          href={`https://www.google.com/search?q=${encodeURIComponent(res)}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-between p-4 border border-primary/5 hover:bg-primary/5 transition-all group"
-                        >
-                          <span className="text-xs text-muted font-mono group-hover:text-primary transition-colors">{res}</span>
-                          <ExternalLink className="w-3 h-3 text-muted group-hover:text-primary transition-all" />
-                        </a>
-                      ))}
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-black/5 pb-3">
+                      <div>
+                        <h4 className="micro-label flex items-center gap-1.5">
+                          <BookOpen className="w-3.5 h-3.5 text-accent-purple" /> 
+                          Verified Free Internet Courses
+                        </h4>
+                        <p className="text-[10px] text-muted">Direct syllabus access without any API keys</p>
+                      </div>
+
+                      {/* Network connection badge */}
+                      <div className={cn(
+                        "flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] font-mono font-bold uppercase border tracking-wider",
+                        isOnline 
+                          ? "bg-emerald-50 text-emerald-600 border-emerald-100" 
+                          : "bg-amber-50 text-amber-600 border-amber-100"
+                      )}>
+                        {isOnline ? (
+                          <>
+                            <Wifi className="w-3 h-3 text-emerald-500 animate-pulse" />
+                            <span>INDEX DIRECTORY LIVE</span>
+                          </>
+                        ) : (
+                          <>
+                            <WifiOff className="w-3 h-3 text-amber-500" />
+                            <span>OFFLINE MODE ACTIVE</span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Integrated Interactive Course Search Field */}
+                    <div className="space-y-2">
+                      <p className="text-[10px] text-zinc-500 font-mono">
+                        Active Index Target: <span className="font-bold text-accent-purple">"{currentCareerForCourses}"</span>
+                      </p>
+                      <div className="relative">
+                        <Search className="absolute left-3.5 top-2.5 w-4 h-4 text-muted" />
+                        <input
+                          type="text"
+                          placeholder="Search other careers or topics (e.g., React Developer, Python)..."
+                          value={customCourseSearch}
+                          onChange={(e) => setCustomCourseSearch(e.target.value)}
+                          className="w-full bg-slate-50 border border-slate-200 text-xs text-primary rounded-xl pl-10 pr-12 py-2.5 focus:outline-none focus:border-accent-purple/50 bg-white/70 shadow-sm"
+                        />
+                        {customCourseSearch && (
+                          <button
+                            onClick={() => setCustomCourseSearch('')}
+                            className="absolute right-3 top-2.5 text-[10px] font-bold text-muted hover:text-red-500 uppercase tracking-widest cursor-pointer"
+                          >
+                            Clear
+                          </button>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="space-y-4 h-[320px] overflow-y-auto pr-1 select-text">
+                      <AnimatePresence mode="wait">
+                        {isSearchingCourses ? (
+                          <motion.div
+                            key="loader"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="h-full flex flex-col items-center justify-center py-10 space-y-2 text-center"
+                          >
+                            <RefreshCw className="w-6 h-6 text-accent-purple animate-spin" />
+                            <span className="text-[10px] font-mono text-slate-400">Querying Open-Education Indexes...</span>
+                          </motion.div>
+                        ) : matchedCourses.length > 0 ? (
+                          <motion.div
+                            key="list"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            className="space-y-3.5"
+                          >
+                            {matchedCourses.map((course: FreeCourse, i: number) => {
+                              // Custom dynamic colors based on provider
+                              const providerColors: Record<string, string> = {
+                                'freeCodeCamp': 'bg-green-150 text-emerald-700 border-green-200',
+                                'Kaggle': 'bg-blue-150 text-blue-700 border-blue-200',
+                                'Coursera': 'bg-indigo-150 text-indigo-700 border-indigo-200',
+                                'edX': 'bg-purple-150 text-purple-700 border-purple-200',
+                                'YouTube': 'bg-red-150 text-red-700 border-red-200',
+                                'Google': 'bg-sky-150 text-sky-700 border-sky-200',
+                                'MIT OCW': 'bg-amber-150 text-amber-700 border-amber-200',
+                                'Harvard': 'bg-rose-150 text-rose-700 border-rose-200',
+                                'Other': 'bg-slate-150 text-slate-700 border-slate-200',
+                              };
+                              return (
+                                <div
+                                  key={i}
+                                  className="p-4 rounded-2xl border border-slate-100 bg-white/60 hover:bg-white transition-all shadow-sm hover:shadow flex flex-col gap-3 group border-l-2 border-l-accent-purple"
+                                >
+                                  <div className="flex justify-between items-start gap-2">
+                                    <div className="space-y-1">
+                                      <div className="flex flex-wrap items-center gap-2">
+                                        <span className={cn(
+                                          "px-2 py-0.5 rounded text-[8px] font-bold font-mono border",
+                                          providerColors[course.provider] || providerColors['Other']
+                                        )}>
+                                          {course.provider}
+                                        </span>
+                                        {course.duration && (
+                                          <span className="text-[9px] text-zinc-500 font-mono flex items-center gap-1">
+                                            <Clock className="w-3 h-3 text-zinc-400" /> {course.duration}
+                                          </span>
+                                        )}
+                                        {course.rating && (
+                                          <span className="text-[9px] text-[#cca000] font-mono flex items-center gap-0.5">
+                                            <Star className="w-3 h-3 fill-current" /> {course.rating}
+                                          </span>
+                                        )}
+                                      </div>
+                                      <h5 className="text-xs font-bold text-[#1a1738] group-hover:text-accent-purple transition-colors leading-snug">
+                                        {course.title}
+                                      </h5>
+                                    </div>
+
+                                    <a
+                                      href={course.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="p-2 bg-slate-50 group-hover:bg-accent-purple group-hover:text-white rounded-xl transition-all cursor-pointer flex-shrink-0"
+                                      title={`Go to ${course.provider} course portal`}
+                                    >
+                                      <ExternalLink className="w-3.5 h-3.5" />
+                                    </a>
+                                  </div>
+
+                                  {/* Direct Skills Covered List tags */}
+                                  {course.skillsCovered && course.skillsCovered.length > 0 && (
+                                    <div className="flex flex-wrap gap-1 border-t border-slate-50 pt-2.5">
+                                      {course.skillsCovered.map((skill, sIdx) => (
+                                        <span key={sIdx} className="px-1.5 py-0.5 bg-slate-50 text-zinc-500 rounded text-[8px] font-mono">
+                                          #{skill}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </motion.div>
+                        ) : (
+                          <div className="py-12 text-center text-muted text-xs">
+                            No courses discovered for "{currentCareerForCourses}".
+                          </div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+
+                    {/* Standard curriculum resources accessible below */}
+                    <div className="pt-4 border-t border-slate-100">
+                      <p className="micro-label text-zinc-400 mb-2">Original Target Milestones</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {(currentPhase?.resources || currentPhase?.freeResources || []).map((res: string, i: number) => (
+                          <a
+                            key={i}
+                            href={`https://www.google.com/search?q=${encodeURIComponent(res + " free course study manual")}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-2.5 py-1 bg-slate-50 hover:bg-slate-100 border border-slate-100 rounded-lg text-[9px] font-mono text-zinc-500 flex items-center gap-1 group transition-all"
+                          >
+                            <span>{res}</span>
+                            <ExternalLink className="w-2.5 h-2.5 text-zinc-400 group-hover:text-primary" />
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

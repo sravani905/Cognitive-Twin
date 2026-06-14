@@ -138,7 +138,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
             </div>
 
             {/* Bottom 3-Pill Interactive Cards Grid Section (matching Image 7) */}
-            <div className="w-full max-w-5xl px-4 grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 z-10">
+            <div className="w-full max-w-5xl px-4 grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 z-10 font-sans">
               
               {/* Pill Card 1: Mind Profile */}
               <div 
@@ -153,9 +153,9 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                       🧠
                     </div>
                   </div>
-                  <div className="space-y-0.5">
+                  <div className="space-y-0.5 text-left">
                     <h3 className="text-xs font-bold text-[#1e1a42] uppercase tracking-wider font-sans leading-none">Mind Profile Demo</h3>
-                    <p className="text-[11px] text-[#7c779e] font-sans">See How It's Calculated</p>
+                    <p className="text-[11px] text-[#7c779e] font-sans">See how your unique strengths are mapped</p>
                   </div>
                 </div>
                 <div className="text-[#a78bfa] group-hover:translate-x-1 transition-transform">→</div>
@@ -174,9 +174,9 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                       <Briefcase className="w-4.5 h-4.5 text-[#8161e1]" />
                     </div>
                   </div>
-                  <div className="space-y-0.5">
+                  <div className="space-y-0.5 text-left">
                     <h3 className="text-xs font-bold text-[#1e1a42] uppercase tracking-wider font-sans leading-none">Career Matches Demo</h3>
-                    <p className="text-[11px] text-[#7c779e] font-sans">See How KNN Math Maps It</p>
+                    <p className="text-[11px] text-[#7c779e] font-sans">Find job clusters that fit your personality</p>
                   </div>
                 </div>
                 <div className="text-[#a78bfa] group-hover:translate-x-1 transition-transform">→</div>
@@ -195,9 +195,9 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                       <TrendingUp className="w-4.5 h-4.5 text-[#d470a1]" />
                     </div>
                   </div>
-                  <div className="space-y-0.5">
+                  <div className="space-y-0.5 text-left">
                     <h3 className="text-xs font-bold text-[#1e1a42] uppercase tracking-wider font-sans leading-none">Growth Map Demo</h3>
-                    <p className="text-[11px] text-[#7c779e] font-sans">See Projection coordinate equations</p>
+                    <p className="text-[11px] text-[#7c779e] font-sans">Set personal steps to grow your traits</p>
                   </div>
                 </div>
                 <div className="text-[#a78bfa] group-hover:translate-x-1 transition-transform">→</div>
@@ -408,7 +408,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               initial={{ opacity: 0, scale: 0.95, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
-              className="bg-white/95 backdrop-blur-2xl rounded-[2.5rem] border border-purple-100 shadow-2xl p-6 sm:p-10 w-full max-w-2xl max-h-[85vh] overflow-y-auto relative space-y-6 text-slate-800"
+              className="bg-white/95 backdrop-blur-2xl rounded-[2.5rem] border border-purple-100 shadow-2xl p-6 sm:p-10 w-full max-w-2xl max-h-[85vh] overflow-y-auto relative space-y-6 text-slate-800 font-sans"
             >
               <button 
                 onClick={() => setActiveDemo(null)}
@@ -417,46 +417,46 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                 ×
               </button>
 
-              <div className="space-y-1.5">
+              <div className="space-y-1.5 text-left font-sans">
                 <span className="text-[10px] font-mono tracking-widest text-[#8161e1] font-bold uppercase block">
                   COGNITIVE PROFILE WORKFLOW
                 </span>
                 <h2 className="text-3xl font-serif italic text-[#1e1a42] tracking-tight font-normal">
-                  How is your Mind Profile Generated?
+                  Unlocking Your Mind's Potential
                 </h2>
                 <p className="text-xs text-slate-500 font-sans leading-relaxed">
-                  Your digital mind profile translates complex interactive tests into standardized bell-curve performance markers.
+                  Discover how our friendly, game-like exercises translate into a beautiful visual map of your core attributes. No stress, no complex tests!
                 </p>
               </div>
 
-              {/* Workflow Flowcharts */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                <div className="p-3.5 bg-indigo-50/50 rounded-2xl border border-indigo-150/20 text-left">
-                  <span className="font-mono text-xs font-bold text-[#8161e1] block mb-0.5">01. TRIAL METRIC CAPTURE</span>
-                  <p className="text-[10px] text-slate-600 leading-snug">Tracks raw response correctness metrics alongside millisecond latency values during active session gameplay.</p>
+              {/* Workflow Flowcharts simplified */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 font-sans">
+                <div className="p-3.5 bg-indigo-50/50 rounded-2xl border border-indigo-150/20 text-left font-sans">
+                  <span className="font-sans text-xs font-bold text-[#8161e1] block mb-0.5">01. FUN TASKS</span>
+                  <p className="text-[10.5px] text-slate-600 leading-normal">Play responsive mental games that measure your reactions in a totally stress-free way.</p>
                 </div>
-                <div className="p-3.5 bg-violet-50/50 rounded-2xl border border-violet-150/20 text-left">
-                  <span className="font-mono text-xs font-bold text-[#8161e1] block mb-0.5">02. BELL-CURVE NORMALIZATION</span>
-                  <p className="text-[10px] text-slate-600 leading-snug">Maps raw results to standard Gaussian distributions: <code className="text-pink-600 font-mono font-bold text-[9px]">Z = (X - μ) / σ</code> against cohort baselines.</p>
+                <div className="p-3.5 bg-violet-50/50 rounded-2xl border border-violet-150/20 text-left font-sans">
+                  <span className="font-sans text-xs font-bold text-[#8161e1] block mb-0.5">02. WHERE YOU STAND</span>
+                  <p className="text-[10.5px] text-slate-600 leading-normal">Instead of scary pass/fail grades, we balance your score to show where your natural talents shine.</p>
                 </div>
-                <div className="p-3.5 bg-pink-50/50 rounded-2xl border border-pink-150/20 text-left">
-                  <span className="font-mono text-xs font-bold text-pink-600 block mb-0.5">03. COMPOSITE RADAR PROJECTION</span>
-                  <p className="text-[10px] text-slate-600 leading-snug">Symmetrically groups independent lobe scores onto five key intellectual dimension vectors for profile validation.</p>
+                <div className="p-3.5 bg-pink-50/50 rounded-2xl border border-pink-150/20 text-left font-sans">
+                  <span className="font-sans text-xs font-bold text-pink-600 block mb-0.5">03. YOUR RADAR MAP</span>
+                  <p className="text-[10.5px] text-slate-600 leading-normal">We organize your strengths into five simple categories to create your gorgeous personal chart.</p>
                 </div>
               </div>
 
               {/* Live Interactive Sandbox Calculator */}
-              <div className="bg-[#FAF9FE] border border-purple-100 rounded-3xl p-5 space-y-4">
+              <div className="bg-[#FAF9FE] border border-purple-100 rounded-3xl p-5 space-y-4 font-sans text-left">
                 <h3 className="text-xs font-bold text-[#1e1a42] uppercase tracking-wider font-sans flex items-center gap-2">
-                  🧮 Interactive Mind Profile Sandbox
+                  🧮 Try Your Strengths Slider Sandbox
                 </h3>
                 <p className="text-[11px] text-slate-500 font-sans">
-                  Slide parameters to preview simulated client-side mathematical index aggregation:
+                  Drag the sliders below to see how easy it is to trace your skills in real-time:
                 </p>
 
                 <div className="space-y-3.5 pt-1">
                   <div className="space-y-1">
-                    <div className="flex justify-between text-xs">
+                    <div className="flex justify-between text-xs font-sans">
                       <span className="font-medium text-slate-700">Executive Attention Speed</span>
                       <span className="font-mono font-bold text-[#8161e1]">{sumAttention}%</span>
                     </div>
@@ -467,7 +467,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                     />
                   </div>
 
-                  <div className="space-y-1">
+                  <div className="space-y-1 font-sans">
                     <div className="flex justify-between text-xs">
                       <span className="font-medium text-slate-700">Logical Reasoning Accuracy</span>
                       <span className="font-mono font-bold text-[#8161e1]">{sumReasoning}%</span>
@@ -479,8 +479,8 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                     />
                   </div>
 
-                  <div className="space-y-1">
-                    <div className="flex justify-between text-xs">
+                  <div className="space-y-1 font-sans">
+                    <div className="flex justify-between text-xs font-sans">
                       <span className="font-medium text-slate-700">Spatial Invariant Transform</span>
                       <span className="font-mono font-bold text-[#8161e1]">{sumSpatial}%</span>
                     </div>
@@ -492,23 +492,27 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                   </div>
                 </div>
 
-                {/* Real-time Equations block */}
-                <div className="p-4 bg-slate-900 text-slate-200 rounded-2xl font-mono text-[10px] space-y-1.5 text-left leading-normal">
-                  <p className="text-purple-400 font-bold">REAL-TIME FORMULAS:</p>
-                  <p className="text-white">Mean Mind Score (M) = ({sumAttention} + {sumReasoning} + {sumSpatial}) / 3 = {Math.round((sumAttention + sumReasoning + sumSpatial) / 3)}%</p>
-                  <p className="text-slate-400">Baseline Cohort Constants: Mean (μ) = 72.0%, StdDev (σ) = 11.5%</p>
-                  <p className="text-pink-300 font-bold">Computed Z-Score = (M - μ) / σ = ({(sumAttention + sumReasoning + sumSpatial) / 3 === 72 ? "72.0" : Math.round((sumAttention + sumReasoning + sumSpatial) / 3)} - 72.0) / 11.5 = {(((sumAttention + sumReasoning + sumSpatial)/3 - 72) / 11.5).toFixed(2)}</p>
-                  <div className="pt-2.5 border-t border-white/10 mt-2.5 flex justify-between items-center text-xs">
-                    <span className="text-slate-350">Dynamic Classification Tier:</span>
-                    <span className="bg-emerald-500/20 text-emerald-300 font-bold px-2.5 py-1 rounded text-[10px] uppercase font-sans tracking-wider">
-                      {Math.round((sumAttention + sumReasoning + sumSpatial) / 3) >= 86 ? "Superior (Level 5)" : Math.round((sumAttention + sumReasoning + sumSpatial) / 3) >= 72 ? "Optimal (Level 4)" : "Standard (Level 3)"}
+                {/* Real-time intuitive display instead of formula */}
+                <div className="p-4 bg-slate-900 text-slate-200 rounded-2xl font-sans text-xs space-y-2.5 text-left leading-relaxed">
+                  <p className="text-purple-300 font-bold uppercase tracking-wider text-[10px]">✨ YOUR ESTIMATED TALENT RATING:</p>
+                  <div>
+                    <span className="text-white font-medium">Overall Average Score:</span>{" "}
+                    <span className="text-emerald-400 font-mono font-bold">{Math.round((sumAttention + sumReasoning + sumSpatial) / 3)}%</span>
+                  </div>
+                  <p className="text-slate-300 text-[11px]">
+                    This overall average combines your attention, logic, and visualization levels instantly. You won't have to carry out any manual calculation!
+                  </p>
+                  <div className="pt-2 border-t border-white/10 mt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <span className="text-slate-400 font-medium">Your Cognitive Skill Rank:</span>
+                    <span className="bg-emerald-500/20 text-emerald-300 font-bold px-3 py-1 rounded text-[10px] uppercase tracking-wider text-center">
+                      {Math.round((sumAttention + sumReasoning + sumSpatial) / 3) >= 86 ? "Superior Talent Tier" : Math.round((sumAttention + sumReasoning + sumSpatial) / 3) >= 72 ? "Optimal Talent Tier" : "Growing Talent Tier"}
                     </span>
                   </div>
                 </div>
               </div>
 
               {/* CTA buttons */}
-              <div className="flex gap-3 justify-end pt-2">
+              <div className="flex gap-3 justify-end pt-2 font-sans font-sans">
                 <button 
                   onClick={() => setActiveDemo(null)}
                   className="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full text-xs font-semibold uppercase tracking-wider cursor-pointer"
@@ -537,7 +541,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               initial={{ opacity: 0, scale: 0.95, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
-              className="bg-white/95 backdrop-blur-2xl rounded-[2.5rem] border border-purple-100 shadow-2xl p-6 sm:p-10 w-full max-w-2xl max-h-[85vh] overflow-y-auto relative space-y-6 text-slate-800"
+              className="bg-white/95 backdrop-blur-2xl rounded-[2.5rem] border border-purple-100 shadow-2xl p-6 sm:p-10 w-full max-w-2xl max-h-[85vh] overflow-y-auto relative space-y-6 text-slate-800 font-sans"
             >
               <button 
                 onClick={() => setActiveDemo(null)}
@@ -546,39 +550,36 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                 ×
               </button>
 
-              <div className="space-y-1.5">
+              <div className="space-y-1.5 text-left font-sans">
                 <span className="text-[10px] font-mono tracking-widest text-[#8161e1] font-bold uppercase block">
-                  K-NEAREST NEIGHBORS (K-NN) ALGORITHM DEMONSTRATION
+                  INTELLIGENT MATCHING PROCESS
                 </span>
                 <h2 className="text-3xl font-serif italic text-[#1e1a42] tracking-tight font-normal">
-                  How are your Career Best Fits Calculated?
+                  Finding Your Perfect Career Matches
                 </h2>
                 <p className="text-xs text-slate-500 font-sans leading-relaxed">
-                  The system models your cognitive scores as a point coordinates inside our database vector, running real-time distance sorting to compute matching profiles.
+                  We compare your custom scores in real-time with baseline profiles of top industry careers to instantly pinpoint where your talents fit best.
                 </p>
               </div>
 
-              {/* Math banner math definition */}
-              <div className="bg-[#FAF9FE] p-4.5 rounded-2xl border border-purple-100 text-center space-y-1.5">
-                <p className="text-xs text-slate-700 font-sans font-semibold">10-Dimensional Euclidean Metric Distance formulation formula:</p>
-                <div className="py-2.5 px-6 bg-white border border-purple-200/60 text-[#8161e1] font-mono text-sm inline-block rounded-xl font-bold tracking-widest shadow-sm">
-                  d = √ [ (U_att - C_att)² + (U_log - C_log)² + (U_cre - C_cre)² ]
-                </div>
-                <p className="text-[9px] text-slate-500 font-mono">
-                  Coordinates represent User Vector (<code className="text-[#8161e1]">U</code>) relative to corporate benchmark archetypes centers (<code className="text-pink-600">C</code>).
+              {/* Intuitive visual explanation banner */}
+              <div className="bg-[#FAF9FE] p-5 rounded-2xl border border-purple-100 text-left space-y-2 font-sans">
+                <p className="text-xs text-slate-700 font-sans font-bold">🗺️ How matching works on a skill map:</p>
+                <p className="text-[11px] text-slate-600 leading-normal font-sans">
+                  Think of your skills as standard directions on a map. By matching how high your level of Logic or Attention is against standard industry requirements, we find the "closest" careers. The closer an activity is to your style, the higher your match percentage!
                 </p>
               </div>
 
               {/* Live sandbox vectors */}
-              <div className="bg-[#FAF9FE] border border-purple-100 rounded-3xl p-5 space-y-4">
+              <div className="bg-[#FAF9FE] border border-purple-100 rounded-3xl p-5 space-y-4 text-left font-sans">
                 <h3 className="text-xs font-bold text-[#1e1a42] uppercase tracking-wider font-sans flex items-center gap-2">
-                  🛰️ Adjust User Coordinate Vector [U] Right Now
+                  🎯 Try Customizing Your Skill Levels Right Now
                 </h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                  <div className="space-y-1">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 font-sans">
+                  <div className="space-y-1 font-sans">
                     <div className="flex justify-between text-[11px] font-bold text-slate-600">
-                      <span>Attention (U_att)</span>
+                      <span>Attention Level</span>
                       <span className="font-mono text-purple-600">{guestKnnAttention}%</span>
                     </div>
                     <input 
@@ -588,9 +589,9 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                     />
                   </div>
 
-                  <div className="space-y-1">
+                  <div className="space-y-1 font-sans">
                     <div className="flex justify-between text-[11px] font-bold text-slate-600">
-                      <span>Logical (U_log)</span>
+                      <span>Logical Power</span>
                       <span className="font-mono text-purple-600">{guestKnnLogic}%</span>
                     </div>
                     <input 
@@ -600,9 +601,9 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                     />
                   </div>
 
-                  <div className="space-y-1">
+                  <div className="space-y-1 font-sans">
                     <div className="flex justify-between text-[11px] font-bold text-slate-600">
-                      <span>Creative (U_cre)</span>
+                      <span>Creative Focus</span>
                       <span className="font-mono text-purple-600">{guestKnnCreativity}%</span>
                     </div>
                     <input 
@@ -613,9 +614,9 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                   </div>
                 </div>
 
-                {/* Simulated distance outputs table */}
-                <div className="space-y-2 pt-2 text-left">
-                  <span className="text-[9px] font-mono font-bold uppercase text-slate-400 tracking-wider">Dynamic Distance Calculations:</span>
+                {/* Simulated distance outputs table with clean progress bars */}
+                <div className="space-y-2 pt-2 text-left font-sans">
+                  <span className="text-[10px] font-sans font-bold uppercase text-slate-400 tracking-wider">Dynamic Career Fit Estimation:</span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     
                     {/* Centroid 1 */}
@@ -623,13 +624,19 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                       const d = Math.sqrt(Math.pow(guestKnnAttention - 90, 2) + Math.pow(guestKnnLogic - 95, 2) + Math.pow(guestKnnCreativity - 45, 2));
                       const percent = Math.max(0, Math.min(100, Math.round(100 * (1 - d / 120))));
                       return (
-                        <div className="bg-white p-3 rounded-2xl border border-slate-100 flex flex-col justify-between space-y-1.5 shadow-sm">
+                        <div className="bg-white p-4.5 rounded-2xl border border-slate-100 flex flex-col justify-between space-y-2.5 shadow-sm font-sans text-left">
                           <div className="flex justify-between items-start">
-                            <span className="font-bold text-slate-800 text-[11px] leading-tight block">🔬 Quantitative AI Modeler <span className="text-[9px] font-mono text-slate-400 block mt-0.5">Centroid = [90, 95, 45]</span></span>
-                            <span className="text-indigo-600 font-mono font-bold text-xs">{percent}% fit</span>
+                            <div>
+                              <span className="font-bold text-slate-800 text-xs leading-tight block">🔬 Data Scientist & AI Researcher</span>
+                              <span className="text-[9.5px] text-slate-400 block mt-0.5">High Focus & Logic Benchmark</span>
+                            </div>
+                            <span className="text-indigo-600 font-sans font-bold text-xs">{percent}% fit</span>
                           </div>
-                          <div className="text-[9px] font-mono text-slate-450 bg-slate-50 p-1.5/2 rounded p-1 border border-slate-100">
-                            d = √[({guestKnnAttention}-90)² + ({guestKnnLogic}-95)² + ({guestKnnCreativity}-45)²] = {d.toFixed(1)} distance units.
+                          <div className="space-y-1">
+                            <div className="h-2 bg-slate-100 rounded-full overflow-hidden mt-1">
+                              <div className="h-full bg-indigo-500 rounded-full transition-all duration-300" style={{ width: `${percent}%` }} />
+                            </div>
+                            <span className="text-[9px] text-slate-400 block">Matches closely with systematic, detail-oriented styles.</span>
                           </div>
                         </div>
                       );
@@ -640,13 +647,19 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                       const d = Math.sqrt(Math.pow(guestKnnAttention - 55, 2) + Math.pow(guestKnnLogic - 60, 2) + Math.pow(guestKnnCreativity - 92, 2));
                       const percent = Math.max(0, Math.min(100, Math.round(100 * (1 - d / 120))));
                       return (
-                        <div className="bg-white p-3 rounded-2xl border border-slate-100 flex flex-col justify-between space-y-1.5 shadow-sm">
+                        <div className="bg-white p-4.5 rounded-2xl border border-slate-100 flex flex-col justify-between space-y-2.5 shadow-sm font-sans text-left">
                           <div className="flex justify-between items-start">
-                            <span className="font-bold text-slate-800 text-[11px] leading-tight block">🎨 Narrative UX Architect <span className="text-[9px] font-mono text-slate-400 block mt-0.5">Centroid = [55, 60, 92]</span></span>
-                            <span className="text-pink-600 font-mono font-bold text-xs">{percent}% fit</span>
+                            <div>
+                              <span className="font-bold text-slate-800 text-xs leading-tight block">🎨 Creative Product Designer</span>
+                              <span className="text-[9.5px] text-slate-400 block mt-0.5">High Imagination & Fluid Benchmark</span>
+                            </div>
+                            <span className="text-pink-600 font-sans font-bold text-xs">{percent}% fit</span>
                           </div>
-                          <div className="text-[9px] font-mono text-slate-450 bg-slate-50 p-1.5/2 rounded p-1 border border-slate-100">
-                            d = √[({guestKnnAttention}-55)² + ({guestKnnLogic}-60)² + ({guestKnnCreativity}-92)²] = {d.toFixed(1)} distance units.
+                          <div className="space-y-1">
+                            <div className="h-2 bg-slate-100 rounded-full overflow-hidden mt-1">
+                              <div className="h-full bg-pink-500 rounded-full transition-all duration-300" style={{ width: `${percent}%` }} />
+                            </div>
+                            <span className="text-[9px] text-slate-400 block">Matches closely with visual, divergent, and human-centric styles.</span>
                           </div>
                         </div>
                       );
@@ -657,7 +670,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               </div>
 
               {/* Buttons Footer */}
-              <div className="flex gap-3 justify-end pt-2">
+              <div className="flex gap-3 justify-end pt-2 font-sans">
                 <button 
                   onClick={() => setActiveDemo(null)}
                   className="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full text-xs font-semibold uppercase tracking-wider cursor-pointer"
@@ -668,7 +681,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                   onClick={() => { setActiveDemo(null); setView('auth'); }}
                   className="px-5 py-2.5 bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white rounded-full text-xs font-semibold uppercase tracking-wider shadow-md hover:brightness-105 transition-all cursor-pointer"
                 >
-                  Start Assessment Path
+                  Start Assessment Mapped Path
                 </button>
               </div>
             </motion.div>
@@ -678,7 +691,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
         {activeDemo === 'map' && (
           <motion.div 
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: 0.95 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-[#161234]/75 backdrop-blur-md flex items-center justify-center p-4"
           >
@@ -686,7 +699,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               initial={{ opacity: 0, scale: 0.95, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
-              className="bg-white/95 backdrop-blur-2xl rounded-[2.5rem] border border-purple-100 shadow-2xl p-6 sm:p-10 w-full max-w-2xl max-h-[85vh] overflow-y-auto relative space-y-6 text-slate-800"
+              className="bg-white/95 backdrop-blur-2xl rounded-[2.5rem] border border-purple-100 shadow-2xl p-6 sm:p-10 w-full max-w-2xl max-h-[85vh] overflow-y-auto relative space-y-6 text-slate-800 font-sans"
             >
               <button 
                 onClick={() => setActiveDemo(null)}
@@ -695,26 +708,26 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                 ×
               </button>
 
-              <div className="space-y-1.5">
+              <div className="space-y-1.5 text-left font-sans">
                 <span className="text-[10px] font-mono tracking-widest text-[#8161e1] font-bold uppercase block">
-                  COORDINATE DIMENSION MAPPING MATRIX & PLOT
+                  COORDINATE DIMENSION MAPPING
                 </span>
                 <h2 className="text-3xl font-serif italic text-[#1e1a42] tracking-tight font-normal">
                   How is your Growth Map Generated?
                 </h2>
                 <p className="text-xs text-slate-500 font-sans leading-relaxed">
-                  The system project coordinates onto a neat 2D map space using weighted reduction equations, displaying your balance between logic and fluid creativity.
+                  We translate your answers directly into a friendly visual coordinates point. You'll instantly see standard paths on where you stand and how you can naturally expand.
                 </p>
               </div>
 
               {/* Sliders sandbox */}
-              <div className="bg-[#FAF9FE] border border-purple-100 rounded-3xl p-5 space-y-4">
+              <div className="bg-[#FAF9FE] border border-purple-100 rounded-3xl p-5 space-y-4 text-left font-sans">
                 <h3 className="text-xs font-bold text-[#1e1a42] uppercase tracking-wider font-sans">
-                  📐 Live Projection Formula Sandbox
+                  📐 Try Moving the Mapping Sandbox Sliders
                 </h3>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 py-1">
-                  <div className="space-y-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 py-1 font-sans">
+                  <div className="space-y-1 font-sans">
                     <div className="flex justify-between text-[11px] font-bold text-pink-700">
                       <span>Divergent Creativity Rating</span>
                       <span className="font-mono text-pink-600">{guestProjCreativity}%</span>
@@ -726,7 +739,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                     />
                   </div>
 
-                  <div className="space-y-1">
+                  <div className="space-y-1 font-sans">
                     <div className="flex justify-between text-[11px] font-bold text-indigo-700">
                       <span>Logical / Analytical Power</span>
                       <span className="font-mono text-indigo-600">{guestProjLogic}%</span>
@@ -741,30 +754,30 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
 
                 {/* Plot calculations */}
                 {(() => {
-                  const xCoord = Math.round(5 + (guestProjCreativity * 0.9));
-                  const yCoord = Math.round(5 + (guestProjLogic * 0.9));
+                  const xCoord = Math.round(5 + (guestProjCreativity * 0.88));
+                  const yCoord = Math.round(5 + (guestProjLogic * 0.88));
                   return (
-                    <div className="space-y-3.5">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[10px] font-mono leading-tight">
-                        <div className="p-3 bg-pink-50/70 border border-pink-100 rounded-xl">
-                          <span className="font-bold text-pink-800">Horizontal Coordinate Map X:</span>
-                          <p className="mt-1 font-bold">X = ({guestProjCreativity} × 0.9) + 5 = {xCoord}%</p>
+                    <div className="space-y-3.5 font-sans">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs leading-normal font-sans">
+                        <div className="p-3 bg-pink-50/70 border border-pink-100 rounded-xl text-left font-sans">
+                          <span className="font-bold text-pink-805 block text-[11px]">Horizontal Position (Creative Value):</span>
+                          <p className="mt-1 font-semibold text-pink-700">{xCoord}% width mapping</p>
                         </div>
-                        <div className="p-3 bg-indigo-50/70 border border-indigo-100 rounded-xl">
-                          <span className="font-bold text-indigo-800">Vertical Coordinate Map Y:</span>
-                          <p className="mt-1 font-bold">Y = ({guestProjLogic} × 0.9) + 5 = {yCoord}%</p>
+                        <div className="p-3 bg-indigo-50/70 border border-indigo-100 rounded-xl text-left font-sans">
+                          <span className="font-bold text-indigo-805 block text-[11px]">Vertical Position (Logical Value):</span>
+                          <p className="mt-1 font-semibold text-indigo-700">{yCoord}% height mapping</p>
                         </div>
                       </div>
 
                       {/* Canvas map plotting */}
-                      <div className="relative h-44 w-full bg-[#14102e] border border-white/5 rounded-2xl overflow-hidden flex items-center justify-center shadow-inner">
+                      <div className="relative h-44 w-full bg-[#14102e] border border-white/5 rounded-2xl overflow-hidden flex items-center justify-center shadow-inner font-sans">
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px))] bg-[size:14px_14px]" />
                         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px))] bg-[size:14px_14px]" />
                         <div className="absolute inset-x-0 h-[1.5px] bg-white/5 top-1/2" />
                         <div className="absolute inset-y-0 w-[1.5px] bg-white/5 left-1/2" />
 
-                        <span className="absolute left-3.5 top-2 text-[8px] font-mono text-slate-550">ANALYTICAL SPECTRA ▲</span>
-                        <span className="absolute right-3.5 bottom-2 text-[8px] font-mono text-slate-550">CREATIVE VARIANCE ▶</span>
+                        <span className="absolute left-3.5 top-2 text-[8px] font-sans tracking-wider text-slate-400">ANALYTICAL SPECTRA ▲</span>
+                        <span className="absolute right-3.5 bottom-2 text-[8px] font-sans tracking-wider text-slate-400">CREATIVE VARIANCE ▶</span>
 
                         {/* Normalized Plot position */}
                         <motion.div 
@@ -777,8 +790,8 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                           <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
                         </motion.div>
 
-                        <div className="absolute bottom-2.5 left-2.5 bg-[#14102e]/90 border border-white/10 px-2 py-1 rounded-lg text-[8px] font-mono text-purple-200">
-                          Projection: [X:{xCoord}, Y:{yCoord}]
+                        <div className="absolute bottom-2.5 left-2.5 bg-[#14102e]/90 border border-white/10 px-2.5 py-1 rounded-lg text-[9px] font-sans text-purple-200">
+                          Your Map Position: [Creative: {xCoord}%, Logical: {yCoord}%]
                         </div>
                       </div>
                     </div>
@@ -788,7 +801,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3 justify-end pt-2">
+              <div className="flex gap-3 justify-end pt-2 font-sans">
                 <button 
                   onClick={() => setActiveDemo(null)}
                   className="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full text-xs font-semibold uppercase tracking-wider cursor-pointer"
@@ -799,7 +812,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                   onClick={() => { setActiveDemo(null); setView('auth'); }}
                   className="px-5 py-2.5 bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white rounded-full text-xs font-semibold uppercase tracking-wider shadow-md hover:brightness-105 transition-all cursor-pointer"
                 >
-                  Start Assessment Path
+                  Start Assessment Mapped Path
                 </button>
               </div>
             </motion.div>
