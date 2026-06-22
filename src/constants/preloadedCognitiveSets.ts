@@ -43,7 +43,7 @@ export const PRELOADED_COGNITIVE_SETS: PreloadedSet[] = [
     archetype: {
       title: "The Quantum Logic Strategist",
       description: "An exceptional analytical powerhouse specialized in high-dimensional logical reasoning, structured puzzle solving, and system synthesis.",
-      color: "#8161e1"
+      color: "#8A2BE2"
     },
     studyMethod: "First-Principles Decomposition & Truth Table Synthesis",
     productivityStyle: "Modular Time Sprints with Zero-Distraction Segments",

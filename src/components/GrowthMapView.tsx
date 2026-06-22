@@ -148,7 +148,7 @@ export const GrowthMapView: React.FC<GrowthMapViewProps> = ({ metrics }) => {
                 <h4 className="text-[10px] uppercase tracking-widest font-extrabold text-accent-purple font-mono">1. Modify High-D Raw Scores</h4>
                 <button 
                   onClick={handleResetToReal}
-                  className="text-[9px] text-[#8161e1] hover:underline font-bold flex items-center gap-1 uppercase"
+                  className="text-[9px] text-[#8A2BE2] hover:underline font-bold flex items-center gap-1 uppercase"
                 >
                   <RefreshCw className="w-2.5 h-2.5" />
                   Reset to Actuals
@@ -351,12 +351,12 @@ export const GrowthMapView: React.FC<GrowthMapViewProps> = ({ metrics }) => {
                 <path 
                   d={`M 15 15 Q 40 50 ${displayX * 100} ${(1 - displayY) * 100} T 80 25`} 
                   fill="none" 
-                  stroke="rgba(129,97,225,0.4)" 
+                  stroke="rgba(138, 43, 226,0.4)" 
                   strokeWidth="0.5" 
                   strokeDasharray="1,1" 
                 />
-                <circle cx="15" cy="15" r="1" fill="#8161e1" />
-                <circle cx="80" cy="25" r="1" fill="#8161e1" />
+                <circle cx="15" cy="15" r="1" fill="#8A2BE2" />
+                <circle cx="80" cy="25" r="1" fill="#8A2BE2" />
               </svg>
             )}
 
@@ -370,11 +370,11 @@ export const GrowthMapView: React.FC<GrowthMapViewProps> = ({ metrics }) => {
               className="absolute text-center cursor-pointer group z-20 transition-all duration-300"
               onClick={() => setActiveTooltip(!activeTooltip)}
             >
-              <div className="relative flex items-center justify-center w-12 h-12 bg-[#8161e1] text-white rounded-full font-serif italic text-xs font-bold animate-[pulse_4s_infinite] shadow-lg shadow-accent-purple/30 border-2 border-white">
+              <div className="relative flex items-center justify-center w-12 h-12 bg-[#8A2BE2] text-white rounded-full font-serif italic text-xs font-bold animate-[pulse_4s_infinite] shadow-lg shadow-accent-purple/30 border-2 border-white">
                 Self
-                <div className="absolute inset-[-6px] rounded-full border border-[#8161e1]/20 animate-ping" />
+                <div className="absolute inset-[-6px] rounded-full border border-[#8A2BE2]/20 animate-ping" />
               </div>
-              <p className="text-[10px] font-bold text-[#8161e1] uppercase mt-1">Your Self</p>
+              <p className="text-[10px] font-bold text-[#8A2BE2] uppercase mt-1">Your Self</p>
 
               {/* Precise parameters tooltip floating block matching Image 6 */}
               {activeTooltip && (

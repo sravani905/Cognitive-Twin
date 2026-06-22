@@ -124,7 +124,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-10 pb-16 z-10 w-full max-w-md">
               <button
                 onClick={() => setView('auth')}
-                className="w-full sm:w-56 py-4 px-6 bg-gradient-to-r from-[#8161e1] via-[#8c6be8] to-[#9979f4] text-white rounded-full font-sans font-medium text-xs sm:text-sm uppercase tracking-widest shadow-lg shadow-indigo-600/15 hover:brightness-105 active:scale-95 transition-all duration-200 cursor-pointer"
+                className="w-full sm:w-56 py-4 px-6 bg-gradient-to-r from-[#8A2BE2] via-[#8c6be8] to-[#9979f4] text-white rounded-full font-sans font-medium text-xs sm:text-sm uppercase tracking-widest shadow-lg shadow-indigo-600/15 hover:brightness-105 active:scale-95 transition-all duration-200 cursor-pointer"
               >
                 Start Assessment
               </button>
@@ -144,12 +144,12 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               <div 
                 id="btn-mind-profile-demo"
                 onClick={() => setActiveDemo('profile')}
-                className="bg-white/80 border border-white/95 rounded-[1.5rem] px-6 py-5 flex items-center justify-between gap-4 cursor-pointer hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-[0_8px_24px_-6px_rgba(138,43,226,0.06)] relative group overflow-hidden border-b-2 border-b-[#8161e1]/10"
+                className="bg-white/80 border border-white/95 rounded-[1.5rem] px-6 py-5 flex items-center justify-between gap-4 cursor-pointer hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-[0_8px_24px_-6px_rgba(138,43,226,0.06)] relative group overflow-hidden border-b-2 border-b-[#8A2BE2]/10"
               >
                 <div className="flex items-center gap-4">
                   {/* Icon Frame */}
                   <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center shrink-0">
-                    <div className="w-8 h-8 rounded-xl bg-[#8161e1]/15 text-[#8161e1] flex items-center justify-center font-bold text-lg">
+                    <div className="w-8 h-8 rounded-xl bg-[#8A2BE2]/15 text-[#8A2BE2] flex items-center justify-center font-bold text-lg">
                       🧠
                     </div>
                   </div>
@@ -165,13 +165,13 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               <div 
                 id="btn-career-matches-demo"
                 onClick={() => setActiveDemo('careers')}
-                className="bg-white/80 border border-white/95 rounded-[1.5rem] px-6 py-5 flex items-center justify-between gap-4 cursor-pointer hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-[0_8px_24px_-6px_rgba(138,43,226,0.06)] relative group overflow-hidden border-b-2 border-b-[#8161e1]/10"
+                className="bg-white/80 border border-white/95 rounded-[1.5rem] px-6 py-5 flex items-center justify-between gap-4 cursor-pointer hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-[0_8px_24px_-6px_rgba(138,43,226,0.06)] relative group overflow-hidden border-b-2 border-b-[#8A2BE2]/10"
               >
                 <div className="flex items-center gap-4">
                   {/* Icon Frame */}
                   <div className="w-12 h-12 bg-violet-50 rounded-2xl flex items-center justify-center shrink-0">
-                    <div className="w-8 h-8 rounded-xl bg-[#8161e1]/15 text-[#8161e1] flex items-center justify-center">
-                      <Briefcase className="w-4.5 h-4.5 text-[#8161e1]" />
+                    <div className="w-8 h-8 rounded-xl bg-[#8A2BE2]/15 text-[#8A2BE2] flex items-center justify-center">
+                      <Briefcase className="w-4.5 h-4.5 text-[#8A2BE2]" />
                     </div>
                   </div>
                   <div className="space-y-0.5 text-left">
@@ -186,7 +186,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               <div 
                 id="btn-growth-map-demo"
                 onClick={() => setActiveDemo('map')}
-                className="bg-white/80 border border-white/95 rounded-[1.5rem] px-6 py-5 flex items-center justify-between gap-4 cursor-pointer hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-[0_8px_24px_-6px_rgba(138,43,226,0.06)] relative group overflow-hidden border-b-2 border-b-[#8161e1]/10"
+                className="bg-white/80 border border-white/95 rounded-[1.5rem] px-6 py-5 flex items-center justify-between gap-4 cursor-pointer hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-[0_8px_24px_-6px_rgba(138,43,226,0.06)] relative group overflow-hidden border-b-2 border-b-[#8A2BE2]/10"
               >
                 <div className="flex items-center gap-4">
                   {/* Icon Frame */}
@@ -222,7 +222,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                 
                 {/* Large custom logo matching Image 8 layout */}
                 <div className="flex justify-center lg:justify-start">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#8161e1] to-[#a78bfa] flex items-center justify-center shadow-lg shadow-purple-500/10 text-white text-3xl font-bold border-2 border-white/65 cursor-pointer hover:rotate-6 transition-transform" onClick={() => setView('landing')}>
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#8A2BE2] to-[#a78bfa] flex items-center justify-center shadow-lg shadow-purple-500/10 text-white text-3xl font-bold border-2 border-white/65 cursor-pointer hover:rotate-6 transition-transform" onClick={() => setView('landing')}>
                     🧠
                   </div>
                 </div>
@@ -233,7 +233,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                       Cognitive Twin
                     </h2>
                     {/* Tiny orbit ribbon below logo heading */}
-                    <div className="w-full h-1 bg-[#8161e1]/25 mt-1 rounded-full" />
+                    <div className="w-full h-1 bg-[#8A2BE2]/25 mt-1 rounded-full" />
                   </div>
                   
                   <p className="text-[#514371] text-xs sm:text-sm tracking-widest font-bold uppercase">
@@ -243,7 +243,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
 
                 <button 
                   onClick={() => setView('landing')}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#8161e1] hover:text-[#5e3fba] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#8A2BE2] hover:text-[#5e3fba] transition-colors"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
                   <span>Back to Welcome Home</span>
@@ -253,7 +253,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               {/* Right Column Section: The Beautiful Rounded Soft-shadow Auth Card */}
               <div className="lg:col-span-7 flex justify-center w-full">
                 
-                <div className="bg-white/80 backdrop-blur-xl border border-white/70 shadow-2xl shadow-[#8161e1]/5 rounded-[2.5rem] p-8 sm:p-10 w-full max-w-[460px] relative overflow-hidden flex flex-col justify-between">
+                <div className="bg-white/80 backdrop-blur-xl border border-white/70 shadow-2xl shadow-[#8A2BE2]/5 rounded-[2.5rem] p-8 sm:p-10 w-full max-w-[460px] relative overflow-hidden flex flex-col justify-between">
                   
                   {/* Heart Sparkle deco bubble in the top right corner exactly like screenshot */}
                   <div className="absolute top-4 right-4 bg-pink-100/50 p-2 rounded-full text-pink-500 animate-pulse pointer-events-none">
@@ -329,7 +329,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                         <button
                           type="button"
                           onClick={() => alert("Cognitive logic key retrieval has been sent! Presettle password index to log back in.")}
-                          className="text-[#8161e1] font-bold hover:underline"
+                          className="text-[#8A2BE2] font-bold hover:underline"
                         >
                           Forgot Password?
                         </button>
@@ -349,7 +349,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                           type="submit"
                           onClick={() => setIsSignUp(false)}
                           disabled={isAuthenticating}
-                          className="w-full py-4 bg-gradient-to-r from-[#8161e1] via-[#8c6be8] to-[#9979f4] hover:brightness-105 active:scale-95 disabled:opacity-60 text-white font-sans font-bold text-xs uppercase tracking-widest rounded-2xl shadow-md shadow-indigo-600/10 cursor-pointer transition-all duration-200 flex items-center justify-center gap-2"
+                          className="w-full py-4 bg-gradient-to-r from-[#8A2BE2] via-[#8c6be8] to-[#9979f4] hover:brightness-105 active:scale-95 disabled:opacity-60 text-white font-sans font-bold text-xs uppercase tracking-widest rounded-2xl shadow-md shadow-indigo-600/10 cursor-pointer transition-all duration-200 flex items-center justify-center gap-2"
                         >
                           {isAuthenticating && !isSignUp ? (
                             <svg className="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
@@ -383,7 +383,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                   <div className="pt-6 border-t border-purple-100/40 text-center">
                     <p className="text-[10px] text-[#7c779e]">
                       By continuing, you agree to our{' '}
-                      <span className="text-[#8161e1] hover:underline cursor-pointer">Terms & Privacy</span>.
+                      <span className="text-[#8A2BE2] hover:underline cursor-pointer">Terms & Privacy</span>.
                     </p>
                   </div>
 
@@ -418,7 +418,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               </button>
 
               <div className="space-y-1.5 text-left font-sans">
-                <span className="text-[10px] font-mono tracking-widest text-[#8161e1] font-bold uppercase block">
+                <span className="text-[10px] font-mono tracking-widest text-[#8A2BE2] font-bold uppercase block">
                   COGNITIVE PROFILE WORKFLOW
                 </span>
                 <h2 className="text-3xl font-serif italic text-[#1e1a42] tracking-tight font-normal">
@@ -432,11 +432,11 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               {/* Workflow Flowcharts simplified */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 font-sans">
                 <div className="p-3.5 bg-indigo-50/50 rounded-2xl border border-indigo-150/20 text-left font-sans">
-                  <span className="font-sans text-xs font-bold text-[#8161e1] block mb-0.5">01. FUN TASKS</span>
+                  <span className="font-sans text-xs font-bold text-[#8A2BE2] block mb-0.5">01. FUN TASKS</span>
                   <p className="text-[10.5px] text-slate-600 leading-normal">Play responsive mental games that measure your reactions in a totally stress-free way.</p>
                 </div>
                 <div className="p-3.5 bg-violet-50/50 rounded-2xl border border-violet-150/20 text-left font-sans">
-                  <span className="font-sans text-xs font-bold text-[#8161e1] block mb-0.5">02. WHERE YOU STAND</span>
+                  <span className="font-sans text-xs font-bold text-[#8A2BE2] block mb-0.5">02. WHERE YOU STAND</span>
                   <p className="text-[10.5px] text-slate-600 leading-normal">Instead of scary pass/fail grades, we balance your score to show where your natural talents shine.</p>
                 </div>
                 <div className="p-3.5 bg-pink-50/50 rounded-2xl border border-pink-150/20 text-left font-sans">
@@ -458,36 +458,36 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                   <div className="space-y-1">
                     <div className="flex justify-between text-xs font-sans">
                       <span className="font-medium text-slate-700">Executive Attention Speed</span>
-                      <span className="font-mono font-bold text-[#8161e1]">{sumAttention}%</span>
+                      <span className="font-mono font-bold text-[#8A2BE2]">{sumAttention}%</span>
                     </div>
                     <input 
                       type="range" min="10" max="100" value={sumAttention} 
                       onChange={(e) => setSumAttention(Number(e.target.value))}
-                      className="w-full accent-[#8161e1] cursor-pointer"
+                      className="w-full accent-[#8A2BE2] cursor-pointer"
                     />
                   </div>
 
                   <div className="space-y-1 font-sans">
                     <div className="flex justify-between text-xs">
                       <span className="font-medium text-slate-700">Logical Reasoning Accuracy</span>
-                      <span className="font-mono font-bold text-[#8161e1]">{sumReasoning}%</span>
+                      <span className="font-mono font-bold text-[#8A2BE2]">{sumReasoning}%</span>
                     </div>
                     <input 
                       type="range" min="10" max="100" value={sumReasoning} 
                       onChange={(e) => setSumReasoning(Number(e.target.value))}
-                      className="w-full accent-[#8161e1] cursor-pointer"
+                      className="w-full accent-[#8A2BE2] cursor-pointer"
                     />
                   </div>
 
                   <div className="space-y-1 font-sans">
                     <div className="flex justify-between text-xs font-sans">
                       <span className="font-medium text-slate-700">Spatial Invariant Transform</span>
-                      <span className="font-mono font-bold text-[#8161e1]">{sumSpatial}%</span>
+                      <span className="font-mono font-bold text-[#8A2BE2]">{sumSpatial}%</span>
                     </div>
                     <input 
                       type="range" min="10" max="100" value={sumSpatial} 
                       onChange={(e) => setSumSpatial(Number(e.target.value))}
-                      className="w-full accent-[#8161e1] cursor-pointer"
+                      className="w-full accent-[#8A2BE2] cursor-pointer"
                     />
                   </div>
                 </div>
@@ -521,7 +521,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                 </button>
                 <button 
                   onClick={() => { setActiveDemo(null); setView('auth'); }}
-                  className="px-5 py-2.5 bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white rounded-full text-xs font-semibold uppercase tracking-wider shadow-md hover:brightness-105 transition-all cursor-pointer"
+                  className="px-5 py-2.5 bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white rounded-full text-xs font-semibold uppercase tracking-wider shadow-md hover:brightness-105 transition-all cursor-pointer"
                 >
                   Start Assessment Mapped Path
                 </button>
@@ -551,7 +551,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               </button>
 
               <div className="space-y-1.5 text-left font-sans">
-                <span className="text-[10px] font-mono tracking-widest text-[#8161e1] font-bold uppercase block">
+                <span className="text-[10px] font-mono tracking-widest text-[#8A2BE2] font-bold uppercase block">
                   INTELLIGENT MATCHING PROCESS
                 </span>
                 <h2 className="text-3xl font-serif italic text-[#1e1a42] tracking-tight font-normal">
@@ -585,7 +585,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                     <input 
                       type="range" min="10" max="100" value={guestKnnAttention} 
                       onChange={(e) => setGuestKnnAttention(Number(e.target.value))}
-                      className="w-full accent-[#8161e1] cursor-pointer"
+                      className="w-full accent-[#8A2BE2] cursor-pointer"
                     />
                   </div>
 
@@ -597,7 +597,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                     <input 
                       type="range" min="10" max="100" value={guestKnnLogic} 
                       onChange={(e) => setGuestKnnLogic(Number(e.target.value))}
-                      className="w-full accent-[#8161e1] cursor-pointer"
+                      className="w-full accent-[#8A2BE2] cursor-pointer"
                     />
                   </div>
 
@@ -679,7 +679,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                 </button>
                 <button 
                   onClick={() => { setActiveDemo(null); setView('auth'); }}
-                  className="px-5 py-2.5 bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white rounded-full text-xs font-semibold uppercase tracking-wider shadow-md hover:brightness-105 transition-all cursor-pointer"
+                  className="px-5 py-2.5 bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white rounded-full text-xs font-semibold uppercase tracking-wider shadow-md hover:brightness-105 transition-all cursor-pointer"
                 >
                   Start Assessment Mapped Path
                 </button>
@@ -709,7 +709,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
               </button>
 
               <div className="space-y-1.5 text-left font-sans">
-                <span className="text-[10px] font-mono tracking-widest text-[#8161e1] font-bold uppercase block">
+                <span className="text-[10px] font-mono tracking-widest text-[#8A2BE2] font-bold uppercase block">
                   COORDINATE DIMENSION MAPPING
                 </span>
                 <h2 className="text-3xl font-serif italic text-[#1e1a42] tracking-tight font-normal">
@@ -785,7 +785,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                             left: `${xCoord}%`, 
                             bottom: `${yCoord}%` 
                           }}
-                          className="absolute w-5 h-5 rounded-full bg-[#8161e1] border-2 border-white flex items-center justify-center -translate-x-1/2 translate-y-1/2 shadow-lg shadow-purple-500/50"
+                          className="absolute w-5 h-5 rounded-full bg-[#8A2BE2] border-2 border-white flex items-center justify-center -translate-x-1/2 translate-y-1/2 shadow-lg shadow-purple-500/50"
                         >
                           <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
                         </motion.div>
@@ -810,7 +810,7 @@ export const AuthModule: React.FC<AuthModuleProps> = ({
                 </button>
                 <button 
                   onClick={() => { setActiveDemo(null); setView('auth'); }}
-                  className="px-5 py-2.5 bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white rounded-full text-xs font-semibold uppercase tracking-wider shadow-md hover:brightness-105 transition-all cursor-pointer"
+                  className="px-5 py-2.5 bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white rounded-full text-xs font-semibold uppercase tracking-wider shadow-md hover:brightness-105 transition-all cursor-pointer"
                 >
                   Start Assessment Mapped Path
                 </button>

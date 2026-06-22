@@ -115,7 +115,7 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
       {/* Premium Sticky Navigation Header matching ContactView perfectly */}
       <div className="sticky top-0 z-50 w-full bg-white/60 backdrop-blur-md border-b border-purple-100/40 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#8161e1] to-[#9979f4] flex items-center justify-center text-white shadow-md shadow-indigo-600/10">
+          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#8A2BE2] to-[#9979f4] flex items-center justify-center text-white shadow-md shadow-indigo-600/10">
             <Key className="w-5 h-5" />
           </div>
           <div>
@@ -139,8 +139,8 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-full font-sans transition-all cursor-pointer ${
                   isSelected 
-                    ? 'bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white shadow-sm' 
-                    : 'text-[#6a427f] hover:bg-white/90 hover:text-[#8161e1]'
+                    ? 'bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white shadow-sm' 
+                    : 'text-[#6a427f] hover:bg-white/90 hover:text-[#8A2BE2]'
                 }`}
               >
                 <Icon className="w-3.5 h-3.5" />
@@ -177,7 +177,7 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-1.5 px-3 py-2 text-[10px] font-bold uppercase tracking-wider rounded-xl transition-all ${
                   isSelected 
-                    ? 'bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white shadow-sm' 
+                    ? 'bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white shadow-sm' 
                     : 'text-[#6a427f] hover:bg-[#ebdff2]'
                 }`}
               >
@@ -202,7 +202,7 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                 className="space-y-8 text-left"
               >
                 <div className="text-center max-w-2xl mx-auto space-y-4 py-4">
-                  <span className="text-[#8161e1] font-bold text-xs uppercase tracking-[0.3em] bg-[#8161e1]/8 border border-[#8161e1]/18 px-4.5 py-1.5 rounded-full inline-block">Neural Node Setup</span>
+                  <span className="text-[#8A2BE2] font-bold text-xs uppercase tracking-[0.3em] bg-[#8A2BE2]/8 border border-[#8A2BE2]/18 px-4.5 py-1.5 rounded-full inline-block">Neural Node Setup</span>
                   <h1 className="text-4xl font-serif italic text-[#322851] tracking-tight">"Configure API Access Keys"</h1>
                   <p className="text-[#6e5380] text-sm font-light leading-relaxed">
                     By default, the Cognitive Twin utilizes the shared global laboratory bandwidth. Establish a dedicated personal link to unlock uncapped high-performance neural mapping modules.
@@ -216,7 +216,7 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                     
                     {/* active link status badge */}
                     <div className="p-5 bg-white/70 border border-purple-100 rounded-3xl flex flex-col space-y-3 shadow-sm">
-                      <div className="w-9 h-9 rounded-xl bg-violet-50 border border-violet-100 flex items-center justify-center text-[#8161e1]">
+                      <div className="w-9 h-9 rounded-xl bg-violet-50 border border-violet-100 flex items-center justify-center text-[#8A2BE2]">
                         <Server className="w-4.5 h-4.5" />
                       </div>
                       <h4 className="text-xs font-bold text-[#322851] uppercase tracking-wider font-sans">Active Link Status</h4>
@@ -249,7 +249,7 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                   </div>
 
                   {/* Right Column: Interaction Form */}
-                  <div className="md:col-span-3 bg-white border border-purple-150 p-6 md:p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 text-left space-y-6">
+                  <div className="md:col-span-3 bg-white border border-purple-150 p-6 md:p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 text-left space-y-6">
                     
                     <div className="flex gap-4">
                       {/* Public selection pill */}
@@ -293,12 +293,12 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                               setIsEditing(true);
                             }}
                             placeholder={keyInfo.isUserKey ? "••••••••••••••••••••••••••••••••••••" : "AI Studio Access Token..."}
-                            className="flex-1 px-4 py-2.5 rounded-xl border border-purple-100 text-xs bg-slate-50 focus:bg-white focus:ring-1 focus:ring-[#8161e1] outline-none text-slate-800 font-mono"
+                            className="flex-1 px-4 py-2.5 rounded-xl border border-purple-100 text-xs bg-slate-50 focus:bg-white focus:ring-1 focus:ring-[#8A2BE2] outline-none text-slate-800 font-mono"
                           />
                           {(isEditing || userKey !== (localStorage.getItem('COGNITIVE_TWIN_USER_KEY') || '')) ? (
                             <button 
                               onClick={handleSaveCredentials}
-                              className="px-5 bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white text-[10px] font-bold uppercase tracking-wider rounded-xl hover:brightness-105 active:scale-98 transition-all cursor-pointer"
+                              className="px-5 bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white text-[10px] font-bold uppercase tracking-wider rounded-xl hover:brightness-105 active:scale-98 transition-all cursor-pointer"
                             >
                               Sync key
                             </button>
@@ -315,9 +315,9 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                       </div>
 
                       <div className="p-4 bg-[#fcfbfe] border border-purple-100 rounded-2xl flex gap-3.5 items-start">
-                        <Info className="w-4.5 h-4.5 text-[#8161e1] shrink-0 mt-0.5" />
+                        <Info className="w-4.5 h-4.5 text-[#8A2BE2] shrink-0 mt-0.5" />
                         <p className="text-[10px] text-slate-500 leading-relaxed font-light">
-                          API keys enable seamless text synthesis and career-matching analysis. Obtain yours on the official <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" className="text-[#8161e1] hover:underline font-bold inline-flex items-center gap-0.5">Google AI Studio Portal</a> platform for free.
+                          API keys enable seamless text synthesis and career-matching analysis. Obtain yours on the official <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" className="text-[#8A2BE2] hover:underline font-bold inline-flex items-center gap-0.5">Google AI Studio Portal</a> platform for free.
                         </p>
                       </div>
                     </div>
@@ -351,14 +351,14 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                 className="space-y-8 text-left"
               >
                 <div className="text-center max-w-2xl mx-auto space-y-4 py-4">
-                  <span className="text-[#8161e1] font-bold text-xs uppercase tracking-[0.3em] bg-[#8161e1]/8 border border-[#8161e1]/18 px-4.5 py-1.5 rounded-full inline-block">Telemetry Matrix</span>
+                  <span className="text-[#8A2BE2] font-bold text-xs uppercase tracking-[0.3em] bg-[#8A2BE2]/8 border border-[#8A2BE2]/18 px-4.5 py-1.5 rounded-full inline-block">Telemetry Matrix</span>
                   <h1 className="text-4xl font-serif italic text-[#322851] tracking-tight">"Manage Optional Tracking features"</h1>
                   <p className="text-[#6e5380] text-sm font-light leading-relaxed">
                     Control active data capture mechanisms. Toggle background diagnostic tracking, research signal transmissions, and automated mental mapping log cycles to fit your requirements.
                   </p>
                 </div>
 
-                <div className="max-w-2xl mx-auto bg-white border border-purple-150 p-6 md:p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 space-y-6">
+                <div className="max-w-2xl mx-auto bg-white border border-purple-150 p-6 md:p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 space-y-6">
                   
                   {/* Selector Toggle 1 */}
                   <div className="flex items-start justify-between gap-6 pb-5 border-b border-purple-50">
@@ -374,7 +374,7 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                     <button
                       onClick={() => setDiagnosticsLogs(!diagnosticsLogs)}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-all cursor-pointer ${
-                        diagnosticsLogs ? 'bg-[#8161e1]' : 'bg-slate-200'
+                        diagnosticsLogs ? 'bg-[#8A2BE2]' : 'bg-slate-200'
                       }`}
                     >
                       <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-all ${
@@ -397,7 +397,7 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                     <button
                       onClick={() => setTelemetrySignals(!telemetrySignals)}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-all cursor-pointer ${
-                        telemetrySignals ? 'bg-[#8161e1]' : 'bg-slate-200'
+                        telemetrySignals ? 'bg-[#8A2BE2]' : 'bg-slate-200'
                       }`}
                     >
                       <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-all ${
@@ -420,7 +420,7 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                     <button
                       onClick={() => setAcuityAutoLogging(!acuityAutoLogging)}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-all cursor-pointer ${
-                        acuityAutoLogging ? 'bg-[#8161e1]' : 'bg-slate-200'
+                        acuityAutoLogging ? 'bg-[#8A2BE2]' : 'bg-slate-200'
                       }`}
                     >
                       <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-all ${
@@ -435,7 +435,7 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                     </span>
                     <button 
                       onClick={handleSaveTracking}
-                      className="px-6 py-2.5 bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white text-xs font-bold uppercase tracking-wider rounded-xl hover:brightness-105 active:scale-98 shadow-md transition-all cursor-pointer inline-flex items-center gap-1.5"
+                      className="px-6 py-2.5 bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white text-xs font-bold uppercase tracking-wider rounded-xl hover:brightness-105 active:scale-98 shadow-md transition-all cursor-pointer inline-flex items-center gap-1.5"
                     >
                       Save Configuration Settings
                     </button>
@@ -469,7 +469,7 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                 className="space-y-8 text-left"
               >
                 <div className="text-center max-w-3xl mx-auto space-y-4 py-4">
-                  <span className="text-[#8161e1] font-bold text-xs uppercase tracking-[0.3em] bg-[#8161e1]/8 border border-[#8161e1]/18 px-4.5 py-1.5 rounded-full inline-block">Sovereign Controls</span>
+                  <span className="text-[#8A2BE2] font-bold text-xs uppercase tracking-[0.3em] bg-[#8A2BE2]/8 border border-[#8A2BE2]/18 px-4.5 py-1.5 rounded-full inline-block">Sovereign Controls</span>
                   <h2 className="text-3xl font-serif italic text-[#322851]">Security Controls & Integrity Assurances</h2>
                   <p className="text-[#6e5380] text-xs md:text-sm font-light leading-relaxed">
                      Rigorous guidelines ensuring the safe, non-custodial handling of administrative tokens, session states, and credentials.
@@ -477,9 +477,9 @@ export const ApiConfigView: React.FC<ApiConfigViewProps> = ({ onClose }) => {
                 </div>
 
                 {/* Academic declaration papers card */}
-                <div className="bg-white/80 border border-purple-100/75 p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 space-y-6 text-left max-w-3xl mx-auto">
+                <div className="bg-white/80 border border-purple-100/75 p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 space-y-6 text-left max-w-3xl mx-auto">
                   
-                  <div className="border-l-4 border-[#8161e1] pl-4 space-y-2">
+                  <div className="border-l-4 border-[#8A2BE2] pl-4 space-y-2">
                     <h3 className="text-sm font-bold text-[#322851] uppercase tracking-wider flex items-center gap-2">
                        Cryptographic Key Sandbox Isolation
                     </h3>

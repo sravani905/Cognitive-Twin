@@ -183,7 +183,7 @@ export function NotificationScheduler() {
           </div>
           <div className="font-mono text-[9px] bg-white/60 p-1.5 rounded-lg border border-indigo-100/50 flex justify-between">
             <span>{new Date(lastLogin).toLocaleDateString()} {new Date(lastLogin).toLocaleTimeString()}</span>
-            <span className="text-[#8161e1] font-bold">ACTIVE CYCLE</span>
+            <span className="text-[#8A2BE2] font-bold">ACTIVE CYCLE</span>
           </div>
         </div>
       )}

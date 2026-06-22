@@ -92,7 +92,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
       {/* Header element matching AboutView perfectly */}
       <div className="sticky top-0 z-50 w-full bg-white/60 backdrop-blur-md border-b border-purple-100/40 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#8161e1] to-[#9979f4] flex items-center justify-center text-white shadow-md shadow-indigo-600/10">
+          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#8A2BE2] to-[#9979f4] flex items-center justify-center text-white shadow-md shadow-indigo-600/10">
             <ShieldCheck className="w-5 h-5" />
           </div>
           <div>
@@ -116,8 +116,8 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-full font-sans transition-all cursor-pointer ${
                   isSelected 
-                    ? 'bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white shadow-sm' 
-                    : 'text-[#6a427f] hover:bg-white/90 hover:text-[#8161e1]'
+                    ? 'bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white shadow-sm' 
+                    : 'text-[#6a427f] hover:bg-white/90 hover:text-[#8A2BE2]'
                 }`}
               >
                 <Icon className="w-3.5 h-3.5" />
@@ -154,7 +154,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-1.5 px-3 py-2 text-[10px] font-bold uppercase tracking-wider rounded-xl transition-all ${
                   isSelected 
-                    ? 'bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white shadow-sm' 
+                    ? 'bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white shadow-sm' 
                     : 'text-[#6a427f] hover:bg-[#ebdff2]'
                 }`}
               >
@@ -177,7 +177,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
                 className="space-y-8"
               >
                 <div className="text-center max-w-3xl mx-auto space-y-4 py-4">
-                  <span className="text-[#8161e1] font-bold text-xs uppercase tracking-[0.3em] bg-[#8161e1]/8 border border-[#8161e1]/18 px-4.5 py-1.5 rounded-full inline-block">Security First</span>
+                  <span className="text-[#8A2BE2] font-bold text-xs uppercase tracking-[0.3em] bg-[#8A2BE2]/8 border border-[#8A2BE2]/18 px-4.5 py-1.5 rounded-full inline-block">Security First</span>
                   <h1 className="text-4xl md:text-5xl font-serif italic text-[#322851] tracking-tight">"Non-Custodial Mind Autonomy"</h1>
                   <p className="text-[#6e5380] text-sm md:text-base leading-relaxed font-light">
                     As an advanced AI-powered data science thesis project, Cognitive Twin strictly implements absolute data isolation guarantees. Your psychological profile is wholly yours to command.
@@ -188,8 +188,8 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
                 <div className="grid md:grid-cols-2 gap-6 pt-4">
                   
                   {/* Principle 1 */}
-                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 flex flex-col space-y-4">
-                    <div className="w-12 h-12 rounded-2xl bg-violet-50 border border-violet-100 flex items-center justify-center text-[#8161e1] shadow-sm">
+                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 flex flex-col space-y-4">
+                    <div className="w-12 h-12 rounded-2xl bg-violet-50 border border-violet-100 flex items-center justify-center text-[#8A2BE2] shadow-sm">
                       <Lock className="w-5 h-5" />
                     </div>
                     <h3 className="text-xl font-serif text-[#322851] italic font-semibold">Zero Centralized Storage</h3>
@@ -199,7 +199,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
                   </div>
 
                   {/* Principle 2 */}
-                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 flex flex-col space-y-4">
+                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 flex flex-col space-y-4">
                     <div className="w-12 h-12 rounded-2xl bg-pink-50 border border-pink-100 flex items-center justify-center text-pink-500 shadow-sm">
                       <EyeOff className="w-5 h-5" />
                     </div>
@@ -210,7 +210,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
                   </div>
 
                   {/* Principle 3 */}
-                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 flex flex-col space-y-4">
+                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 flex flex-col space-y-4">
                     <div className="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-500 shadow-sm">
                       <Database className="w-5 h-5" />
                     </div>
@@ -221,7 +221,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
                   </div>
 
                   {/* Principle 4 */}
-                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 flex flex-col space-y-4">
+                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 flex flex-col space-y-4">
                     <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-500 shadow-sm">
                       <CheckCircle2 className="w-5 h-5" />
                     </div>
@@ -244,7 +244,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
                 className="space-y-6"
               >
                 <div className="text-center max-w-2xl mx-auto space-y-3.5">
-                  <span className="text-[#8161e1] font-bold text-xs uppercase tracking-[0.3em] bg-[#8161e1]/8 border border-[#8161e1]/18 px-4.5 py-1.5 rounded-full inline-block">Proof of Autonomy</span>
+                  <span className="text-[#8A2BE2] font-bold text-xs uppercase tracking-[0.3em] bg-[#8A2BE2]/8 border border-[#8A2BE2]/18 px-4.5 py-1.5 rounded-full inline-block">Proof of Autonomy</span>
                   <h2 className="text-3xl font-serif italic text-[#322851]">Active Sandbox Database Inspector</h2>
                   <p className="text-[#6e5380] text-xs font-light leading-relaxed">
                     Verify live that all vectors, energy profiles, and progress metrics reside transparently inside your local browser storage registry.
@@ -252,7 +252,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
                 </div>
 
                 {/* Live inspector tool */}
-                <div className="bg-white border border-purple-100 p-6 md:p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 space-y-6">
+                <div className="bg-white border border-purple-100 p-6 md:p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 space-y-6">
                   
                   <div className="flex flex-col sm:flex-row justify-between items-center bg-slate-900 text-purple-300 p-4 rounded-2xl gap-4">
                     <div className="flex items-center gap-3">
@@ -296,7 +296,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
                           </code>
                           <button
                             onClick={() => handleCopyText(entry.val, entry.key)}
-                            className="text-[9px] font-mono px-3.5 py-1.5 rounded-lg font-bold border border-[#8161e1]/20 text-[#8161e1] hover:bg-[#8161e1]/5 active:scale-95 transition-all cursor-pointer shrink-0"
+                            className="text-[9px] font-mono px-3.5 py-1.5 rounded-lg font-bold border border-[#8A2BE2]/20 text-[#8A2BE2] hover:bg-[#8A2BE2]/5 active:scale-95 transition-all cursor-pointer shrink-0"
                           >
                             {copiedKey === entry.key ? "✓ Copied!" : "Copy Value"}
                           </button>
@@ -322,7 +322,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
                 className="space-y-8"
               >
                 <div className="text-center max-w-3xl mx-auto space-y-4 py-4">
-                  <span className="text-[#8161e1] font-bold text-xs uppercase tracking-[0.3em] bg-[#8161e1]/8 border border-[#8161e1]/18 px-4.5 py-1.5 rounded-full inline-block">Thesis Standards</span>
+                  <span className="text-[#8A2BE2] font-bold text-xs uppercase tracking-[0.3em] bg-[#8A2BE2]/8 border border-[#8A2BE2]/18 px-4.5 py-1.5 rounded-full inline-block">Thesis Standards</span>
                   <h2 className="text-3xl font-serif italic text-[#322851]">Academic Compliance Declaration</h2>
                   <p className="text-[#6e5380] text-xs md:text-sm font-light leading-relaxed">
                     Formal integrity statements verifying user safeguards according to sessional evaluation panels.
@@ -330,8 +330,8 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({ onClose }) => {
                 </div>
 
                 {/* Academic declaration papers card */}
-                <div className="bg-white/80 border border-purple-100/75 p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 space-y-6 text-left">
-                  <div className="border-l-4 border-[#8161e1] pl-4 space-y-2">
+                <div className="bg-white/80 border border-purple-100/75 p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 space-y-6 text-left">
+                  <div className="border-l-4 border-[#8A2BE2] pl-4 space-y-2">
                     <h3 className="text-sm font-bold text-[#322851] uppercase tracking-wider">JNTUH Annexure-IX: Security Compliance</h3>
                     <p className="text-xs text-slate-600 font-light leading-relaxed">
                       This system handles diagnostic testing scoring in native local variable scopes. It guarantees zero cloud persistence for participant records, eliminating potential storage manipulation risks during grading reviews.

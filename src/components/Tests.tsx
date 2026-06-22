@@ -66,11 +66,11 @@ export const ProgressBar = ({ current, total }: { current: number, total: number
       <span className="text-[10px] font-bold text-[#8c78a5] uppercase tracking-widest">Progress</span>
       <span className="text-[10px] font-bold text-[#8c78a5] uppercase tracking-widest">{current} / {total}</span>
     </div>
-    <div className="h-1.5 w-full bg-[#8161e1]/10 rounded-full overflow-hidden">
+    <div className="h-1.5 w-full bg-[#8A2BE2]/10 rounded-full overflow-hidden">
       <motion.div 
         initial={{ width: 0 }}
         animate={{ width: `${(current / total) * 100}%` }}
-        className="h-full bg-gradient-to-r from-[#8161e1] to-[#9979f4] rounded-full"
+        className="h-full bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] rounded-full"
       />
     </div>
   </div>
@@ -85,8 +85,8 @@ export const DifficultySelector = ({ selected, onSelect }: { selected: string, o
         className={cn(
           "px-5 py-2 text-[10px] font-bold uppercase tracking-widest border rounded-full font-sans transition-all duration-200 whitespace-nowrap active:scale-95 cursor-pointer",
           selected === d 
-            ? "bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white border-transparent shadow-md shadow-indigo-600/10" 
-            : "bg-white/60 text-[#6a427f] border-[#8161e1]/20 hover:bg-white"
+            ? "bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white border-transparent shadow-md shadow-indigo-600/10" 
+            : "bg-white/60 text-[#6a427f] border-[#8A2BE2]/20 hover:bg-white"
         )}
       >
         {d}
@@ -97,7 +97,7 @@ export const DifficultySelector = ({ selected, onSelect }: { selected: string, o
 
 export const TestHeader = ({ title, description, icon: Icon }: any) => (
   <div className="text-center mb-8 md:mb-10 px-4">
-    <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#8161e1]/10 to-[#9979f4]/10 border border-[#8161e1]/20 mb-4 text-[#8161e1] shadow-sm">
+    <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#8A2BE2]/10 to-[#9979f4]/10 border border-[#8A2BE2]/20 mb-4 text-[#8A2BE2] shadow-sm">
       <Icon className="w-5 h-5" />
     </div>
     <h3 className="text-xl md:text-2xl font-serif italic text-[#322851] font-normal mb-2 tracking-tight">{title}</h3>
@@ -114,7 +114,7 @@ export const SuccessPulse = ({ active }: { active: boolean }) => (
         exit={{ opacity: 0, scale: 2 }}
         className="absolute inset-0 pointer-events-none flex items-center justify-center z-50"
       >
-        <div className="w-64 h-64 rounded-full bg-[#8161e1]/10 blur-3xl" />
+        <div className="w-64 h-64 rounded-full bg-[#8A2BE2]/10 blur-3xl" />
       </motion.div>
     )}
   </AnimatePresence>
@@ -170,9 +170,9 @@ export const ComprehensiveLocalTest = withStability(({ onComplete }: any) => {
       
       <ProgressBar current={currentIndex + 1} total={totalQuestions} />
 
-      <div className="w-full bg-white/80 border border-purple-100 rounded-3xl p-6 md:p-8 space-y-6 shadow-xl shadow-[#8161e1]/5">
+      <div className="w-full bg-white/80 border border-purple-100 rounded-3xl p-6 md:p-8 space-y-6 shadow-xl shadow-[#8A2BE2]/5">
         <div className="flex justify-between items-center pb-2 border-b border-purple-50">
-          <span className="text-[10px] font-bold text-[#8161e1] uppercase tracking-widest bg-[#8161e1]/8 px-3.5 py-1.5 rounded-full border border-[#8161e1]/10">{domain} Domain</span>
+          <span className="text-[10px] font-bold text-[#8A2BE2] uppercase tracking-widest bg-[#8A2BE2]/8 px-3.5 py-1.5 rounded-full border border-[#8A2BE2]/10">{domain} Domain</span>
           <span className="text-[10px] font-bold text-[#8c78a5] uppercase tracking-widest font-mono">Q: {currentIndex + 1} / {totalQuestions}</span>
         </div>
         
@@ -185,9 +185,9 @@ export const ComprehensiveLocalTest = withStability(({ onComplete }: any) => {
               <button
                 key={i}
                 onClick={() => handleAnswer(i)}
-                className="w-full p-4.5 text-left border border-purple-100 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer"
+                className="w-full p-4.5 text-left border border-purple-100 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer"
               >
-                <div className="w-8 h-8 rounded-full bg-[#8161e1]/8 flex items-center justify-center text-[#8161e1] font-bold text-xs group-hover:bg-[#8161e1] group-hover:text-white transition-all shrink-0">
+                <div className="w-8 h-8 rounded-full bg-[#8A2BE2]/8 flex items-center justify-center text-[#8A2BE2] font-bold text-xs group-hover:bg-[#8A2BE2] group-hover:text-white transition-all shrink-0">
                   {letter}
                 </div>
                 <span className="text-[#513c66] text-sm font-medium leading-normal">{ans}</span>
@@ -269,7 +269,7 @@ export const FuturisticButton = ({ children, onClick, className, disabled, varia
     className={cn(
       "relative px-8 py-3.5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 rounded-full active:scale-95 cursor-pointer",
       variant === 'primary' 
-        ? "bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white hover:brightness-105 shadow-md shadow-indigo-600/10 border-transparent" 
+        ? "bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white hover:brightness-105 shadow-md shadow-indigo-600/10 border-transparent" 
         : "bg-[#f4ecf8] text-[#6a427f] border border-purple-100/55 hover:bg-[#ebdff2]",
       disabled && "opacity-30 cursor-not-allowed pointer-events-none",
       className
@@ -281,7 +281,7 @@ export const FuturisticButton = ({ children, onClick, className, disabled, varia
 
 const LoadingOverlay = ({ message }: { message: string }) => (
   <div className="flex flex-col items-center justify-center p-12 space-y-6">
-    <div className="w-12 h-12 bg-[#8161e1]/10 rounded-2xl flex items-center justify-center text-[#8161e1] border border-[#8161e1]/25 animate-pulse">
+    <div className="w-12 h-12 bg-[#8A2BE2]/10 rounded-2xl flex items-center justify-center text-[#8A2BE2] border border-[#8A2BE2]/25 animate-pulse">
       <Loader2 className="w-6 h-6 animate-spin" />
     </div>
     <p className="text-[10px] uppercase tracking-[0.25em] text-[#8c78a5] animate-pulse font-semibold">{message}</p>
@@ -395,7 +395,7 @@ export const AttentionTest = withStability(({ onComplete, difficulty = 'moderate
           <>
             <div className="absolute top-6 left-8 text-[11px] font-bold uppercase tracking-widest text-[#8c78a5]">Time: {timeLeft}s</div>
             <div className="absolute top-6 right-8 text-[11px] font-bold uppercase tracking-widest text-[#8c78a5]">Intensity: Lvl {level}</div>
-            <div className="absolute top-12 right-8 text-[9px] font-extrabold uppercase tracking-widest text-[#8161e1]">Hits: {score}</div>
+            <div className="absolute top-12 right-8 text-[9px] font-extrabold uppercase tracking-widest text-[#8A2BE2]">Hits: {score}</div>
             
             <motion.div
               key={score} // Trigger animation on every hit / new target
@@ -406,7 +406,7 @@ export const AttentionTest = withStability(({ onComplete, difficulty = 'moderate
                 scale: targetScale,
                 opacity: 1
               }}
-              className="absolute w-12 h-12 -ml-6 -mt-6 rounded-full border-2 border-[#8161e1] bg-gradient-to-br from-[#8161e1] to-[#9979f4] flex items-center justify-center shadow-lg shadow-purple-600/30"
+              className="absolute w-12 h-12 -ml-6 -mt-6 rounded-full border-2 border-[#8A2BE2] bg-gradient-to-br from-[#8A2BE2] to-[#9979f4] flex items-center justify-center shadow-lg shadow-purple-600/30"
               onClick={(e) => {
                 e.stopPropagation();
                 handleClick();
@@ -415,7 +415,7 @@ export const AttentionTest = withStability(({ onComplete, difficulty = 'moderate
               <div className="w-2.5 h-2.5 rounded-full bg-white shadow-xl shadow-black/40 animate-ping" />
               <div className="absolute w-2 h-2 rounded-full bg-white shadow-xl shadow-black/40" />
               {/* Subtle indicator of current streak/level */}
-              <div className="absolute -inset-2 rounded-full border border-[#8161e1]/30 animate-pulse" />
+              <div className="absolute -inset-2 rounded-full border border-[#8A2BE2]/30 animate-pulse" />
             </motion.div>
           </>
         )}
@@ -557,7 +557,7 @@ export const MemoryTest = withStability(({ onComplete, difficulty = 'moderate' }
       
       <div className="flex justify-center mb-6">
         <div className="px-4 py-1.5 border border-purple-100 rounded-full bg-white/80 shadow-sm">
-           <span className="text-[9px] uppercase tracking-[0.2em] text-[#8161e1] font-bold">Neural Sync Level: {getDifficultyString()}</span>
+           <span className="text-[9px] uppercase tracking-[0.2em] text-[#8A2BE2] font-bold">Neural Sync Level: {getDifficultyString()}</span>
         </div>
       </div>
 
@@ -570,8 +570,8 @@ export const MemoryTest = withStability(({ onComplete, difficulty = 'moderate' }
             className={cn(
                "w-24 h-24 border border-purple-100 rounded-3xl transition-all duration-300 cursor-pointer flex items-center justify-center shadow-sm",
                activeIndex === i 
-                 ? "bg-gradient-to-r from-[#8161e1] to-[#9979f4] border-transparent scale-105 shadow-md shadow-purple-600/20" 
-                 : "bg-white hover:border-purple-300 hover:bg-[#8161e1]/5"
+                 ? "bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] border-transparent scale-105 shadow-md shadow-purple-600/20" 
+                 : "bg-white hover:border-purple-300 hover:bg-[#8A2BE2]/5"
             )}
           >
             <div className={cn("w-2.5 h-2.5 rounded-full transition-all", activeIndex === i ? "bg-white animate-ping" : "bg-purple-200")} />
@@ -644,12 +644,12 @@ export const RiskTest = withStability(({ onComplete, difficulty = 'moderate', us
             <button
               key={i}
               onClick={() => handleChoice(i)}
-              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
+              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
             >
-              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8161e1]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
+              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8A2BE2]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
                 {String.fromCharCode(65 + i)}
               </div>
-              <span className="group-hover:text-[#8161e1] transition-colors">{ans}</span>
+              <span className="group-hover:text-[#8A2BE2] transition-colors">{ans}</span>
             </button>
           ))}
         </div>
@@ -714,12 +714,12 @@ export const CreativityTest = withStability(({ onComplete, difficulty = 'moderat
             <button
               key={i}
               onClick={() => handleChoice(i)}
-              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
+              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
             >
-              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8161e1]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
+              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8A2BE2]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
                 {String.fromCharCode(65 + i)}
               </div>
-              <span className="group-hover:text-[#8161e1] transition-colors">{ans}</span>
+              <span className="group-hover:text-[#8A2BE2] transition-colors">{ans}</span>
             </button>
           ))}
         </div>
@@ -801,7 +801,7 @@ export const LogicTest = withStability(({ onComplete, difficulty = 'moderate', u
       
       <div className="flex justify-center mb-6">
         <div className="px-4 py-1.5 border border-purple-100 rounded-full bg-white/80 shadow-sm">
-           <span className="text-[9px] uppercase tracking-[0.2em] text-[#8161e1] font-bold">Logic Tier: {getDifficultyString()}</span>
+           <span className="text-[9px] uppercase tracking-[0.2em] text-[#8A2BE2] font-bold">Logic Tier: {getDifficultyString()}</span>
         </div>
       </div>
 
@@ -812,12 +812,12 @@ export const LogicTest = withStability(({ onComplete, difficulty = 'moderate', u
             <button
               key={i}
               onClick={() => handleAnswer(i)}
-              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
+              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
             >
-              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8161e1]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
+              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8A2BE2]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
                 {String.fromCharCode(65 + i)}
               </div>
-              <span className="group-hover:text-[#8161e1] transition-colors">{ans}</span>
+              <span className="group-hover:text-[#8A2BE2] transition-colors">{ans}</span>
             </button>
           ))}
         </div>
@@ -903,7 +903,7 @@ export const DecisionTest = withStability(({ onComplete, difficulty = 'moderate'
 
       <div className="flex justify-center mb-6">
         <div className="px-4 py-1.5 border border-purple-100 rounded-full bg-white/80 shadow-sm">
-           <span className="text-[9px] uppercase tracking-[0.2em] text-[#8161e1] font-bold">Latency Threshold: {getDifficultyString()}</span>
+           <span className="text-[9px] uppercase tracking-[0.2em] text-[#8A2BE2] font-bold">Latency Threshold: {getDifficultyString()}</span>
         </div>
       </div>
 
@@ -918,12 +918,12 @@ export const DecisionTest = withStability(({ onComplete, difficulty = 'moderate'
             <button
               key={i}
               onClick={() => handleChoice(i)}
-              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
+              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
             >
-              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8161e1]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
+              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8A2BE2]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
                 {String.fromCharCode(65 + i)}
               </div>
-              <span className="group-hover:text-[#8161e1] transition-colors">{ans}</span>
+              <span className="group-hover:text-[#8A2BE2] transition-colors">{ans}</span>
             </button>
           ))}
         </div>
@@ -1004,24 +1004,24 @@ export const SpatialTest = withStability(({ onComplete, difficulty = 'moderate' 
                   <p className="text-[9px] uppercase tracking-widest text-[#8c78a5] font-bold">Target</p>
                   <div className="w-16 h-16 border border-purple-300 flex items-center justify-center relative rotate-90 rounded-xl bg-white shadow-sm">
                     <div className="w-1.5 h-6 bg-emerald-500 absolute top-0 rounded-b-md" />
-                    <MeshBrain className="w-6 h-6 opacity-35 text-[#8161e1]" />
+                    <MeshBrain className="w-6 h-6 opacity-35 text-[#8A2BE2]" />
                   </div>
                 </div>
                 <div className="text-center space-y-2">
                   <p className="text-[9px] uppercase tracking-widest text-[#8c78a5] font-bold">Current</p>
                   <motion.div 
                     animate={{ rotate: userRotation }}
-                    className="w-16 h-16 border-2 border-[#8161e1] flex items-center justify-center relative bg-purple-50 rounded-xl shadow-md"
+                    className="w-16 h-16 border-2 border-[#8A2BE2] flex items-center justify-center relative bg-purple-50 rounded-xl shadow-md"
                   >
                     <div className="w-1.5 h-6 bg-purple-600 absolute top-0 rounded-b-md" />
-                    <MeshBrain className="w-6 h-6 opacity-85 text-[#8161e1]" />
+                    <MeshBrain className="w-6 h-6 opacity-85 text-[#8A2BE2]" />
                   </motion.div>
                 </div>
               </div>
               <div className="flex gap-3">
-                <button onClick={() => setUserRotation(r => r - 90)} className="p-2.5 border border-purple-200 rounded-full hover:bg-purple-50 text-[#8161e1] bg-white transition-colors cursor-pointer shadow-sm"><RefreshCw className="w-4 h-4 rotate-180" /></button>
-                <button onClick={() => setUserRotation(r => r + 90)} className="p-2.5 border border-purple-200 rounded-full hover:bg-purple-50 text-[#8161e1] bg-white transition-colors cursor-pointer shadow-sm"><RefreshCw className="w-4 h-4" /></button>
-                <button onClick={() => handleAnswer()} className="px-5 py-2.5 bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white text-[10px] font-bold uppercase tracking-widest rounded-full cursor-pointer shadow-md shadow-indigo-600/10 active:scale-95 transition-all">Confirm Match</button>
+                <button onClick={() => setUserRotation(r => r - 90)} className="p-2.5 border border-purple-200 rounded-full hover:bg-purple-50 text-[#8A2BE2] bg-white transition-colors cursor-pointer shadow-sm"><RefreshCw className="w-4 h-4 rotate-180" /></button>
+                <button onClick={() => setUserRotation(r => r + 90)} className="p-2.5 border border-purple-200 rounded-full hover:bg-purple-50 text-[#8A2BE2] bg-white transition-colors cursor-pointer shadow-sm"><RefreshCw className="w-4 h-4" /></button>
+                <button onClick={() => handleAnswer()} className="px-5 py-2.5 bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white text-[10px] font-bold uppercase tracking-widest rounded-full cursor-pointer shadow-md shadow-indigo-600/10 active:scale-95 transition-all">Confirm Match</button>
               </div>
             </div>
           ) : questions[current].isFolding ? (
@@ -1030,7 +1030,7 @@ export const SpatialTest = withStability(({ onComplete, difficulty = 'moderate' 
               <div className="w-8 h-8 rounded border border-purple-300 bg-purple-100" />
               <div className="w-8 h-8 rounded border border-purple-200 bg-white/20" />
               <div className="w-8 h-8 rounded border border-purple-300 bg-purple-100" />
-              <div className="w-8 h-8 rounded-lg border-2 border-[#8161e1] bg-[#8161e1]/20 animate-pulse shadow-sm" />
+              <div className="w-8 h-8 rounded-lg border-2 border-[#8A2BE2] bg-[#8A2BE2]/20 animate-pulse shadow-sm" />
               <div className="w-8 h-8 rounded border border-purple-300 bg-purple-100" />
               <div className="w-8 h-8 rounded border border-purple-200 bg-white/20" />
               <div className="w-8 h-8 rounded border border-purple-300 bg-purple-100" />
@@ -1038,8 +1038,8 @@ export const SpatialTest = withStability(({ onComplete, difficulty = 'moderate' 
             </div>
           ) : (
             <div className="w-24 h-24 border border-purple-200 hover:border-purple-300 transition-colors flex items-center justify-center relative rounded-2xl bg-purple-50/40 shadow-sm">
-              <div className="absolute inset-0 border border-[#8161e1]/20 rounded-2xl scale-75 rotate-45 border-dashed" />
-              <Box className="w-12 h-12 text-[#8161e1]" />
+              <div className="absolute inset-0 border border-[#8A2BE2]/20 rounded-2xl scale-75 rotate-45 border-dashed" />
+              <Box className="w-12 h-12 text-[#8A2BE2]" />
             </div>
           )}
         </div>
@@ -1050,7 +1050,7 @@ export const SpatialTest = withStability(({ onComplete, difficulty = 'moderate' 
               <button
                 key={i}
                 onClick={() => handleAnswer(i)}
-                className="p-4 text-center border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/60 active:scale-[0.98] transition-all rounded-2xl text-[#513c66] text-sm font-medium leading-normal shadow-sm cursor-pointer"
+                className="p-4 text-center border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/60 active:scale-[0.98] transition-all rounded-2xl text-[#513c66] text-sm font-medium leading-normal shadow-sm cursor-pointer"
               >
                 {ans}
               </button>
@@ -1124,12 +1124,12 @@ export const VerbalTest = withStability(({ onComplete, difficulty = 'moderate', 
             <button
               key={i}
               onClick={() => handleAnswer(i)}
-              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
+              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
             >
-              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8161e1]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
+              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8A2BE2]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
                 {String.fromCharCode(65 + i)}
               </div>
-              <span className="group-hover:text-[#8161e1] transition-colors">{ans}</span>
+              <span className="group-hover:text-[#8A2BE2] transition-colors">{ans}</span>
             </button>
           ))}
         </div>
@@ -1205,12 +1205,12 @@ export const LearningStyleTest = withStability(({ onComplete }: any) => {
               <button
                 key={i}
                 onClick={() => handleChoice(i)}
-                className="flex items-center gap-4 p-4.5 text-left border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
+                className="flex items-center gap-4 p-4.5 text-left border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
               >
-                <div className="w-8 h-8 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8161e1]/40 bg-white transition-colors">
-                  <Icon className="w-4 h-4 text-[#8161e1] group-hover:text-[#9979f4] transition-colors" />
+                <div className="w-8 h-8 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8A2BE2]/40 bg-white transition-colors">
+                  <Icon className="w-4 h-4 text-[#8A2BE2] group-hover:text-[#9979f4] transition-colors" />
                 </div>
-                <span className="group-hover:text-[#8161e1] transition-colors">{ans}</span>
+                <span className="group-hover:text-[#8A2BE2] transition-colors">{ans}</span>
               </button>
             );
           })}
@@ -1276,12 +1276,12 @@ export const EQTest = withStability(({ onComplete, difficulty = 'moderate', user
             <button
               key={i}
               onClick={() => handleChoice(i)}
-              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
+              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
             >
-              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8161e1]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
+              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8A2BE2]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
                 {String.fromCharCode(65 + i)}
               </div>
-              <span className="group-hover:text-[#8161e1] transition-colors">{ans}</span>
+              <span className="group-hover:text-[#8A2BE2] transition-colors">{ans}</span>
             </button>
           ))}
         </div>
@@ -1343,12 +1343,12 @@ export const NumericalTest = withStability(({ onComplete, difficulty = 'moderate
             <button
               key={i}
               onClick={() => handleAnswer(i)}
-              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
+              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
             >
-              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8161e1]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
+              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8A2BE2]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
                 {String.fromCharCode(65 + i)}
               </div>
-              <span className="group-hover:text-[#8161e1] transition-colors">{ans}</span>
+              <span className="group-hover:text-[#8A2BE2] transition-colors">{ans}</span>
             </button>
           ))}
         </div>
@@ -1413,12 +1413,12 @@ export const AbstractTest = withStability(({ onComplete, difficulty = 'moderate'
             <button
               key={i}
               onClick={() => handleAnswer(i)}
-              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
+              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
             >
-              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8161e1]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
+              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8A2BE2]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
                 {String.fromCharCode(65 + i)}
               </div>
-              <span className="group-hover:text-[#8161e1] transition-colors">{ans}</span>
+              <span className="group-hover:text-[#8A2BE2] transition-colors">{ans}</span>
             </button>
           ))}
         </div>
@@ -1516,7 +1516,7 @@ export const ExecutiveTest = withStability(({ onComplete, difficulty = 'moderate
             <button
               key={i}
               onClick={() => handleChoice(opt)}
-              className="p-4 border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl text-[#513c66] text-xs font-bold uppercase tracking-widest cursor-pointer shadow-sm"
+              className="p-4 border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl text-[#513c66] text-xs font-bold uppercase tracking-widest cursor-pointer shadow-sm"
             >
               {opt}
             </button>
@@ -1626,7 +1626,7 @@ export const ResilienceTest = withStability(({ onComplete, difficulty = 'moderat
             <button
               key={i}
               onClick={() => handleChoice(opt)}
-              className={cn("p-4 border hover:bg-[#8161e1]/5 active:scale-[0.98] transition-all rounded-2xl text-sm font-bold shadow-sm cursor-pointer", isDistracted ? "border-red-200 bg-white text-red-700 hover:bg-red-50" : "border-purple-100 bg-white text-[#513c66]")}
+              className={cn("p-4 border hover:bg-[#8A2BE2]/5 active:scale-[0.98] transition-all rounded-2xl text-sm font-bold shadow-sm cursor-pointer", isDistracted ? "border-red-200 bg-white text-red-700 hover:bg-red-50" : "border-purple-100 bg-white text-[#513c66]")}
             >
               {opt}
             </button>
@@ -1677,7 +1677,7 @@ export const AestheticTest = withStability(({ onComplete }: any) => {
             <button
               key={i}
               onClick={() => handleChoice(i)}
-              className="flex gap-2 p-4.5 border border-purple-100/75 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] rounded-2xl transition-all cursor-pointer shadow-sm"
+              className="flex gap-2 p-4.5 border border-purple-100/75 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] rounded-2xl transition-all cursor-pointer shadow-sm"
             >
               {opt.map((c, j) => (
                 <div key={j} className="flex-1 h-8 rounded-lg shadow-inner border border-black/5" style={{ backgroundColor: c }} />
@@ -1740,12 +1740,12 @@ export const AestheticTest = withStability(({ onComplete }: any) => {
             <button
               key={i}
               onClick={() => handleChoice(i)}
-              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
+              className="w-full p-4.5 text-left border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl group flex items-center gap-4 cursor-pointer text-[#513c66] text-sm font-medium leading-normal shadow-sm"
             >
-              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8161e1]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
+              <div className="w-5 h-5 rounded-full border border-purple-200 flex items-center justify-center group-hover:border-[#8A2BE2]/40 transition-colors bg-white font-mono text-[10px] font-bold text-[#8c78a5]">
                 {String.fromCharCode(65 + i)}
               </div>
-              <span className="group-hover:text-[#8161e1] transition-colors">{ans}</span>
+              <span className="group-hover:text-[#8A2BE2] transition-colors">{ans}</span>
             </button>
           ))}
         </div>
@@ -1795,13 +1795,13 @@ export const AuditoryTest = withStability(({ onComplete, difficulty = 'moderate'
       />
       <ProgressBar current={current + 1} total={questions.length} />
       <div className="w-full bg-white/95 border border-purple-100 rounded-3xl p-6 sm:p-10 space-y-12 flex flex-col items-center shadow-xl shadow-purple-600/5">
-        <div className="text-2xl font-mono text-[#8161e1] tracking-widest text-center bg-purple-50/80 px-6 py-3 rounded-2xl border border-purple-100 font-bold">{questions[current].p}</div>
+        <div className="text-2xl font-mono text-[#8A2BE2] tracking-widest text-center bg-purple-50/80 px-6 py-3 rounded-2xl border border-purple-100 font-bold">{questions[current].p}</div>
         <div className="grid grid-cols-1 gap-3.5 w-full">
           {questions[current].options?.map((opt: any, i: number) => (
             <button
               key={i}
               onClick={() => handleChoice(i)}
-              className="p-4 border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl text-[#513c66] text-sm font-bold tracking-widest cursor-pointer shadow-sm"
+              className="p-4 border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl text-[#513c66] text-sm font-bold tracking-widest cursor-pointer shadow-sm"
             >
               {opt}
             </button>
@@ -1863,7 +1863,7 @@ export const NarrativeTest = withStability(({ onComplete, difficulty = 'moderate
             <button
               key={i}
               onClick={() => handleChoice(i)}
-              className="p-4 border border-purple-100/70 hover:border-[#8161e1]/40 hover:bg-[#8161e1]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl text-[#513c66] text-sm font-bold tracking-widest cursor-pointer shadow-sm"
+              className="p-4 border border-purple-100/70 hover:border-[#8A2BE2]/40 hover:bg-[#8A2BE2]/5 bg-white/50 active:scale-[0.98] transition-all rounded-2xl text-[#513c66] text-sm font-bold tracking-widest cursor-pointer shadow-sm"
             >
               {opt}
             </button>

@@ -39,7 +39,7 @@ export const SuccessParticleCanvas: React.FC = () => {
 
     // Particle color palettes representing our theme accents:
     const palette = [
-      '#8161e1', // primary violet
+      '#8A2BE2', // primary violet
       '#a78bfa', // secondary lavender
       '#3b82f6', // blue
       '#10b981', // emerald

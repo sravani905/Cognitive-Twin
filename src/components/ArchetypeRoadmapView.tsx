@@ -88,7 +88,7 @@ export const ArchetypeRoadmapView: React.FC = () => {
         <motion.div 
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gradient-to-br from-[#f5f7fc] to-[#eff3fc] border-2 border-[#8161e1]/25 p-6 rounded-3xl space-y-6 shadow-xl text-[#251e44]"
+          className="bg-gradient-to-br from-[#f5f7fc] to-[#eff3fc] border-2 border-[#8A2BE2]/25 p-6 rounded-3xl space-y-6 shadow-xl text-[#251e44]"
         >
           <div className="flex items-center justify-between border-b border-black/5 pb-3">
             <div>
@@ -146,7 +146,7 @@ export const ArchetypeRoadmapView: React.FC = () => {
                 <button
                   onClick={triggerRoadmapGen}
                   disabled={isGeneratingRoadmap}
-                  className="w-full bg-[#8161e1] hover:brightness-105 text-white py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2 disabled:bg-slate-300"
+                  className="w-full bg-[#8A2BE2] hover:brightness-105 text-white py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2 disabled:bg-slate-300"
                 >
                   {isGeneratingRoadmap ? (
                     <>
@@ -187,7 +187,7 @@ export const ArchetypeRoadmapView: React.FC = () => {
 
                 {isGeneratingRoadmap && (
                   <div className="text-center py-12 space-y-3">
-                    <div className="w-8 h-8 border-4 border-[#8161e1] border-t-transparent rounded-full animate-spin mx-auto" />
+                    <div className="w-8 h-8 border-4 border-[#8A2BE2] border-t-transparent rounded-full animate-spin mx-auto" />
                     <p className="text-xs font-mono text-[#4a456e] block">Running Sequence Mapping algorithm...</p>
                   </div>
                 )}
@@ -195,8 +195,8 @@ export const ArchetypeRoadmapView: React.FC = () => {
                 {generatedCurriculum && (
                   <div className="space-y-4 w-full">
                     <div className="bg-[#eae4f5]/30 p-2.5 rounded-xl border border-accent-purple/10 flex justify-between items-center text-xs">
-                      <span>Curriculum Focus: <strong className="capitalize text-[#8161e1] font-bold">{selectedGap} Training Series</strong></span>
-                      <span className="bg-[#8161e1] text-white px-2 py-0.5 rounded font-mono text-[9px]">4 Steps Loaded</span>
+                      <span>Curriculum Focus: <strong className="capitalize text-[#8A2BE2] font-bold">{selectedGap} Training Series</strong></span>
+                      <span className="bg-[#8A2BE2] text-white px-2 py-0.5 rounded font-mono text-[9px]">4 Steps Loaded</span>
                     </div>
 
                     <div className="space-y-3">
@@ -320,7 +320,7 @@ export const ArchetypeRoadmapView: React.FC = () => {
                 setShowChallengeToast(true);
                 setTimeout(() => setShowChallengeToast(false), 4500);
               }}
-              className="w-full bg-[#8161e1] text-white py-2.5 px-4 rounded-full text-[10px] font-bold uppercase tracking-widest hover:brightness-105 flex items-center justify-center gap-1.5 transition-all"
+              className="w-full bg-[#8A2BE2] text-white py-2.5 px-4 rounded-full text-[10px] font-bold uppercase tracking-widest hover:brightness-105 flex items-center justify-center gap-1.5 transition-all"
             >
               <span>+ Generate Next Step</span>
               <ChevronRight className="w-3.5 h-3.5" />
@@ -339,7 +339,7 @@ export const ArchetypeRoadmapView: React.FC = () => {
           {/* Top Gemini Chat bubble from Image 3 */}
           <div className="flex gap-4">
             {/* Avatar face sketch mock */}
-            <div className="w-12 h-12 rounded-full border border-[#8161e1]/20 overflow-hidden shrink-0 bg-indigo-50 flex items-center justify-center font-bold text-[#8161e1]">
+            <div className="w-12 h-12 rounded-full border border-[#8A2BE2]/20 overflow-hidden shrink-0 bg-indigo-50 flex items-center justify-center font-bold text-[#8A2BE2]">
               👩🏻‍💼
             </div>
             
@@ -389,7 +389,7 @@ export const ArchetypeRoadmapView: React.FC = () => {
                   <div className="absolute left-[45%] top-[75%] text-xs">🌟</div>
                   <div className="absolute left-[80%] top-[25%] text-xs">🌟</div>
                   
-                  <div className="absolute left-4 bottom-4 bg-[#8161e1] text-white text-[9px] font-bold px-2 py-0.5 rounded shadow">
+                  <div className="absolute left-4 bottom-4 bg-[#8A2BE2] text-white text-[9px] font-bold px-2 py-0.5 rounded shadow">
                     ✓ Crinine
                   </div>
                 </div>

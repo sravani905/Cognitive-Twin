@@ -39,6 +39,7 @@ import { SuccessParticleCanvas } from './components/SuccessParticleCanvas';
 import { QuickActionsFloatingMenu } from './components/QuickActionsFloatingMenu';
 import { DashboardOnboardingWalkthrough } from './components/DashboardOnboardingWalkthrough';
 import { NotificationScheduler } from './components/NotificationScheduler';
+import { CinematicIntro } from './components/CinematicIntro';
 
 export default function App() {
   const state = useAppState();
@@ -57,6 +58,7 @@ export default function App() {
 
   // Interactive Onboarding Walkthrough State
   const [showOnboarding, setShowOnboarding] = useState(false);
+  const [showIntro, setShowIntro] = useState(true);
 
   // Local UI State
   const [showAbout, setShowAbout] = useState(false);
@@ -306,6 +308,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-transparent text-secondary font-sans selection:bg-accent-purple/10 relative">
+      {showIntro && <CinematicIntro onComplete={() => setShowIntro(false)} />}
       <SparkleBackground />
       <NeuralCore />
       <SuccessParticleCanvas />
@@ -385,7 +388,8 @@ export default function App() {
                 <button onClick={() => { setIsDemoMode(false); setStep('welcome'); }} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#5c4ce1] hover:brightness-110 border border-[#5c4ce1]/25 px-4 py-1.5 rounded-full bg-[#5c4ce1]/5 shrink-0"><ArrowLeft className="w-3.5 h-3.5" /> Landing Page</button>
                 <button onClick={() => setShowApiConfig(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-accent-blue hover:brightness-110 border border-accent-blue/20 px-4 py-1.5 rounded-full bg-blue-50/10 shrink-0"><Key className="w-3.5 h-3.5" /> API Settings</button>
                 <button onClick={() => setShowOnboarding(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-accent-emerald hover:brightness-110 border border-accent-emerald/20 px-4 py-1.5 rounded-full bg-emerald-50/15 shrink-0 animate-pulse"><HelpCircle className="w-3.5 h-3.5" /> Interactive Tour</button>
-                <button onClick={() => setShowAbout(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#8161e1] hover:brightness-110 border border-[#8161e1]/20 px-4 py-1.5 rounded-full bg-[#8161e1]/8 shrink-0"><Sparkles className="w-3.5 h-3.5" /> About Platform</button>
+                <button onClick={() => setShowIntro(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#ca4eb3] hover:brightness-110 border border-[#ca4eb3]/25 px-4 py-1.5 rounded-full bg-pink-50/10 shrink-0"><Play className="w-3.5 h-3.5 text-[#ca4eb3] animate-pulse" /> Replay Cinema Init</button>
+                <button onClick={() => setShowAbout(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#8A2BE2] hover:brightness-110 border border-[#8A2BE2]/20 px-4 py-1.5 rounded-full bg-[#8A2BE2]/8 shrink-0"><Sparkles className="w-3.5 h-3.5" /> About Platform</button>
                 <button onClick={() => setShowResetConfirm(true)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-accent-purple hover:brightness-110 border border-accent-purple/20 px-4 py-1.5 rounded-full bg-white/40 shrink-0"><RefreshCw className="w-3.5 h-3.5" /> Start Fresh</button>
                 <button onClick={handleShare} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-muted hover:text-primary shrink-0">{copied ? <Check className="w-3 h-3 text-accent-emerald" /> : <Share2 className="w-3.5 h-3.5" />}{copied ? "Copied" : "Share URL"}</button>
                 <button onClick={() => { setUser(null); setIsDemoMode(false); setStep('welcome'); }} className="text-xs font-semibold uppercase text-red-500 hover:scale-[0.98] transition-all">Sign out</button>
@@ -397,12 +401,12 @@ export default function App() {
               <motion.div 
                 initial={{ opacity: 0, y: -10 }} 
                 animate={{ opacity: 1, y: 0 }} 
-                className="bg-gradient-to-r from-[#8161e1]/8 via-[#e59ec1]/5 to-[#8161e1]/8 border border-[#8161e1]/20 p-5 rounded-3xl relative overflow-hidden backdrop-blur-md shadow-sm space-y-4 md:space-y-0 flex flex-col md:flex-row items-center justify-between gap-6"
+                className="bg-gradient-to-r from-[#8A2BE2]/8 via-[#e59ec1]/5 to-[#8A2BE2]/8 border border-[#8A2BE2]/20 p-5 rounded-3xl relative overflow-hidden backdrop-blur-md shadow-sm space-y-4 md:space-y-0 flex flex-col md:flex-row items-center justify-between gap-6"
               >
                 <div className="flex items-center gap-4">
                   <div className="relative">
-                    <div className="w-10 h-10 rounded-2xl bg-[#8161e1]/10 flex items-center justify-center text-xl animate-pulse">✨</div>
-                    <div className="absolute inset-0 bg-[#8161e1]/10 rounded-2xl animate-ping opacity-30" />
+                    <div className="w-10 h-10 rounded-2xl bg-[#8A2BE2]/10 flex items-center justify-center text-xl animate-pulse">✨</div>
+                    <div className="absolute inset-0 bg-[#8A2BE2]/10 rounded-2xl animate-ping opacity-30" />
                   </div>
                   <div>
                     <h3 className="text-xs font-bold text-primary flex flex-wrap items-center gap-2">
@@ -786,7 +790,7 @@ export default function App() {
       <footer className="relative z-10 mt-12 p-8 border-t border-black/5 text-center flex flex-col items-center gap-4">
         <div className="flex gap-4 flex-wrap justify-center">
           <button id="btn-footer-contact" onClick={() => setShowContact(true)} className="px-6 py-2 rounded-full border border-black/5 text-[10px] font-bold text-muted uppercase tracking-widest hover:bg-white/40 transition-all"><Mail className="w-3 h-3 inline mr-2" /> Contact</button>
-          <button id="btn-footer-api-config" onClick={() => setShowApiConfig(true)} className="px-6 py-2 rounded-full border border-black/5 text-[10px] font-bold text-[#8161e1] uppercase tracking-widest hover:bg-white/40 transition-all"><Key className="w-3 h-3 inline mr-2" /> API Settings</button>
+          <button id="btn-footer-api-config" onClick={() => setShowApiConfig(true)} className="px-6 py-2 rounded-full border border-black/5 text-[10px] font-bold text-[#8A2BE2] uppercase tracking-widest hover:bg-white/40 transition-all"><Key className="w-3 h-3 inline mr-2" /> API Settings</button>
         </div>
         <p className="text-[9px] font-semibold text-muted uppercase tracking-[0.4em]">Cognitive Twin • Your Mind, Reflected</p>
       </footer>

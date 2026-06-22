@@ -78,16 +78,16 @@ export const AssessmentModule: React.FC<AssessmentModuleProps> = ({
         className="max-w-4xl mx-auto space-y-10 py-6"
       >
         {/* Dynamic, High-Fidelity Test Header Banner */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end bg-white/70 backdrop-blur-xl border border-white/80 p-8 rounded-[2rem] shadow-lg shadow-[#8161e1]/5 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end bg-white/70 backdrop-blur-xl border border-white/80 p-8 rounded-[2rem] shadow-lg shadow-[#8A2BE2]/5 gap-6">
           <div className="space-y-2">
             <div className="flex flex-wrap items-center gap-2">
-              <p className="text-[10px] font-bold text-[#8c78a5] uppercase tracking-widest bg-gradient-to-r from-[#8161e1]/10 to-[#9979f4]/10 border border-[#8161e1]/15 px-4.5 py-1.5 rounded-full inline-block">
+              <p className="text-[10px] font-bold text-[#8c78a5] uppercase tracking-widest bg-gradient-to-r from-[#8A2BE2]/10 to-[#9979f4]/10 border border-[#8A2BE2]/15 px-4.5 py-1.5 rounded-full inline-block">
                 Onboarding Phase {testIndex + 1} of {tests.length}
               </p>
               {onBackToLanding && (
                 <button
                   onClick={onBackToLanding}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white/70 hover:bg-white active:scale-95 text-[#8161e1] text-[9px] font-bold uppercase tracking-widest border border-purple-100/40 rounded-full transition-all duration-200 cursor-pointer shadow-sm shrink-0"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white/70 hover:bg-white active:scale-95 text-[#8A2BE2] text-[9px] font-bold uppercase tracking-widest border border-purple-100/40 rounded-full transition-all duration-200 cursor-pointer shadow-sm shrink-0"
                 >
                   <ArrowLeft className="w-3 h-3" /> Back to Landing Page
                 </button>
@@ -114,8 +114,8 @@ export const AssessmentModule: React.FC<AssessmentModuleProps> = ({
                   key={i} 
                   className={cn(
                     "h-1.5 rounded-full transition-all duration-300", 
-                    i === testIndex ? "bg-[#8161e1] w-6" : 
-                    i < testIndex ? "bg-[#8161e1]/50 w-2.5" : "bg-purple-100 w-1.5"
+                    i === testIndex ? "bg-[#8A2BE2] w-6" : 
+                    i < testIndex ? "bg-[#8A2BE2]/50 w-2.5" : "bg-purple-100 w-1.5"
                   )} 
                   title={tests[i].label}
                 />
@@ -125,7 +125,7 @@ export const AssessmentModule: React.FC<AssessmentModuleProps> = ({
         </div>
 
         {/* The Testing Stage Card */}
-        <TechnicalCard className="min-h-[550px] flex items-center justify-center relative overflow-hidden bg-white/75 border border-white/80 p-6 md:p-12 shadow-2xl shadow-[#8161e1]/10 rounded-[2.5rem]">
+        <TechnicalCard className="min-h-[550px] flex items-center justify-center relative overflow-hidden bg-white/75 border border-white/80 p-6 md:p-12 shadow-2xl shadow-[#8A2BE2]/10 rounded-[2.5rem]">
           <AnimatePresence mode="wait">
             <motion.div
               key={testIndex}
@@ -159,7 +159,7 @@ export const AssessmentModule: React.FC<AssessmentModuleProps> = ({
             </button>
             <button
               onClick={handleFastTrackAll}
-              className="px-7 py-3 text-[10px] font-bold uppercase tracking-widest font-sans rounded-full text-white bg-gradient-to-r from-[#8161e1] to-[#9979f4] hover:brightness-105 active:scale-95 transition-all cursor-pointer shadow-md shadow-indigo-600/10"
+              className="px-7 py-3 text-[10px] font-bold uppercase tracking-widest font-sans rounded-full text-white bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] hover:brightness-105 active:scale-95 transition-all cursor-pointer shadow-md shadow-indigo-600/10"
             >
               Fast-Track to Dashboard
             </button>
@@ -179,8 +179,8 @@ export const AssessmentModule: React.FC<AssessmentModuleProps> = ({
       >
         <div className="relative">
           <div className="w-32 h-32 border border-purple-100/40 rounded-full flex items-center justify-center p-8 relative shadow-lg shadow-purple-600/5 bg-white">
-            <MeshBrain className="w-16 h-16 animate-pulse text-[#8161e1] absolute opacity-40" />
-            <RefreshCw className="w-10 h-10 text-[#8161e1] animate-spin relative z-10" />
+            <MeshBrain className="w-16 h-16 animate-pulse text-[#8A2BE2] absolute opacity-40" />
+            <RefreshCw className="w-10 h-10 text-[#8A2BE2] animate-spin relative z-10" />
           </div>
           <div className="absolute top-0 right-0 w-4 h-4 rounded-full bg-indigo-500 border border-white animate-pulse" />
         </div>

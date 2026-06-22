@@ -103,7 +103,7 @@ function WalkthroughVisualAid({ stepIndex }: { stepIndex: number }) {
             <motion.div 
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute w-12 h-12 bg-gradient-to-tr from-accent-purple to-accent-blue rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(129,97,225,0.6)]"
+              className="absolute w-12 h-12 bg-gradient-to-tr from-accent-purple to-accent-blue rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(138, 43, 226,0.6)]"
             >
               <Sparkles className="w-6 h-6 text-white" />
             </motion.div>
@@ -129,7 +129,7 @@ function WalkthroughVisualAid({ stepIndex }: { stepIndex: number }) {
           </div>
           
           <div className="absolute bottom-2 inset-x-0 text-center">
-            <span className="text-[9px] font-mono tracking-widest text-[#8161e1] uppercase animate-pulse">Neural Synchronization Active</span>
+            <span className="text-[9px] font-mono tracking-widest text-[#8A2BE2] uppercase animate-pulse">Neural Synchronization Active</span>
           </div>
         </div>
       );
@@ -207,7 +207,7 @@ function WalkthroughVisualAid({ stepIndex }: { stepIndex: number }) {
               </button>
               <div className="flex flex-col">
                 <span className="text-[10px] font-sans font-bold text-white">Focus track: Ambient Rain</span>
-                <span className="text-[8px] font-mono text-[#8161e1]">Alpha Waves (12Hz) Enabled</span>
+                <span className="text-[8px] font-mono text-[#8A2BE2]">Alpha Waves (12Hz) Enabled</span>
               </div>
             </div>
             <span className="text-[9px] font-mono text-slate-400">OSC-1</span>
@@ -257,7 +257,7 @@ function WalkthroughVisualAid({ stepIndex }: { stepIndex: number }) {
               <motion.div 
                 animate={{ width: ['30%', '85%', '20%', '60%'] }} 
                 transition={{ duration: 10, repeat: Infinity }}
-                className="bg-accent-purple h-full shadow-[0_0_5px_rgba(129,97,225,1)]" 
+                className="bg-accent-purple h-full shadow-[0_0_5px_rgba(138, 43, 226,1)]" 
               />
             </div>
           </div>
@@ -267,7 +267,7 @@ function WalkthroughVisualAid({ stepIndex }: { stepIndex: number }) {
     case 5: // Bento Mini-Workspace
       return (
         <div className="w-full bg-slate-950 p-3 rounded-2xl border border-slate-800/80 my-3">
-          <span className="text-[9px] font-mono text-[#8161e1] block mb-2 uppercase">Interactive Bento Preview</span>
+          <span className="text-[9px] font-mono text-[#8A2BE2] block mb-2 uppercase">Interactive Bento Preview</span>
           <div className="grid grid-cols-2 gap-2">
             <div className="bg-slate-900/80 p-2 rounded-xl border border-white/5 space-y-1">
               <span className="text-[8px] text-slate-400 font-mono">Cognitive Scores</span>
@@ -457,7 +457,7 @@ export function DashboardOnboardingWalkthrough({ onClose, onNavigateTab, activeT
             }}
             exit={{ opacity: 0 }}
             transition={{ type: 'spring', damping: 25, stiffness: 180 }}
-            className="absolute rounded-[24px] border-2 border-accent-purple bg-accent-purple/5 shadow-[0_0_35px_rgba(129,97,225,0.75)] pointer-events-none z-[1000]"
+            className="absolute rounded-[24px] border-2 border-accent-purple bg-accent-purple/5 shadow-[0_0_35px_rgba(138, 43, 226,0.75)] pointer-events-none z-[1000]"
           >
             {/* Top ripple visual pulse effects */}
             <span className="absolute -inset-1 rounded-[26px] border border-accent-purple/50 animate-ping opacity-30" />

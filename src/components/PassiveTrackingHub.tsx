@@ -540,12 +540,12 @@ export const PassiveTrackingHub = ({
       {/* Visual Header / Neural Level Tracker */}
       <div className="relative overflow-hidden p-8 md:p-10 rounded-[3rem] bg-white/[0.02] border border-white/5 backdrop-blur-xl">
         <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
-          <Trophy className="w-48 h-48 text-[#8161e1]" />
+          <Trophy className="w-48 h-48 text-[#8A2BE2]" />
         </div>
         
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 relative z-10">
           <div className="space-y-3">
-            <span className="micro-label text-[#8161e1] bg-[#8161e1]/8 border border-[#8161e1]/18 px-3.5 py-1 rounded-full uppercase tracking-widest font-mono">
+            <span className="micro-label text-[#8A2BE2] bg-[#8A2BE2]/8 border border-[#8A2BE2]/18 px-3.5 py-1 rounded-full uppercase tracking-widest font-mono">
               Bandwidth Sync & Achievements
             </span>
             <h2 className="text-3xl font-serif italic text-primary">Neural Synchronization Hub</h2>
@@ -556,18 +556,18 @@ export const PassiveTrackingHub = ({
 
           {/* Holographic Level Badge */}
           <div className="flex items-center gap-6 bg-white/[0.02] border border-white/5 p-6 rounded-3xl shrink-0">
-            <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-[#8161e1]/30 to-purple-500/10 border border-[#8161e1]/40 shadow-[0_0_20px_rgba(129,97,225,0.15)] glow">
-              <Sparkles className="absolute w-12 h-12 text-[#8161e1]/20 animate-pulse" />
+            <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-[#8A2BE2]/30 to-purple-500/10 border border-[#8A2BE2]/40 shadow-[0_0_20px_rgba(138, 43, 226,0.15)] glow">
+              <Sparkles className="absolute w-12 h-12 text-[#8A2BE2]/20 animate-pulse" />
               <span className="text-xl font-mono font-bold text-white">{level}</span>
             </div>
             <div className="space-y-1.5 flex-1 min-w-[150px]">
               <div className="flex justify-between text-[9px] font-mono uppercase tracking-widest">
-                <span className="text-[#8161e1] font-bold">Neural Stage</span>
+                <span className="text-[#8A2BE2] font-bold">Neural Stage</span>
                 <span className="text-slate-500 font-bold">{currentLevelXP} / {xpNeededForNext} XP</span>
               </div>
               <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden border border-white/5">
                 <div 
-                  className="h-full bg-gradient-to-r from-[#8161e1] to-[#bca6ec] rounded-full transition-all duration-1000" 
+                  className="h-full bg-gradient-to-r from-[#8A2BE2] to-[#bca6ec] rounded-full transition-all duration-1000" 
                   style={{ width: `${(currentLevelXP / xpNeededForNext) * 100}%` }}
                 />
               </div>
@@ -593,11 +593,11 @@ export const PassiveTrackingHub = ({
               className={cn(
                 "flex items-center gap-2.5 px-6 py-3 rounded-2xl text-[10px] uppercase font-bold tracking-widest transition-all shrink-0",
                 activeTab === tab.id 
-                  ? "bg-[#8161e1]/10 text-white border border-[#8161e1]/25 shadow-[0_0_15px_rgba(129,97,225,0.08)]" 
+                  ? "bg-[#8A2BE2]/10 text-white border border-[#8A2BE2]/25 shadow-[0_0_15px_rgba(138, 43, 226,0.08)]" 
                   : "text-slate-500 hover:text-white border border-transparent hover:bg-white/[0.02]"
               )}
             >
-              <tab.icon className="w-4 h-4 text-[#8161e1]" />
+              <tab.icon className="w-4 h-4 text-[#8A2BE2]" />
               {tab.label}
             </button>
           ))}
@@ -620,7 +620,7 @@ export const PassiveTrackingHub = ({
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/5 pb-6">
                   <div>
                     <h3 className="text-xl font-serif text-primary flex items-center gap-2.5">
-                      <ShieldCheck className="w-5 h-5 text-[#8161e1]" /> Real-time Ingestion Controls
+                      <ShieldCheck className="w-5 h-5 text-[#8A2BE2]" /> Real-time Ingestion Controls
                     </h3>
                     <p className="text-[10px] text-slate-500 uppercase tracking-widest font-mono mt-1">Configure external data synchronization parameters</p>
                   </div>
@@ -666,14 +666,14 @@ export const PassiveTrackingHub = ({
                         className={cn(
                           "p-6 rounded-3xl border transition-all flex flex-col justify-between h-[230px]",
                           conn.status === 'connected' 
-                            ? "bg-[#8161e1]/4 border-[#8161e1]/25 hover:border-[#8161e1]/35 shadow-[0_0_20px_rgba(129,97,225,0.03)]" 
+                            ? "bg-[#8A2BE2]/4 border-[#8A2BE2]/25 hover:border-[#8A2BE2]/35 shadow-[0_0_20px_rgba(138, 43, 226,0.03)]" 
                             : "bg-white/[0.01] border-white/5 hover:border-white/10"
                         )}
                       >
                         <div className="space-y-3">
                           <div className="flex items-center justify-between">
                             <div className="p-2.5 rounded-xl bg-white/5 text-slate-400">
-                              <Icon className="w-5 h-5 text-[#8161e1]" />
+                              <Icon className="w-5 h-5 text-[#8A2BE2]" />
                             </div>
                             <span className={cn(
                               "text-[8px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border",
@@ -694,7 +694,7 @@ export const PassiveTrackingHub = ({
                         </div>
 
                         {conn.status === 'connected' && conn.simulatedValue && (
-                          <div className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-xl flex items-center gap-1.5 text-[8px] font-mono text-[#8161e1]">
+                          <div className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-xl flex items-center gap-1.5 text-[8px] font-mono text-[#8A2BE2]">
                             <Info className="w-3 h-3 text-slate-500" />
                             <span className="truncate">{conn.simulatedValue}</span>
                           </div>
@@ -722,7 +722,7 @@ export const PassiveTrackingHub = ({
               <div className="md:col-span-4 p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 space-y-6">
                 <div>
                   <h3 className="text-lg font-serif italic text-primary flex items-center gap-2.5">
-                    <Database className="w-4.5 h-4.5 text-[#8161e1]" /> Local Intake Telemetry
+                    <Database className="w-4.5 h-4.5 text-[#8A2BE2]" /> Local Intake Telemetry
                   </h3>
                   <p className="text-[9px] text-slate-500 uppercase tracking-widest font-mono mt-1">Real-time sandboxed passive event queue</p>
                 </div>
@@ -737,7 +737,7 @@ export const PassiveTrackingHub = ({
                         className="p-3 bg-white/[0.01] border border-white/5 rounded-2xl space-y-1.5 hover:bg-white/[0.03] transition-colors"
                       >
                         <div className="flex justify-between items-center text-[8px] font-mono">
-                          <span className="text-[#8161e1] font-bold uppercase">{log.source}</span>
+                          <span className="text-[#8A2BE2] font-bold uppercase">{log.source}</span>
                           <span className="text-slate-500">{log.timestamp}</span>
                         </div>
                         <p className="text-[10px] text-slate-400 font-light leading-snug">{log.event}</p>
@@ -791,7 +791,7 @@ export const PassiveTrackingHub = ({
                     className={cn(
                       "p-6 rounded-[2rem] border transition-all relative overflow-hidden flex flex-col justify-between h-[230px]",
                       ach.unlocked 
-                        ? "bg-[#8161e1]/5 border-[#8161e1]/25 hover:border-[#8161e1]/35 shadow-[0_0_20px_rgba(129,97,225,0.05)]" 
+                        ? "bg-[#8A2BE2]/5 border-[#8A2BE2]/25 hover:border-[#8A2BE2]/35 shadow-[0_0_20px_rgba(138, 43, 226,0.05)]" 
                         : "bg-white/[0.01] border-white/5 opacity-60 hover:opacity-100"
                     )}
                   >
@@ -800,7 +800,7 @@ export const PassiveTrackingHub = ({
                         <div className={cn(
                           "p-3 rounded-2xl",
                           ach.unlocked 
-                            ? "bg-[#8161e1]/10 text-[#8161e1]" 
+                            ? "bg-[#8A2BE2]/10 text-[#8A2BE2]" 
                             : "bg-white/5 text-slate-500"
                         )}>
                           <Icon className="w-5 h-5" />
@@ -835,13 +835,13 @@ export const PassiveTrackingHub = ({
                         <div 
                           className={cn(
                             "h-full rounded-full transition-all duration-500",
-                            ach.unlocked ? "bg-gradient-to-r from-emerald-500 to-[#8161e1]" : "bg-white/10"
+                            ach.unlocked ? "bg-gradient-to-r from-emerald-500 to-[#8A2BE2]" : "bg-white/10"
                           )}
                           style={{ width: `${ach.progress}%` }}
                         />
                       </div>
                       {ach.unlocked && (
-                        <div className="flex items-center gap-1.5 text-[9px] text-[#8161e1] font-mono font-bold uppercase tracking-widest mt-1">
+                        <div className="flex items-center gap-1.5 text-[9px] text-[#8A2BE2] font-mono font-bold uppercase tracking-widest mt-1">
                           <CheckCircle className="w-3.5 h-3.5 text-emerald-500" />
                           <span>+ {ach.xpReward} CBC Credits Saved</span>
                         </div>
@@ -890,7 +890,7 @@ export const PassiveTrackingHub = ({
                       className={cn(
                         "grid grid-cols-12 px-6 py-4 items-center text-xs",
                         userRow.isUser 
-                          ? "bg-[#8161e1]/8 border-y border-[#8161e1]/20 font-bold text-white shadow-inner" 
+                          ? "bg-[#8A2BE2]/8 border-y border-[#8A2BE2]/20 font-bold text-white shadow-inner" 
                           : "text-slate-400 hover:text-white hover:bg-white/[0.01] transition-all"
                       )}
                     >
@@ -910,9 +910,9 @@ export const PassiveTrackingHub = ({
                       </div>
                       
                       <div className="col-span-4 font-medium flex items-center gap-2">
-                        {userRow.isUser && <span className="w-1.5 h-1.5 bg-[#8161e1] rounded-full animate-pulse" />}
+                        {userRow.isUser && <span className="w-1.5 h-1.5 bg-[#8A2BE2] rounded-full animate-pulse" />}
                         {userRow.name}
-                        {userRow.isUser && <span className="text-[8px] uppercase tracking-widest border border-[#8161e1]/30 bg-[#8161e1]/10 text-white font-bold font-mono px-2 py-0.5 rounded-full">YOU</span>}
+                        {userRow.isUser && <span className="text-[8px] uppercase tracking-widest border border-[#8A2BE2]/30 bg-[#8A2BE2]/10 text-white font-bold font-mono px-2 py-0.5 rounded-full">YOU</span>}
                       </div>
 
                       <div className="col-span-2 text-center font-mono text-[10px] font-bold">
@@ -923,7 +923,7 @@ export const PassiveTrackingHub = ({
                         {userRow.streak} Day Loop
                       </div>
 
-                      <div className="col-span-2 text-right font-mono font-bold text-[#8161e1]">
+                      <div className="col-span-2 text-right font-mono font-bold text-[#8A2BE2]">
                         {userRow.score.toFixed(1)}% Accuracy
                       </div>
                     </div>
@@ -964,7 +964,7 @@ export const PassiveTrackingHub = ({
                             ? "bg-emerald-500/10 text-emerald-400" 
                             : "bg-white/5 text-slate-500"
                         )}>
-                          <Icon className="w-5 h-5 text-[#8161e1]" />
+                          <Icon className="w-5 h-5 text-[#8A2BE2]" />
                         </div>
                         <span className={cn(
                           "text-[9px] font-mono font-bold uppercase tracking-widest px-3 py-1 rounded bg-white/5 border border-white/5",
@@ -1030,7 +1030,7 @@ export const PassiveTrackingHub = ({
               className="relative w-full max-w-lg bg-[#14122d] border border-white/10 rounded-[3rem] p-8 md:p-10 shadow-2xl space-y-6"
             >
               <div className="flex items-center gap-4 border-b border-white/5 pb-4">
-                <div className="p-3 bg-[#8161e1]/10 rounded-2xl text-[#8161e1]">
+                <div className="p-3 bg-[#8A2BE2]/10 rounded-2xl text-[#8A2BE2]">
                   {(() => {
                     const IconComponent = connectors.find(c => c.id === activeModal)?.icon || ExternalLink;
                     return <IconComponent className="w-6 h-6" />;
@@ -1046,7 +1046,7 @@ export const PassiveTrackingHub = ({
 
               <div className="space-y-4">
                 <div className="space-y-1.5 bg-white/[0.02] p-4.5 rounded-2xl border border-white/5">
-                  <h5 className="text-[10px] font-bold uppercase tracking-widest text-[#8161e1]">Credentials & Instructions</h5>
+                  <h5 className="text-[10px] font-bold uppercase tracking-widest text-[#8A2BE2]">Credentials & Instructions</h5>
                   <p className="text-[10px] text-slate-400 leading-relaxed font-light">
                     {connectors.find(c => c.id === activeModal)?.instructions}
                   </p>
@@ -1059,7 +1059,7 @@ export const PassiveTrackingHub = ({
                     value={inputToken}
                     onChange={(e) => setInputToken(e.target.value)}
                     placeholder="Input secure webhook client token key (e.g. ln_tok_...)"
-                    className="w-full bg-[#1b1935] border border-white/10 rounded-2xl p-4 text-xs font-mono outline-none focus:border-[#8161e1] text-white transition-all placeholder:text-slate-600"
+                    className="w-full bg-[#1b1935] border border-white/10 rounded-2xl p-4 text-xs font-mono outline-none focus:border-[#8A2BE2] text-white transition-all placeholder:text-slate-600"
                   />
                 </div>
 
@@ -1079,7 +1079,7 @@ export const PassiveTrackingHub = ({
               <div className="flex gap-4 pt-4">
                 <button
                   onClick={handleConfirmConnect}
-                  className="flex-1 py-3.5 bg-[#8161e1] text-white rounded-2xl text-[10px] font-bold uppercase tracking-widest hover:brightness-110 transition-all shadow-md"
+                  className="flex-1 py-3.5 bg-[#8A2BE2] text-white rounded-2xl text-[10px] font-bold uppercase tracking-widest hover:brightness-110 transition-all shadow-md"
                 >
                   Confirm Secure Connection
                 </button>

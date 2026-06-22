@@ -103,7 +103,7 @@ export const QuickActionsFloatingMenu: React.FC<QuickActionsFloatingMenuProps> =
             {/* Header section with closing element */}
             <div className="flex items-center justify-between pb-3 border-b border-black/5 dark:border-white/5">
               <div className="flex items-center gap-2">
-                <div className="p-1 px-2.5 rounded-full bg-[#8161e1]/10 text-accent-purple text-[8px] font-mono font-bold uppercase tracking-wider">
+                <div className="p-1 px-2.5 rounded-full bg-[#8A2BE2]/10 text-accent-purple text-[8px] font-mono font-bold uppercase tracking-wider">
                   Operational
                 </div>
                 <span className="text-xs font-serif font-bold text-primary dark:text-white">Quick Lab Actions</span>
@@ -137,7 +137,7 @@ export const QuickActionsFloatingMenu: React.FC<QuickActionsFloatingMenuProps> =
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-[#8161e1] transition-colors font-mono">
+                      <p className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-[#8A2BE2] transition-colors font-mono">
                         {act.title}
                       </p>
                       <p className="text-[10px] text-muted truncate">
@@ -151,7 +151,7 @@ export const QuickActionsFloatingMenu: React.FC<QuickActionsFloatingMenuProps> =
 
             {/* Hint label */}
             <div className="text-[9px] text-[#7c7790] dark:text-slate-400 font-medium text-center flex items-center justify-center gap-1.5 pt-1.5 border-t border-black/5 dark:border-white/5 select-none uppercase tracking-wider">
-              <Zap className="w-3 h-3 text-[#8161e1] animate-bounce" />
+              <Zap className="w-3 h-3 text-[#8A2BE2] animate-bounce" />
               <span>Configure pathways in high-frequency space</span>
             </div>
           </motion.div>

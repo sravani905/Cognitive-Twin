@@ -129,7 +129,7 @@ export const MyMindProfileView: React.FC<MyMindProfileViewProps> = ({ metrics, o
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Left Col: Sliders */}
             <div className="lg:col-span-6 space-y-4">
-              <h4 className="text-[10px] uppercase tracking-widest font-extrabold text-[#8161e1] font-mono">1. Modify Raw Cognitive Inputs (Quiz Scores)</h4>
+              <h4 className="text-[10px] uppercase tracking-widest font-extrabold text-[#8A2BE2] font-mono">1. Modify Raw Cognitive Inputs (Quiz Scores)</h4>
               
               <div className="space-y-3 bg-white p-4 rounded-2xl border border-black/5">
                 <p className="text-[9px] font-mono text-[#5c4ce1] font-bold border-b pb-1 uppercase tracking-wider">Analytical Balance Indicators</p>
@@ -254,7 +254,7 @@ export const MyMindProfileView: React.FC<MyMindProfileViewProps> = ({ metrics, o
 
             {/* Right Col: Mathematical synthesis */}
             <div className="lg:col-span-6 space-y-4">
-              <h4 className="text-[10px] uppercase tracking-widest font-extrabold text-[#8161e1] font-mono">2. Synthesis and 3D Vector Math</h4>
+              <h4 className="text-[10px] uppercase tracking-widest font-extrabold text-[#8A2BE2] font-mono">2. Synthesis and 3D Vector Math</h4>
               
               <div className="bg-white p-5 rounded-3xl border border-black/5 space-y-4 shadow-sm">
                 <p className="text-xs font-mono text-muted">Each master category leverages an unweighted centroid formulation:</p>
@@ -268,7 +268,7 @@ export const MyMindProfileView: React.FC<MyMindProfileViewProps> = ({ metrics, o
                   <div className="w-full h-2 bg-black/5 rounded-full overflow-hidden">
                     <div className="h-full bg-gradient-to-r from-red-400 to-rose-600 rounded-full" style={{ width: `${simAnalytical}%` }} />
                   </div>
-                  <p className="text-[9px] font-mono text-[#8161e1]">Formula: (Logic + Numerical + Abstract) ÷ 3</p>
+                  <p className="text-[9px] font-mono text-[#8A2BE2]">Formula: (Logic + Numerical + Abstract) ÷ 3</p>
                 </div>
 
                 {/* Creative Synthesis Bar */}
@@ -280,7 +280,7 @@ export const MyMindProfileView: React.FC<MyMindProfileViewProps> = ({ metrics, o
                   <div className="w-full h-2 bg-black/5 rounded-full overflow-hidden">
                     <div className="h-full bg-gradient-to-r from-pink-400 to-indigo-500 rounded-full" style={{ width: `${simCreative}%` }} />
                   </div>
-                  <p className="text-[9px] font-mono text-[#8161e1]">Formula: (Creativity + Verbal + Narrative) ÷ 3</p>
+                  <p className="text-[9px] font-mono text-[#8A2BE2]">Formula: (Creativity + Verbal + Narrative) ÷ 3</p>
                 </div>
 
                 {/* Focus Synthesis Bar */}
@@ -292,7 +292,7 @@ export const MyMindProfileView: React.FC<MyMindProfileViewProps> = ({ metrics, o
                   <div className="w-full h-2 bg-black/5 rounded-full overflow-hidden">
                     <div className="h-full bg-gradient-to-r from-[#34d399] to-[#059669] rounded-full" style={{ width: `${simFocus}%` }} />
                   </div>
-                  <p className="text-[9px] font-mono text-[#8161e1]">Formula: (Focus + Executive + Speed) ÷ 3</p>
+                  <p className="text-[9px] font-mono text-[#8A2BE2]">Formula: (Focus + Executive + Speed) ÷ 3</p>
                 </div>
 
                 {/* Vector Location */}
@@ -563,10 +563,10 @@ export const MyMindProfileView: React.FC<MyMindProfileViewProps> = ({ metrics, o
                   <div className="space-y-1">
                     <div className="flex justify-between text-[10px] font-mono text-muted">
                       <span>Verbal Reasoning</span>
-                      <span className="text-[#8161e1] font-bold">82 High</span>
+                      <span className="text-[#8A2BE2] font-bold">82 High</span>
                     </div>
                     <div className="w-full h-2 bg-[#f4f2fa] rounded-full overflow-hidden">
-                      <div className="h-full bg-[#8161e1] rounded-full" style={{ width: '82%' }} />
+                      <div className="h-full bg-[#8A2BE2] rounded-full" style={{ width: '82%' }} />
                     </div>
                   </div>
 
@@ -652,7 +652,7 @@ export const MyMindProfileView: React.FC<MyMindProfileViewProps> = ({ metrics, o
 
             <button 
               onClick={onRetake}
-              className="w-full py-2.5 rounded-full border border-[#8161e1]/20 hover:bg-accent-purple/5 text-accent-purple text-[10px] font-bold uppercase tracking-widest transition-all"
+              className="w-full py-2.5 rounded-full border border-[#8A2BE2]/20 hover:bg-accent-purple/5 text-accent-purple text-[10px] font-bold uppercase tracking-widest transition-all"
             >
               Recalibrate Sessions
             </button>

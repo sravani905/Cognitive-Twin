@@ -96,7 +96,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
       {/* Premium Sticky Navigation Header */}
       <div className="sticky top-0 z-50 w-full bg-white/60 backdrop-blur-md border-b border-purple-100/40 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#8161e1] to-[#9979f4] flex items-center justify-center text-white font-serif italic text-lg shadow-md shadow-indigo-600/10">
+          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#8A2BE2] to-[#9979f4] flex items-center justify-center text-white font-serif italic text-lg shadow-md shadow-indigo-600/10">
             C
           </div>
           <div>
@@ -121,8 +121,8 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-full font-sans transition-all cursor-pointer ${
                   isSelected 
-                    ? 'bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white shadow-sm' 
-                    : 'text-[#6a427f] hover:bg-white/90 hover:text-[#8161e1]'
+                    ? 'bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white shadow-sm' 
+                    : 'text-[#6a427f] hover:bg-white/90 hover:text-[#8A2BE2]'
                 }`}
               >
                 <Icon className="w-3.5 h-3.5" />
@@ -160,7 +160,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-1.5 px-3 py-2 text-[10px] font-bold uppercase tracking-wider rounded-xl transition-all ${
                   isSelected 
-                    ? 'bg-gradient-to-r from-[#8161e1] to-[#9979f4] text-white shadow-sm' 
+                    ? 'bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] text-white shadow-sm' 
                     : 'text-[#6a427f] hover:bg-[#ebdff2]'
                 }`}
               >
@@ -185,7 +185,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
               >
                 {/* Introduction Display */}
                 <div className="text-center max-w-3xl mx-auto space-y-4 py-4">
-                  <span className="text-[#8161e1] font-bold text-xs uppercase tracking-[0.3em] bg-[#8161e1]/8 border border-[#8161e1]/18 px-4.5 py-1.5 rounded-full inline-block">Motto & Foundations</span>
+                  <span className="text-[#8A2BE2] font-bold text-xs uppercase tracking-[0.3em] bg-[#8A2BE2]/8 border border-[#8A2BE2]/18 px-4.5 py-1.5 rounded-full inline-block">Motto & Foundations</span>
                   <h1 className="text-4xl md:text-5xl font-serif italic text-[#322851] tracking-tight">"Your Living Digital Reflection"</h1>
                   <p className="text-[#6e5380] text-sm md:text-base leading-relaxed font-light">
                     Cognitive Twin is a hyper-personalized self-discovery mechanism built to chart the complex typography of your inner consciousness, vectorizing logic, empathy, abstract synthesis, and behavioral tendencies into a beautiful live dashboard.
@@ -196,8 +196,8 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                 <div className="grid md:grid-cols-2 gap-6 pt-4">
                   
                   {/* Motto Card */}
-                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 flex flex-col space-y-4">
-                    <div className="w-12 h-12 rounded-2xl bg-violet-50 border border-violet-100 flex items-center justify-center text-[#8161e1] shadow-sm">
+                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 flex flex-col space-y-4">
+                    <div className="w-12 h-12 rounded-2xl bg-violet-50 border border-violet-100 flex items-center justify-center text-[#8A2BE2] shadow-sm">
                       <Sparkles className="w-5 h-5 animate-pulse" />
                     </div>
                     <h3 className="text-xl font-serif text-[#322851] italic font-semibold">Core Motto</h3>
@@ -207,7 +207,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                   </div>
 
                   {/* Vision Card */}
-                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 flex flex-col space-y-4">
+                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 flex flex-col space-y-4">
                     <div className="w-12 h-12 rounded-2xl bg-cyan-50 border border-cyan-100 flex items-center justify-center text-cyan-500 shadow-sm">
                       <Eye className="w-5 h-5" />
                     </div>
@@ -218,7 +218,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                   </div>
 
                   {/* Mission Card */}
-                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 flex flex-col space-y-4">
+                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 flex flex-col space-y-4">
                     <div className="w-12 h-12 rounded-2xl bg-pink-50 border border-pink-100 flex items-center justify-center text-pink-500 shadow-sm">
                       <Compass className="w-5 h-5" />
                     </div>
@@ -229,7 +229,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                   </div>
 
                   {/* Goal Card */}
-                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 flex flex-col space-y-4">
+                  <div className="bg-white/80 border border-purple-100/70 p-8 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 flex flex-col space-y-4">
                     <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-500 shadow-sm">
                       <Target className="w-5 h-5" />
                     </div>
@@ -242,9 +242,9 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                 </div>
 
                 {/* Team / Research Authors Profile Card */}
-                <div className="bg-gradient-to-tr from-[#8161e1]/5 via-[#9979f4]/5 to-transparent border border-[#8161e1]/20 p-8 rounded-[2.5rem] space-y-6 shadow-md mt-6">
+                <div className="bg-gradient-to-tr from-[#8A2BE2]/5 via-[#9979f4]/5 to-transparent border border-[#8A2BE2]/20 p-8 rounded-[2.5rem] space-y-6 shadow-md mt-6">
                   <div className="text-center space-y-2">
-                    <span className="text-[10px] font-mono font-bold text-[#8161e1] uppercase tracking-[0.25em]">B.Tech CSE (Data Science) Major Project</span>
+                    <span className="text-[10px] font-mono font-bold text-[#8A2BE2] uppercase tracking-[0.25em]">B.Tech CSE (Data Science) Major Project</span>
                     <h3 className="text-2xl font-serif text-[#322851] italic font-semibold">Research Undergraduates & Authors</h3>
                     <p className="text-xs text-[#6e5380] font-light max-w-xl mx-auto">
                       Developed as a Major Research Project in partial fulfillment of Jawaharlal Nehru Technological University Hyderabad (JNTUH) B.Tech standards.
@@ -287,7 +287,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                 className="space-y-8"
               >
                 <div className="text-center max-w-3xl mx-auto space-y-4">
-                  <span className="text-[#8161e1] font-bold text-xs uppercase tracking-[0.3em] bg-[#8161e1]/8 border border-[#8161e1]/18 px-4.5 py-1.5 rounded-full inline-block">Data Pipeline Model</span>
+                  <span className="text-[#8A2BE2] font-bold text-xs uppercase tracking-[0.3em] bg-[#8A2BE2]/8 border border-[#8A2BE2]/18 px-4.5 py-1.5 rounded-full inline-block">Data Pipeline Model</span>
                   <h2 className="text-3xl font-serif italic text-[#322851]">Interactive Application Flowchart</h2>
                   <p className="text-[#6e5380] text-xs md:text-sm font-light leading-relaxed">
                     Hover or tap on each node of the system map to see how data flows from your immediate inputs through vector spaces and into the final dashboard report.
@@ -295,7 +295,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                 </div>
 
                 {/* Flowchart Layout */}
-                <div className="relative min-h-[350px] bg-white/80 border border-purple-100/75 p-6 md:p-10 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 flex flex-col justify-center">
+                <div className="relative min-h-[350px] bg-white/80 border border-purple-100/75 p-6 md:p-10 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 flex flex-col justify-center">
                   
                   {/* Flow Lines Connecting Steps */}
                   <div className="absolute inset-x-12 top-[48%] h-0.5 bg-gradient-to-r from-blue-100 via-indigo-100 via-purple-100 via-pink-100 to-rose-100 hidden md:block pointer-events-none z-0" />
@@ -312,8 +312,8 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                           onClick={() => setActiveNode(isActive ? null : node.id)}
                           className={`relative group bg-white p-6 rounded-3xl border transition-all duration-300 transform cursor-pointer flex flex-col items-center text-center ${
                             isActive 
-                              ? 'border-[#8161e1] shadow-xl shadow-[#8161e1]/12 scale-[1.03] -translate-y-1' 
-                              : 'border-purple-100 hover:border-[#8161e1]/45 shadow-sm hover:translate-y-[-2px]'
+                              ? 'border-[#8A2BE2] shadow-xl shadow-[#8A2BE2]/12 scale-[1.03] -translate-y-1' 
+                              : 'border-purple-100 hover:border-[#8A2BE2]/45 shadow-sm hover:translate-y-[-2px]'
                           }`}
                         >
                           {/* Circle Badge Number */}
@@ -350,7 +350,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                           exit={{ opacity: 0, y: -5 }}
                           className="space-y-1.5"
                         >
-                          <span className="text-[10px] font-bold text-[#8161e1] uppercase tracking-widest font-mono">
+                          <span className="text-[10px] font-bold text-[#8A2BE2] uppercase tracking-widest font-mono">
                             Engineering Blueprint Section {activeNode}
                           </span>
                           <p className="text-xs text-[#513c66] font-medium leading-relaxed">
@@ -386,7 +386,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                 className="space-y-8"
               >
                 <div className="text-center max-w-3xl mx-auto space-y-4">
-                  <span className="text-[#8161e1] font-bold text-xs uppercase tracking-[0.3em] bg-[#8161e1]/8 border border-[#8161e1]/18 px-4.5 py-1.5 rounded-full inline-block">Strategic Analysis</span>
+                  <span className="text-[#8A2BE2] font-bold text-xs uppercase tracking-[0.3em] bg-[#8A2BE2]/8 border border-[#8A2BE2]/18 px-4.5 py-1.5 rounded-full inline-block">Strategic Analysis</span>
                   <h2 className="text-3xl font-serif italic text-[#322851]">Bento SWOT / SWAT Assessment</h2>
                   <p className="text-[#6e5380] text-xs md:text-sm font-light leading-relaxed">
                     A thorough look at our structural strengths, physical limits, and upcoming paths.
@@ -397,18 +397,18 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                 <div className="grid md:grid-cols-2 gap-6">
                   
                   {/* Strengths */}
-                  <div className="bg-gradient-to-tr from-[#f8f6ff] to-white border border-[#8161e1]/20 p-6 rounded-3xl space-y-4 shadow-sm relative overflow-hidden group">
-                    <div className="absolute right-3 top-3 w-16 h-16 text-[#8161e1]/5 group-hover:scale-110 transition-transform">
+                  <div className="bg-gradient-to-tr from-[#f8f6ff] to-white border border-[#8A2BE2]/20 p-6 rounded-3xl space-y-4 shadow-sm relative overflow-hidden group">
+                    <div className="absolute right-3 top-3 w-16 h-16 text-[#8A2BE2]/5 group-hover:scale-110 transition-transform">
                       <Zap className="w-full h-full" />
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-[#8161e1]/10 flex items-center justify-center text-[#8161e1] font-bold text-sm">S</div>
+                      <div className="w-9 h-9 rounded-xl bg-[#8A2BE2]/10 flex items-center justify-center text-[#8A2BE2] font-bold text-sm">S</div>
                       <h4 className="text-base font-bold text-[#322851]">Core Strengths</h4>
                     </div>
                     <ul className="space-y-2.5">
                       {swotData.strengths.map((item, idx) => (
                         <li key={idx} className="flex gap-2 text-xs text-[#513c66] leading-relaxed">
-                          <span className="text-[#8161e1] font-bold font-mono">✦</span>
+                          <span className="text-[#8A2BE2] font-bold font-mono">✦</span>
                           <span className="font-light">{item}</span>
                         </li>
                       ))}
@@ -486,7 +486,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                 className="space-y-8"
               >
                 <div className="text-center max-w-3xl mx-auto space-y-4">
-                  <span className="text-[#8161e1] font-bold text-xs uppercase tracking-[0.3em] bg-[#8161e1]/8 border border-[#8161e1]/18 px-4.5 py-1.5 rounded-full inline-block">Architecture Manual</span>
+                  <span className="text-[#8A2BE2] font-bold text-xs uppercase tracking-[0.3em] bg-[#8A2BE2]/8 border border-[#8A2BE2]/18 px-4.5 py-1.5 rounded-full inline-block">Architecture Manual</span>
                   <h2 className="text-3xl font-serif italic text-[#322851]">Platform Documentation & Modules</h2>
                   <p className="text-[#6e5380] text-xs md:text-sm font-light leading-relaxed">
                     Technical reference guide explaining the algorithms and UI interfaces built into Cognitive Twin.
@@ -494,11 +494,11 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
                 </div>
 
                 {/* Grid layout for Documentation Sections */}
-                <div className="bg-white/80 border border-purple-100/75 p-6 md:p-10 rounded-[2.5rem] shadow-xl shadow-[#8161e1]/5 space-y-8">
+                <div className="bg-white/80 border border-purple-100/75 p-6 md:p-10 rounded-[2.5rem] shadow-xl shadow-[#8A2BE2]/5 space-y-8">
                   
                   {/* Documentation Section 1 */}
                   <div className="space-y-3 pb-6 border-b border-purple-50">
-                    <div className="flex items-center gap-2.5 text-[#8161e1]">
+                    <div className="flex items-center gap-2.5 text-[#8A2BE2]">
                       <FileText className="w-4 h-4 shrink-0" />
                       <h4 className="text-sm font-bold uppercase tracking-wider">Chapter 1: Dynamic Question Pools & Low-Latency Engines</h4>
                     </div>
@@ -509,7 +509,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
 
                   {/* Documentation Section 2 */}
                   <div className="space-y-3 pb-6 border-b border-purple-50">
-                    <div className="flex items-center gap-2.5 text-[#8161e1]">
+                    <div className="flex items-center gap-2.5 text-[#8A2BE2]">
                       <BrainCircuit className="w-4 h-4 shrink-0" />
                       <h4 className="text-sm font-bold uppercase tracking-wider">Chapter 2: Let's De-serialize Vector Profiles</h4>
                     </div>
@@ -520,7 +520,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
 
                   {/* Documentation Section 3 */}
                   <div className="space-y-3 pb-6 border-b border-purple-50">
-                    <div className="flex items-center gap-2.5 text-[#8161e1]">
+                    <div className="flex items-center gap-2.5 text-[#8A2BE2]">
                       <Cpu className="w-4 h-4 shrink-0" />
                       <h4 className="text-sm font-bold uppercase tracking-wider">Chapter 3: Chronotypes, Forecasts, and Sensory Sanctuary</h4>
                     </div>
@@ -533,7 +533,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
 
                   {/* Documentation Section 4 */}
                   <div className="space-y-3">
-                    <div className="flex items-center gap-2.5 text-[#8161e1]">
+                    <div className="flex items-center gap-2.5 text-[#8A2BE2]">
                       <ShieldAlert className="w-4 h-4 shrink-0" />
                       <h4 className="text-sm font-bold uppercase tracking-wider">Chapter 4: Privacy & Non-Custodial Storage</h4>
                     </div>

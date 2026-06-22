@@ -251,7 +251,7 @@ export const AestheticDashboard: React.FC<AestheticDashboardProps> = ({
                   <svg className="w-full h-full transform -rotate-90">
                     <circle 
                       cx="72" cy="72" r="54" 
-                      stroke="rgba(129,97,225,0.15)" strokeWidth="8" fill="transparent" 
+                      stroke="rgba(138, 43, 226,0.15)" strokeWidth="8" fill="transparent" 
                     />
                     <motion.circle 
                       cx="72" cy="72" r="54" 
@@ -286,7 +286,7 @@ export const AestheticDashboard: React.FC<AestheticDashboardProps> = ({
                   <svg className="w-full h-full transform -rotate-90">
                     <circle 
                       cx="72" cy="72" r="54" 
-                      stroke="rgba(85,135,240,0.15)" strokeWidth="8" fill="transparent" 
+                      stroke="rgba(0, 174, 239,0.15)" strokeWidth="8" fill="transparent" 
                     />
                     <motion.circle 
                       cx="72" cy="72" r="54" 

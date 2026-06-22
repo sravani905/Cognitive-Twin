@@ -30,17 +30,17 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onStart, onShowAbout, on
       {onBackToLanding && (
         <button
           onClick={onBackToLanding}
-          className="absolute top-6 left-6 z-20 flex items-center gap-2 px-5 py-2.5 bg-white/60 hover:bg-white active:scale-95 text-[#8161e1] text-[10px] font-bold uppercase tracking-widest border border-purple-100/40 rounded-full transition-all duration-200 cursor-pointer shadow-sm"
+          className="absolute top-6 left-6 z-20 flex items-center gap-2 px-5 py-2.5 bg-white/60 hover:bg-white active:scale-95 text-[#8A2BE2] text-[10px] font-bold uppercase tracking-widest border border-purple-100/40 rounded-full transition-all duration-200 cursor-pointer shadow-sm"
         >
           <ArrowLeft className="w-3.5 h-3.5" /> Back to Landing Page
         </button>
       )}
 
       {/* Main card matching Image 2 perfectly */}
-      <div className="relative z-10 w-full max-w-[580px] bg-white/75 backdrop-blur-2xl border border-white/80 shadow-2xl shadow-[#8161e1]/10 rounded-[2.5rem] p-8 sm:p-12 text-center flex flex-col items-center justify-between min-h-[380px] my-auto">
+      <div className="relative z-10 w-full max-w-[580px] bg-white/75 backdrop-blur-2xl border border-white/80 shadow-2xl shadow-[#8A2BE2]/10 rounded-[2.5rem] p-8 sm:p-12 text-center flex flex-col items-center justify-between min-h-[380px] my-auto">
         
         {/* Pulse Heartbeat / Wave outline Icon exactly as Image 2 */}
-        <div className="w-14 h-14 bg-white/40 border border-purple-100/50 rounded-xl flex items-center justify-center text-[#8161e1] shadow-sm mb-6">
+        <div className="w-14 h-14 bg-white/40 border border-purple-100/50 rounded-xl flex items-center justify-center text-[#8A2BE2] shadow-sm mb-6">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
             <path d="M3 12h3l3-9 4 18 3-12h5" />
           </svg>
@@ -67,7 +67,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onStart, onShowAbout, on
 
           <button
             onClick={onStart}
-            className="flex-1 py-3 px-6 bg-gradient-to-r from-[#8161e1] to-[#9979f4] hover:brightness-105 active:scale-95 text-white rounded-full font-sans font-bold text-[10px] sm:text-xs uppercase tracking-widest shadow-md shadow-indigo-600/10 transition-all duration-200 cursor-pointer"
+            className="flex-1 py-3 px-6 bg-gradient-to-r from-[#8A2BE2] to-[#9979f4] hover:brightness-105 active:scale-95 text-white rounded-full font-sans font-bold text-[10px] sm:text-xs uppercase tracking-widest shadow-md shadow-indigo-600/10 transition-all duration-200 cursor-pointer"
           >
             Continue
           </button>
@@ -142,19 +142,19 @@ export const ContextForm: React.FC<ContextFormProps> = ({ onComplete, onShowAbou
       {onBackToLanding && (
         <button
           onClick={onBackToLanding}
-          className="absolute top-6 left-6 z-20 flex items-center gap-2 px-5 py-2.5 bg-white/60 hover:bg-white active:scale-95 text-[#8161e1] text-[10px] font-bold uppercase tracking-widest border border-purple-100/40 rounded-full transition-all duration-200 cursor-pointer shadow-sm"
+          className="absolute top-6 left-6 z-20 flex items-center gap-2 px-5 py-2.5 bg-white/60 hover:bg-white active:scale-95 text-[#8A2BE2] text-[10px] font-bold uppercase tracking-widest border border-purple-100/40 rounded-full transition-all duration-200 cursor-pointer shadow-sm"
         >
           <ArrowLeft className="w-3.5 h-3.5" /> Back to Landing Page
         </button>
       )}
 
       {/* Main card matching Image 1 ("A Bit About You") */}
-      <div className="relative z-10 w-full max-w-[850px] bg-white/75 backdrop-blur-2xl border border-white/80 shadow-2xl shadow-[#8161e1]/10 rounded-[2.5rem] p-8 sm:p-12 text-center flex flex-col items-center justify-between my-auto">
+      <div className="relative z-10 w-full max-w-[850px] bg-white/75 backdrop-blur-2xl border border-white/80 shadow-2xl shadow-[#8A2BE2]/10 rounded-[2.5rem] p-8 sm:p-12 text-center flex flex-col items-center justify-between my-auto">
         
         {/* Top Logo and Title Section */}
         <div className="flex flex-col items-center gap-4 mb-2">
           {/* Logo with central brain/node emblem */}
-          <div className="w-14 h-14 bg-gradient-to-tr from-[#8161e1] to-[#a78bfa] rounded-full flex items-center justify-center text-white text-2xl shadow-md border-2 border-white/70">
+          <div className="w-14 h-14 bg-gradient-to-tr from-[#8A2BE2] to-[#a78bfa] rounded-full flex items-center justify-center text-white text-2xl shadow-md border-2 border-white/70">
             🧠
           </div>
           
@@ -182,9 +182,9 @@ export const ContextForm: React.FC<ContextFormProps> = ({ onComplete, onShowAbou
                 placeholder="Your name..."
                 value={data.name}
                 onChange={(e) => setData({ ...data, name: e.target.value })}
-                className="w-full bg-white/60 focus:bg-white border border-[#8161e1]/20 focus:border-[#8161e1]/50 focus:ring-1 focus:ring-[#8161e1]/50 rounded-2xl py-3.5 pl-11 pr-4 text-xs sm:text-sm text-[#322851] placeholder-[#8c78a5]/50 outline-none transition-all duration-200"
+                className="w-full bg-white/60 focus:bg-white border border-[#8A2BE2]/20 focus:border-[#8A2BE2]/50 focus:ring-1 focus:ring-[#8A2BE2]/50 rounded-2xl py-3.5 pl-11 pr-4 text-xs sm:text-sm text-[#322851] placeholder-[#8c78a5]/50 outline-none transition-all duration-200"
               />
-              <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8161e1]/50" />
+              <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8A2BE2]/50" />
             </div>
           </div>
 
@@ -198,7 +198,7 @@ export const ContextForm: React.FC<ContextFormProps> = ({ onComplete, onShowAbou
                 <select
                   value={(data as any)[key]}
                   onChange={(e) => setData({ ...data, [key]: e.target.value })}
-                  className="w-full bg-white/60 focus:bg-white border border-[#8161e1]/20 focus:border-[#8161e1]/50 focus:ring-1 focus:ring-[#8161e1]/50 rounded-2xl py-3.5 pl-4 pr-11 text-xs sm:text-sm text-[#322851] appearance-none outline-none transition-all duration-200"
+                  className="w-full bg-white/60 focus:bg-white border border-[#8A2BE2]/20 focus:border-[#8A2BE2]/50 focus:ring-1 focus:ring-[#8A2BE2]/50 rounded-2xl py-3.5 pl-4 pr-11 text-xs sm:text-sm text-[#322851] appearance-none outline-none transition-all duration-200"
                 >
                   {vals.map((v) => (
                     <option key={v} value={v} className="bg-white text-[#322851]">
@@ -206,7 +206,7 @@ export const ContextForm: React.FC<ContextFormProps> = ({ onComplete, onShowAbou
                     </option>
                   ))}
                 </select>
-                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8161e1]/50 pointer-events-none" />
+                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8A2BE2]/50 pointer-events-none" />
               </div>
             </div>
           ))}
@@ -217,14 +217,14 @@ export const ContextForm: React.FC<ContextFormProps> = ({ onComplete, onShowAbou
         <div className="w-full flex flex-col items-center gap-4 pt-10">
           <button
             onClick={handleStart}
-            className="w-full max-w-sm py-4 px-8 bg-gradient-to-r from-[#8161e1] via-[#8c6be8] to-[#9979f4] hover:brightness-105 active:scale-95 text-white rounded-full font-sans font-bold text-xs sm:text-sm uppercase tracking-widest shadow-lg shadow-indigo-600/10 cursor-pointer transition-all duration-200"
+            className="w-full max-w-sm py-4 px-8 bg-gradient-to-r from-[#8A2BE2] via-[#8c6be8] to-[#9979f4] hover:brightness-105 active:scale-95 text-white rounded-full font-sans font-bold text-xs sm:text-sm uppercase tracking-widest shadow-lg shadow-indigo-600/10 cursor-pointer transition-all duration-200"
           >
             Begin The Journey
           </button>
 
           <button
             onClick={handleStart}
-            className="text-xs text-[#8c78a5]/80 hover:text-[#8161e1] hover:underline transition-colors mt-2"
+            className="text-xs text-[#8c78a5]/80 hover:text-[#8A2BE2] hover:underline transition-colors mt-2"
           >
             Skip for now
           </button>

@@ -30,8 +30,8 @@
     --border-main: rgba(179, 165, 226, 0.35);
     --border-accent: rgba(138, 43, 226, 0.4);
     
-    --accent-blue: #5587f0;
-    --accent-purple: #8161e1;
+    --accent-blue: #00AEEF;
+    --accent-purple: #8A2BE2;
     --accent-violet: #a78bfa;
     --accent-emerald: #10b981;
     
@@ -73,11 +73,11 @@
   }
 
   .glow-text-blue {
-    text-shadow: 0 0 10px rgba(85, 135, 240, 0.25);
+    text-shadow: 0 0 10px rgba(0, 174, 239, 0.25);
   }
 
   .glow-text-purple {
-    text-shadow: 0 0 10px rgba(129, 97, 225, 0.25);
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.25);
   }
 
   .editorial-title {
@@ -107,7 +107,7 @@
   .btn-primary {
     background: linear-gradient(135deg, var(--accent-purple) 0%, #684cc8 100%);
     color: white;
-    @apply px-6 py-2.5 rounded-full font-sans font-semibold text-xs uppercase tracking-wider hover:brightness-105 active:scale-[0.98] transition-all duration-200 shadow-[0_4px_16px_0_rgba(129,97,225,0.2)];
+    @apply px-6 py-2.5 rounded-full font-sans font-semibold text-xs uppercase tracking-wider hover:brightness-105 active:scale-[0.98] transition-all duration-200 shadow-[0_4px_16px_0_rgba(138,43,226,0.2)];
   }
 
   .btn-secondary {
@@ -124,7 +124,7 @@
 
   input:focus {
     @apply border-accent-purple;
-    filter: drop-shadow(0 0 4px rgba(129, 97, 225, 0.15));
+    filter: drop-shadow(0 0 4px rgba(138, 43, 226, 0.15));
   }
 }
 

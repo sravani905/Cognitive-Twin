@@ -112,7 +112,7 @@ export const SparkleBackground: React.FC<SparkleBackgroundProps> = ({
         className="absolute top-[8%] right-[5%] w-[320px] h-[240px] opacity-[0.38] max-lg:hidden"
         style={{ x: springX, y: springY }}
       >
-        <svg className="w-full h-full text-[#8161e1]" viewBox="0 0 200 150">
+        <svg className="w-full h-full text-[#8A2BE2]" viewBox="0 0 200 150">
           <line x1="120" y1="20" x2="160" y2="40" stroke="currentColor" strokeWidth="0.5" />
           <line x1="160" y1="40" x2="180" y2="90" stroke="currentColor" strokeWidth="0.5" />
           <line x1="180" y1="90" x2="140" y2="120" stroke="currentColor" strokeWidth="0.5" />
@@ -145,7 +145,7 @@ export const SparkleBackground: React.FC<SparkleBackgroundProps> = ({
           y: -mouseY.get() * 0.8
         }}
       >
-        <svg className="w-full h-full text-[#8161e1]" viewBox="0 0 200 150">
+        <svg className="w-full h-full text-[#8A2BE2]" viewBox="0 0 200 150">
           <line x1="40" y1="120" x2="80" y2="130" stroke="currentColor" strokeWidth="0.5" />
           <line x1="80" y1="130" x2="110" y2="90" stroke="currentColor" strokeWidth="0.5" />
           <line x1="110" y1="90" x2="70" y2="50" stroke="currentColor" strokeWidth="0.5" />

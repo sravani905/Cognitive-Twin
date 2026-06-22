@@ -95,7 +95,7 @@ export const SessionLogView: React.FC = () => {
             <div className="relative w-full h-28 mt-2">
               <svg className="w-full h-full" viewBox="0 0 200 60" preserveAspectRatio="none">
                 {/* Midpoint line */}
-                <line x1="100" y1="0" x2="100" y2="60" stroke="rgba(129,97,225,0.15)" strokeWidth="1" strokeDasharray="2,2" />
+                <line x1="100" y1="0" x2="100" y2="60" stroke="rgba(138, 43, 226,0.15)" strokeWidth="1" strokeDasharray="2,2" />
                 
                 {/* Jitter line path */}
                 <path 
@@ -108,7 +108,7 @@ export const SessionLogView: React.FC = () => {
                 {/* Underlay area */}
                 <path 
                   d="M0,45 Q20,38 40,48 T80,45 T100,28 T120,40 T150,22 T180,43 L200,45 L200,60 L0,60 Z" 
-                  fill="rgba(129,97,225,0.04)"
+                  fill="rgba(138, 43, 226,0.04)"
                 />
 
                 {/* Point indicators in image */}
@@ -121,7 +121,7 @@ export const SessionLogView: React.FC = () => {
                 Alert Zone
               </div>
 
-              <div className="absolute left-[70%] top-[45%] bg-[#8161e1] text-white text-[8px] font-mono px-1.5 py-0.5 rounded shadow">
+              <div className="absolute left-[70%] top-[45%] bg-[#8A2BE2] text-white text-[8px] font-mono px-1.5 py-0.5 rounded shadow">
                 Fatigue Spike
               </div>
             </div>
@@ -152,9 +152,9 @@ export const SessionLogView: React.FC = () => {
             {/* Custom Bar Chart graphics */}
             <div className="relative w-full h-24 flex items-end justify-center gap-1.5 px-6">
               {[40, 60, 55, 75, 100, 95, 80, 70, 50, 45, 30].map((h, bIdx) => (
-                <div key={bIdx} className="w-full bg-[#8161e1]/20 hover:bg-[#8161e1]/45 rounded-t-md transition-all relative group" style={{ height: `${h}%` }}>
+                <div key={bIdx} className="w-full bg-[#8A2BE2]/20 hover:bg-[#8A2BE2]/45 rounded-t-md transition-all relative group" style={{ height: `${h}%` }}>
                   {/* Matching colors from image */}
-                  <div className="absolute inset-0 bg-[#8161e1] rounded-t-md opacity-30 cursor-pointer" />
+                  <div className="absolute inset-0 bg-[#8A2BE2] rounded-t-md opacity-30 cursor-pointer" />
                 </div>
               ))}
 
@@ -194,7 +194,7 @@ export const SessionLogView: React.FC = () => {
           <div className="pt-3 border-t border-black/5 flex flex-wrap gap-2">
             <button 
               onClick={() => alert("Dispensing cognitive alignment instructions stream...")}
-              className="px-4 py-2 bg-[#8161e1] text-white rounded-full text-[10px] font-bold uppercase tracking-widest hover:brightness-105 shadow-sm"
+              className="px-4 py-2 bg-[#8A2BE2] text-white rounded-full text-[10px] font-bold uppercase tracking-widest hover:brightness-105 shadow-sm"
             >
               Apply Cognitive Reset
             </button>

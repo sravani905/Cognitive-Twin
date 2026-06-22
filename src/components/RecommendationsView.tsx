@@ -558,7 +558,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
             <h2 className="text-2xl font-serif italic text-[#1e1a42] tracking-tight">
               Adaptive Learning Path Generator
             </h2>
-            <Sparkles className="w-4 h-4 text-[#8161e1] animate-pulse" />
+            <Sparkles className="w-4 h-4 text-[#8A2BE2] animate-pulse" />
           </div>
           <p className="text-xs text-secondary leading-relaxed">
             Unifying psychometric analysis and continuous behavioral adjustments into an organic, self-optimizing learning syllabus.
@@ -594,7 +594,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
       {/* SECTION 2: ADAPTIVE PROFILES PRESETS INTERACTION */}
       <div className="bg-white/40 border border-[#bfaad4]/20 p-5 rounded-3xl space-y-4">
         <div className="flex items-center gap-2 border-b border-black/5 pb-2">
-          <Layers className="w-4 h-4 text-[#8161e1]" />
+          <Layers className="w-4 h-4 text-[#8A2BE2]" />
           <h4 className="text-xs uppercase font-bold tracking-widest text-[#7c779e] font-mono">
             Step 1: Calibrate Mind Profile Signal Source
           </h4>
@@ -698,7 +698,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
         {/* Param 1: Strategy Focus Mode */}
         <div className="space-y-3">
           <div className="flex items-center gap-1.5 text-xs font-bold text-[#1e1a42] uppercase font-mono tracking-widest border-b border-black/5 pb-1">
-            <Sliders className="w-3.5 h-3.5 text-[#8161e1]" />
+            <Sliders className="w-3.5 h-3.5 text-[#8A2BE2]" />
             <span>1. Adaptive Strategy Focus</span>
           </div>
           <p className="text-[10px] text-[#7c779e] leading-relaxed">
@@ -710,7 +710,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
               className={cn(
                 "w-full px-4 py-2 rounded-xl text-left text-xs font-bold transition-all border flex justify-between items-center",
                 focusStrategy === 'strengthen'
-                  ? "bg-[#8161e1] text-white border-transparent translate-x-1"
+                  ? "bg-[#8A2BE2] text-white border-transparent translate-x-1"
                   : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
               )}
             >
@@ -722,7 +722,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
               className={cn(
                 "w-full px-4 py-2 rounded-xl text-left text-xs font-bold transition-all border flex justify-between items-center",
                 focusStrategy === 'hybrid'
-                  ? "bg-[#8161e1] text-white border-transparent translate-x-1"
+                  ? "bg-[#8A2BE2] text-white border-transparent translate-x-1"
                   : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
               )}
             >
@@ -734,7 +734,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
               className={cn(
                 "w-full px-4 py-2 rounded-xl text-left text-xs font-bold transition-all border flex justify-between items-center",
                 focusStrategy === 'superpower'
-                  ? "bg-[#8161e1] text-white border-transparent translate-x-1"
+                  ? "bg-[#8A2BE2] text-white border-transparent translate-x-1"
                   : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
               )}
             >
@@ -747,7 +747,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
         {/* Param 2: Time Commitment */}
         <div className="space-y-3">
           <div className="flex items-center gap-1.5 text-xs font-bold text-[#1e1a42] uppercase font-mono tracking-widest border-b border-black/5 pb-1">
-            <Clock className="w-3.5 h-3.5 text-[#8161e1]" />
+            <Clock className="w-3.5 h-3.5 text-[#8A2BE2]" />
             <span>2. Time Budget Allocation</span>
           </div>
           <p className="text-[10px] text-[#7c779e] leading-relaxed">
@@ -759,7 +759,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
               className={cn(
                 "w-full px-4 py-2 rounded-xl text-left text-xs font-bold transition-all border flex justify-between items-center",
                 timeCommitment === 'micro'
-                  ? "bg-[#8161e1] text-white border-transparent translate-x-1"
+                  ? "bg-[#8A2BE2] text-white border-transparent translate-x-1"
                   : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
               )}
             >
@@ -771,7 +771,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
               className={cn(
                 "w-full px-4 py-2 rounded-xl text-left text-xs font-bold transition-all border flex justify-between items-center",
                 timeCommitment === 'standard'
-                  ? "bg-[#8161e1] text-white border-transparent translate-x-1"
+                  ? "bg-[#8A2BE2] text-white border-transparent translate-x-1"
                   : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
               )}
             >
@@ -783,7 +783,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
               className={cn(
                 "w-full px-4 py-2 rounded-xl text-left text-xs font-bold transition-all border flex justify-between items-center",
                 timeCommitment === 'immersive'
-                  ? "bg-[#8161e1] text-white border-transparent translate-x-1"
+                  ? "bg-[#8A2BE2] text-white border-transparent translate-x-1"
                   : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
               )}
             >
@@ -796,7 +796,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
         {/* Param 3: Delivery Format */}
         <div className="space-y-3">
           <div className="flex items-center gap-1.5 text-xs font-bold text-[#1e1a42] uppercase font-mono tracking-widest border-b border-black/5 pb-1">
-            <Video className="w-3.5 h-3.5 text-[#8161e1]" />
+            <Video className="w-3.5 h-3.5 text-[#8A2BE2]" />
             <span>3. Delivery Style Medium</span>
           </div>
           <p className="text-[10px] text-[#7c779e] leading-relaxed">
@@ -807,7 +807,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
               onClick={() => setDeliveryFormat('all')}
               className={cn(
                 "px-3 py-2 rounded-xl text-xs font-bold text-center border transition-all truncate",
-                deliveryFormat === 'all' ? "bg-[#8161e1] text-white border-transparent" : "bg-white border-slate-200 hover:bg-slate-50"
+                deliveryFormat === 'all' ? "bg-[#8A2BE2] text-white border-transparent" : "bg-white border-slate-200 hover:bg-slate-50"
               )}
             >
               🚀 All Formats
@@ -816,7 +816,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
               onClick={() => setDeliveryFormat('practice')}
               className={cn(
                 "px-3 py-2 rounded-xl text-xs font-bold text-center border transition-all truncate",
-                deliveryFormat === 'practice' ? "bg-[#8161e1] text-white border-transparent" : "bg-white border-slate-200 hover:bg-slate-50"
+                deliveryFormat === 'practice' ? "bg-[#8A2BE2] text-white border-transparent" : "bg-white border-slate-200 hover:bg-slate-50"
               )}
             >
               🎯 Active Drills
@@ -825,7 +825,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
               onClick={() => setDeliveryFormat('reading')}
               className={cn(
                 "px-3 py-2 rounded-xl text-xs font-bold text-center border transition-all truncate",
-                deliveryFormat === 'reading' ? "bg-[#8161e1] text-white border-transparent" : "bg-white border-slate-200 hover:bg-slate-50"
+                deliveryFormat === 'reading' ? "bg-[#8A2BE2] text-white border-transparent" : "bg-white border-slate-200 hover:bg-slate-50"
               )}
             >
               📖 Concepts
@@ -834,13 +834,13 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
               onClick={() => setDeliveryFormat('audio')}
               className={cn(
                 "px-3 py-2 rounded-xl text-xs font-bold text-center border transition-all truncate",
-                deliveryFormat === 'audio' ? "bg-[#8161e1] text-white border-transparent" : "bg-white border-slate-200 hover:bg-slate-50"
+                deliveryFormat === 'audio' ? "bg-[#8A2BE2] text-white border-transparent" : "bg-white border-slate-200 hover:bg-slate-50"
               )}
             >
               🎧 Acoustic Loops
             </button>
           </div>
-          <p className="text-[9px] text-[#8161e1] italic text-center uppercase tracking-wider font-semibold animate-pulse">
+          <p className="text-[9px] text-[#8A2BE2] italic text-center uppercase tracking-wider font-semibold animate-pulse">
             * Fully auto-generates on selection changes *
           </p>
         </div>
@@ -854,13 +854,13 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-black/5 pb-3 gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="p-1 px-2.2 text-[9px] font-mono font-black uppercase tracking-widest bg-[#8161e1]/10 text-[#8161e1] rounded-full border border-[#8161e1]/30">
+              <span className="p-1 px-2.2 text-[9px] font-mono font-black uppercase tracking-widest bg-[#8A2BE2]/10 text-[#8A2BE2] rounded-full border border-[#8A2BE2]/30">
                 Live Syllabus
               </span>
               <h3 className="text-[#1e1a42] font-serif font-bold text-lg">Adaptive Personal Growth Path</h3>
             </div>
             <p className="text-[11px] text-slate-500">
-              Calibrated targeting for: <strong className="text-secondary">{developmentAreas.map(d=>d.category).join(' & ')}</strong> (Deficits) and <strong className="text-[#8161e1]">{superpowers.map(s=>s.category).join(' & ')}</strong> (Powers)
+              Calibrated targeting for: <strong className="text-secondary">{developmentAreas.map(d=>d.category).join(' & ')}</strong> (Deficits) and <strong className="text-[#8A2BE2]">{superpowers.map(s=>s.category).join(' & ')}</strong> (Powers)
             </p>
           </div>
 
@@ -871,7 +871,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
             </div>
             <div className="w-28 h-2 bg-slate-100 rounded-full overflow-hidden shrink-0">
               <div 
-                className="h-full bg-gradient-to-r from-[#8161e1] to-emerald-400 rounded-full transition-all duration-500"
+                className="h-full bg-gradient-to-r from-[#8A2BE2] to-emerald-400 rounded-full transition-all duration-500"
                 style={{ width: `${progressRatio}%` }}
               />
             </div>
@@ -921,7 +921,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
                       {/* Top status bar */}
                       <div className="flex items-center justify-between pb-2 border-b border-black/[0.03]">
                         <div className="flex items-center gap-1.5 min-w-0">
-                          <span className="text-xs uppercase font-bold tracking-wider font-mono text-[#8161e1] truncate">
+                          <span className="text-xs uppercase font-bold tracking-wider font-mono text-[#8A2BE2] truncate">
                             {item.targetMetricName}
                           </span>
                           <span className="w-1 h-1 bg-slate-300 rounded-full" />
@@ -962,7 +962,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
                         {item.type === 'exercise' && item.targetMetricKey === 'memoryScore' && !isItemCompleted && (
                           <a 
                             href="#sandbox-panel"
-                            className="text-[10px] bg-[#8161e1]/10 text-[#8161e1] px-3 py-1.5 rounded-full font-bold uppercase tracking-wider hover:bg-[#8161e1]/20 transition-all mr-1.5"
+                            className="text-[10px] bg-[#8A2BE2]/10 text-[#8A2BE2] px-3 py-1.5 rounded-full font-bold uppercase tracking-wider hover:bg-[#8A2BE2]/20 transition-all mr-1.5"
                           >
                             Jump Inline ⚡
                           </a>
@@ -973,7 +973,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
                             "px-4 py-2 text-[10px] uppercase font-bold tracking-widest rounded-full transition-all flex items-center gap-1",
                             isItemCompleted
                               ? "bg-slate-200 hover:bg-slate-300 text-slate-600"
-                              : "bg-[#8161e1] hover:bg-[#8161e1]/95 text-white active:scale-97"
+                              : "bg-[#8A2BE2] hover:bg-[#8A2BE2]/95 text-white active:scale-97"
                           )}
                         >
                           {isItemCompleted ? (
@@ -1015,8 +1015,8 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
       <div id="sandbox-panel" className="bg-[#eae4f5]/60 border border-[#bfaad4]/30 p-6 rounded-3xl space-y-6 relative overflow-hidden">
         
         {/* Animated background rings */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] border border-[#8161e1]/5 rounded-full pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-[#8161e1]/5 rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] border border-[#8A2BE2]/5 rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-[#8A2BE2]/5 rounded-full pointer-events-none" />
 
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-[#bfaad4]/30 pb-3 gap-4 relative z-10">
           <div className="space-y-1">
@@ -1051,7 +1051,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
           <div className="md:col-span-7 flex flex-col items-center justify-center bg-[#fdfcff] border border-[#b3a5e2]/25 p-6 rounded-3xl shadow-sm min-h-76">
             {!gameActive ? (
               <div className="text-center space-y-4 max-w-sm">
-                <div className="w-14 h-14 bg-[#8161e1]/10 rounded-full flex items-center justify-center text-[#8161e1] mx-auto border border-[#8161e1]/20">
+                <div className="w-14 h-14 bg-[#8A2BE2]/10 rounded-full flex items-center justify-center text-[#8A2BE2] mx-auto border border-[#8A2BE2]/20">
                   <Play className="w-6 h-6 transform translate-x-0.5" />
                 </div>
                 <div className="space-y-1">
@@ -1062,7 +1062,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
                 </div>
                 <button
                   onClick={startMemoryGame}
-                  className="px-6 py-2.5 bg-[#8161e1] hover:brightness-105 active:scale-97 text-white text-[10px] uppercase font-bold tracking-widest rounded-full transition-all flex items-center gap-1.5 mx-auto"
+                  className="px-6 py-2.5 bg-[#8A2BE2] hover:brightness-105 active:scale-97 text-white text-[10px] uppercase font-bold tracking-widest rounded-full transition-all flex items-center gap-1.5 mx-auto"
                 >
                   <span>Initialize Drill Level {gameLevel}</span>
                   <ArrowRight className="w-3.5 h-3.5 text-white/80" />
@@ -1073,7 +1073,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
                 
                 {/* Status indicators */}
                 <div className="flex justify-between items-center text-xs font-mono px-1">
-                  <span className="text-[#8161e1] font-bold">Level {gameLevel} ({gameSequence.length} Steps)</span>
+                  <span className="text-[#8A2BE2] font-bold">Level {gameLevel} ({gameSequence.length} Steps)</span>
                   <span className={cn(
                     "capitalize font-semibold",
                     gameStatus === 'showing' ? "text-amber-500 animate-pulse" :
@@ -1101,7 +1101,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
                           isFlashing 
                             ? "bg-indigo-500 border-transparent shadow-[0_0_20px_rgba(99,102,241,0.6)]" 
                             : isUserGuessed 
-                              ? "bg-indigo-500/20 border-[#8161e1]/45 text-primary" 
+                              ? "bg-indigo-500/20 border-[#8A2BE2]/45 text-primary" 
                               : "bg-slate-50 border-slate-200/80 text-slate-300 hover:border-slate-300"
                         )}
                       >
@@ -1136,7 +1136,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
                       <div className="flex gap-2 justify-center">
                         <button
                           onClick={startMemoryGame}
-                          className="px-4 py-1.5 bg-[#8161e1] text-white text-[10px] font-bold uppercase tracking-wider rounded-xl hover:brightness-105"
+                          className="px-4 py-1.5 bg-[#8A2BE2] text-white text-[10px] font-bold uppercase tracking-wider rounded-xl hover:brightness-105"
                         >
                           Retry Level
                         </button>
@@ -1166,7 +1166,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
           {/* Theoretical Link Column (5 columns) */}
           <div className="md:col-span-5 bg-[#fdfcff] border border-[#b3a5e2]/25 p-5 rounded-3xl space-y-4 flex flex-col justify-between min-h-76 text-left">
             <div className="space-y-3">
-              <span className="text-[9px] uppercase font-mono font-bold tracking-widest text-[#8161e1] bg-[#8161e1]/5 px-2.5 py-1 rounded border border-[#8161e1]/10 inline-block">
+              <span className="text-[9px] uppercase font-mono font-bold tracking-widest text-[#8A2BE2] bg-[#8A2BE2]/5 px-2.5 py-1 rounded border border-[#8A2BE2]/10 inline-block">
                 Theoretical Scaffold
               </span>
               <p className="text-xs font-bold text-[#1e1a42] font-mono flex items-center gap-1.5">
@@ -1179,7 +1179,7 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
               <div className="bg-slate-50 border border-black/[0.04] p-3 rounded-xl space-y-1 text-[10px] font-mono">
                 <div className="flex justify-between">
                   <span className="text-slate-400">Target Segment</span>
-                  <span className="text-[#8161e1] font-bold">Spatial / Recaller</span>
+                  <span className="text-[#8A2BE2] font-bold">Spatial / Recaller</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400">Cognitive Stressor</span>
@@ -1187,13 +1187,13 @@ export const RecommendationsView: React.FC<RecommendationsViewProps> = ({ metric
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400">Recommended Duration</span>
-                  <span className="text-[#8161e1] font-bold">5 mins daily</span>
+                  <span className="text-[#8A2BE2] font-bold">5 mins daily</span>
                 </div>
               </div>
             </div>
 
             <div className="pt-2 border-t border-black/[0.03]">
-              <div className="flex items-center gap-1.5 text-[9px] text-[#8161e1] uppercase tracking-wider font-extrabold pb-2">
+              <div className="flex items-center gap-1.5 text-[9px] text-[#8A2BE2] uppercase tracking-wider font-extrabold pb-2">
                 <ThumbsUp className="w-3.5 h-3.5" />
                 <span>Adaptation Synergy</span>
               </div>
